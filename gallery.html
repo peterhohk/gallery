@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="gallery.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Handlee|Klee One">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/59b21ce732.js" crossorigin="anonymous"></script>
+  <script src="gallery.js"></script>
+  <title>J-ColourS Gallery</title>
+</head>
+
+
+<body>
+
+<header>
+  <div class="title-tray">
+    <img src="assets/peterhohk.png" alt="">
+    <h1>J-ColourS Gallery</h1>
+  </div>
+  <div class="button-tray">
+    <button type="button" id="button-feat">featured</button>
+    <button type="button" id="button-chara">characters</button>
+    <button type="button" id="button-works">artworks</button>
+  </div>
+</header>
+
+<main class="content-feat">
+  <h2>Featured Artworks</h2>
+  <div class="content-feat-body">
+    <button type="button" class="slideshow-button slideshow-prev"><i class="fa-solid fa-angle-left"></i></button>
+    <button type="button" class="slideshow-button slideshow-next"><i class="fa-solid fa-angle-right"></i></button>
+    <!-- slideshowString goes here -->
+  </div>
+  <div class="slideshow-pip-tray">
+    <!-- button.slideshow-pip goes here -->
+  </div>
+</main>
+
+<main class="content-chara">
+  <h2>Character Introduction</h2>
+  <div class="content-chara-body">
+    <div class="chara-box default">
+      <div class="chara-details">
+        <span class="default-text">Select a character!</span>
+      </div>
+    </div>
+    <div class="chara-box ada">
+      <div class="chara-details">
+        <div class="chara-details-left">
+          <div class="chara-names">
+            <h3>Ada</h3><br>
+            <ruby lang="ja">春日<rp>(</rp><rt>かすが</rt><rp>)</rp></ruby><ruby lang="ja">晴<rp>(</rp><rt>はる</rt><rp>)</rp></ruby><br>
+            (Kasuga Haru)
+          </div>
+          <div class="chara-bio">
+            <h4><i class="fa-solid fa-user"></i> Bio</h4>
+            <table>
+              <tr><td colspan="2"><span>Age</span> 14</td></tr>
+              <tr><td><span>Height</span> 148 cm</td><td><span>Weight</span> 46 kg</td></tr>
+              <tr><td><span>Birthday</span> 12 Feb</td><td><span>Blood type</span> O</td></tr>
+            </table>
+          </div>
+          <div class="chara-about">
+            <h4><i class="fa-solid fa-circle-info"></i> About</h4>
+            <p>President of the school's junior track and field team. An all-in-one package of strength, confidence and a bundle of sunshine. Radiates an aura that makes it impossible to feel sad around her.</p>
+          </div>
+          <div class="chara-likes">
+            <h4><i class="fa-solid fa-heart"></i> Likes</h4>
+            <ul>
+              <li>Fruits (esp. strawberries)</li>
+              <li>Bubble tea</li>
+              <li>Hot springs</li>
+              <li>Photography</li>
+            </ul>
+          </div>
+          <div class="chara-dislikes">
+            <h4><i class="fa-solid fa-heart-crack"></i> Dislikes</h4>
+            <ul>
+              <li>Spiders</li>
+              <li>Spicy food</li>
+              <li>Maths lectures</li>
+            </ul>
+          </div>
+        </div>
+        <div class="chara-details-right">
+          <h4><i class="fa-solid fa-face-smile"></i> Expressions</h4>
+          <div class="chara-expr-container">
+            <div class="chara-expr">
+              <img src="assets/chara/expr_ada1.png" alt="Ada expression 1" loading="lazy">
+              <span>Let's go get some cake!</span>
+            </div>
+            <div class="chara-expr">
+              <img src="assets/chara/expr_ada2.png" alt="Ada expression 2" loading="lazy">
+              <span>Hey! What the heck are you doing there?</span>
+            </div>
+            <div class="chara-expr">
+              <img src="assets/chara/expr_ada3.png" alt="Ada expression 3" loading="lazy">
+              <span>Ahaha! That's a good one!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="assets/chara/portrait_ada.png" alt="Ada portrait" class="chara-portrait" loading="lazy">
+    </div>
+    <div class="chara-box bella">
+      <div class="chara-details">
+        <div class="chara-details-left">
+          <div class="chara-names">
+            <h3>Bella</h3><br>
+            <ruby lang="ja">如月<rp>(</rp><rt>きさらぎ</rt><rp>)</rp></ruby><ruby lang="ja">理香子<rp>(</rp><rt>りかこ</rt><rp>)</rp></ruby><br>
+            (Kisaragi Rikako)
+          </div>
+          <div class="chara-bio">
+            <h4><i class="fa-solid fa-user"></i> Bio</h4>
+            <table>
+              <tr><td colspan="2"><span>Age</span> 15</td></tr>
+              <tr><td><span>Height</span> 155 cm</td><td><span>Weight</span> 44 kg</td></tr>
+              <tr><td><span>Birthday</span> 28 Nov</td><td><span>Blood type</span> AB</td></tr>
+            </table>
+          </div>
+          <div class="chara-about">
+            <h4><i class="fa-solid fa-circle-info"></i> About</h4>
+            <p>Academic top-achiever beyond anyone's reach. Unanimously admired by her classmates, but remains humble and willing to help them. Gentle, serene, elegant, like a crescent moon.</p>
+          </div>
+          <div class="chara-likes">
+            <h4><i class="fa-solid fa-heart"></i> Likes</h4>
+            <ul>
+              <li>Almonds</li>
+              <li>Herbal tea</li>
+              <li>Mystery / fantasy novels</li>
+              <li>Puzzle games</li>
+            </ul>
+          </div>
+          <div class="chara-dislikes">
+            <h4><i class="fa-solid fa-heart-crack"></i> Dislikes</h4>
+            <ul>
+              <li>Fatty food</li>
+              <li>Hot weather</li>
+              <li>Pop music</li>
+            </ul>
+          </div>
+        </div>
+        <div class="chara-details-right">
+          <h4><i class="fa-solid fa-face-smile"></i> Expressions</h4>
+          <div class="chara-expr-container">
+            <div class="chara-expr">
+              <img src="assets/chara/expr_bella1.png" alt="Bella expression 1" loading="lazy">
+              <span>Hmmm... what was the formula again?</span>
+            </div>
+            <div class="chara-expr">
+              <img src="assets/chara/expr_bella2.png" alt="Bella expression 2" loading="lazy">
+              <span>Please keep quiet in the library.</span>
+            </div>
+            <div class="chara-expr">
+              <img src="assets/chara/expr_bella3.png" alt="Bella expression 3" loading="lazy">
+              <span>Thank you very much for the gift!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="assets/chara/portrait_bella.png" alt="Bella portrait" class="chara-portrait" loading="lazy">
+    </div>
+    <div class="chara-box celia">
+      <div class="chara-details">
+        <div class="chara-details-left">
+          <div class="chara-names">
+            <h3>Celia</h3><br>
+            <ruby lang="ja">星川<rp>(</rp><rt>ほしかわ</rt><rp>)</rp></ruby><ruby lang="ja">椿<rp>(</rp><rt>つばき</rt><rp>)</rp></ruby><br>
+            (Hoshikawa Tsubaki)
+          </div>
+          <div class="chara-bio">
+            <h4><i class="fa-solid fa-user"></i> Bio</h4>
+            <table>
+              <tr><td colspan="2"><span>Age</span> 13</td></tr>
+              <tr><td><span>Height</span> 140 cm</td><td><span>Weight</span> 39 kg</td></tr>
+              <tr><td><span>Birthday</span> 31 Mar</td><td><span>Blood type</span> B</td></tr>
+            </table>
+          </div>
+          <div class="chara-about">
+            <h4><i class="fa-solid fa-circle-info"></i> About</h4>
+            <p>Attention-seeker, star of the crowd. Loves to spice up every conversation with her witty jokes. An excellent mood-maker, but can be somewhat of an airhead at times.</p>
+          </div>
+          <div class="chara-likes">
+            <h4><i class="fa-solid fa-heart"></i> Likes</h4>
+            <ul>
+              <li>Lollipop</li>
+              <li>Drawing</li>
+              <li>Watching anime</li>
+              <li>Taking care of house plants</li>
+            </ul>
+          </div>
+          <div class="chara-dislikes">
+            <h4><i class="fa-solid fa-heart-crack"></i> Dislikes</h4>
+            <ul>
+              <li>Vegetables (esp. broccolis)</li>
+              <li>Insects</li>
+              <li>Homework</li>
+            </ul>
+          </div>
+        </div>
+        <div class="chara-details-right">
+          <h4><i class="fa-solid fa-face-smile"></i> Expressions</h4>
+          <div class="chara-expr-container">
+            <div class="chara-expr">
+              <img src="assets/chara/expr_celia1.png" alt="Celia expression 1" loading="lazy">
+              <span>Cheese!</span>
+            </div>
+            <div class="chara-expr">
+              <img src="assets/chara/expr_celia2.png" alt="Celia expression 2" loading="lazy">
+              <span>When can I go home and watch anime...</span>
+            </div>
+            <div class="chara-expr">
+              <img src="assets/chara/expr_celia3.png" alt="Celia expression 3" loading="lazy">
+              <span>Can I... skip the broccoli for just one day pleeeeeease?</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="assets/chara/portrait_celia.png" alt="Celia portrait" class="chara-portrait" loading="lazy">
+    </div>
+    <div class="chara-box davina">
+      <div class="chara-details">
+        <div class="chara-details-left">
+          <div class="chara-names">
+            <h3>Davina</h3><br>
+            <ruby lang="ja">星川<rp>(</rp><rt>ほしかわ</rt><rp>)</rp></ruby><ruby lang="ja">紫苑<rp>(</rp><rt>しおん</rt><rp>)</rp></ruby><br>
+            (Hoshikawa Shion)
+          </div>
+          <div class="chara-bio">
+            <h4><i class="fa-solid fa-user"></i> Bio</h4>
+            <table>
+              <tr><td colspan="2"><span>Age</span> 11</td></tr>
+              <tr><td><span>Height</span> 134 cm</td><td><span>Weight</span> 30 kg</td></tr>
+              <tr><td><span>Birthday</span> 4 Aug</td><td><span>Blood type</span> A</td></tr>
+            </table>
+          </div>
+          <div class="chara-about">
+            <h4><i class="fa-solid fa-circle-info"></i> About</h4>
+            <p>Silent, poker-faced, a perpetually veiled dainty blossom. The inside of her mind is a constellation of mystery, only decipherable by her big sis Celia. The key to unlocking her heart is affection.</p>
+          </div>
+          <div class="chara-likes">
+            <h4><i class="fa-solid fa-heart"></i> Likes</h4>
+            <ul>
+              <li>Cats</li>
+              <li>Dark chocolate</li>
+              <li>Black tea</li>
+              <li>Classical / orchestral music</li>
+            </ul>
+          </div>
+          <div class="chara-dislikes">
+            <h4><i class="fa-solid fa-heart-crack"></i> Dislikes</h4>
+            <ul>
+              <li>Puns (Celia's puns, in particular)</li>
+              <li>Horror movies</li>
+              <li>Household chores</li>
+            </ul>
+          </div>
+        </div>
+        <div class="chara-details-right">
+          <h4><i class="fa-solid fa-face-smile"></i> Expressions</h4>
+          <div class="chara-expr-container">
+            <div class="chara-expr">
+              <img src="assets/chara/expr_davina1.png" alt="Davina expression 1" loading="lazy">
+              <span>I... don't know you?</span>
+            </div>
+            <div class="chara-expr">
+              <img src="assets/chara/expr_davina2.png" alt="Davina expression 2" loading="lazy">
+              <span>85% really is the best.</span>
+            </div>
+            <div class="chara-expr">
+              <img src="assets/chara/expr_davina3.png" alt="Davina expression 3" loading="lazy">
+              <span>Nee-chan, eat your veggies!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="assets/chara/portrait_davina.png" alt="Davina portrait" class="chara-portrait" loading="lazy">
+    </div>
+    <div class="chara-button-tray">
+      <button type="button" class="chara-button ada"><img src="assets/chara/thumb_ada.png" alt="Select Ada" loading="lazy"></button>
+      <button type="button" class="chara-button bella"><img src="assets/chara/thumb_bella.png" alt="Select Bella" loading="lazy"></button>
+      <button type="button" class="chara-button celia"><img src="assets/chara/thumb_celia.png" alt="Select Celia" loading="lazy"></button>
+      <button type="button" class="chara-button davina"><img src="assets/chara/thumb_davina.png" alt="Select Davina" loading="lazy"></button>
+    </div>
+  </div>
+</main>
+
+<main class="content-works">
+  <h2>Artwork Catalogue</h2>
+  <fieldset class="artwork-filter">
+    <legend><i class="fa-solid fa-filter"></i> character filter</legend>
+    <input type="checkbox" name="artwork-filter-ada" id="artwork-filter-ada" checked><label for="artwork-filter-ada">Ada</label>
+    <input type="checkbox" name="artwork-filter-bella" id="artwork-filter-bella" checked><label for="artwork-filter-bella">Bella</label>
+    <input type="checkbox" name="artwork-filter-celia" id="artwork-filter-celia" checked><label for="artwork-filter-celia">Celia</label>
+    <input type="checkbox" name="artwork-filter-davina" id="artwork-filter-davina" checked><label for="artwork-filter-davina">Davina</label>
+  </fieldset>
+  <div class="content-works-body">
+    <!-- buttonString goes here -->
+  </div>
+  <div class="lightbox-overlay">
+    <div class="lightbox">
+      <button type="button" class="lightbox-button lightbox-prev" title="Previous Artwork (Left)"><i class="fa-solid fa-angle-left"></i></button>
+      <button type="button" class="lightbox-button lightbox-next" title="Next Artwork (Right)"><i class="fa-solid fa-angle-right"></i></button>
+      <button type="button" class="lightbox-button lightbox-info" title="Artwork Info (I)"><i class="fa-solid fa-info"></i></button>
+      <button type="button" class="lightbox-button lightbox-expand" title="Open Original (O)"><i class="fa-solid fa-expand"></i></button>
+      <button type="button" class="lightbox-button lightbox-close" title="Close Lightbox (Esc)"><i class="fa-solid fa-xmark"></i></button>
+      <!-- lightboxString goes here -->
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p><i class="fa-regular fa-copyright"></i>2023 peterhohk</p>
+</footer>
+
+</body>
+
+</html>
