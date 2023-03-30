@@ -1,4 +1,4 @@
-# gallery
+# J-ColourS Gallery
 
 Gallery page for my digital art series **J-ColourS**.
 
