@@ -210,9 +210,8 @@ footer p {
 .content-feat-body img {
   display: none;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  inset: 0;
+  margin: auto;
   box-shadow: 0 2px 4px 2px rgba(0,0,0,0.5);
 }
 .content-feat-body span {
@@ -304,9 +303,10 @@ footer p {
 }
 .default-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  inset: 0;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
   font-size: 2rem;
   white-space: nowrap;
 }
@@ -413,11 +413,11 @@ footer p {
   top: 100%;
   right: 32px;
   display: block;
-  width: 16px;
-  height: 16px;
-  background-image: linear-gradient(to top right, var(--img2) 50%, transparent 50%);
-  transform: matrix(1, -1, 0, 1, 0, 0);
-  transform-origin: top left;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-top: 8px solid var(--img2);
+  border-left: 8px solid var(--img2);
 }
 .chara-expr img:hover {
   transform: rotate(5deg);
@@ -429,7 +429,7 @@ footer p {
 .chara-portrait {
   position: relative;
   left: 16px;
-  height: 100%;
+  max-height: 100%;
   max-width: 25%;
   object-position: top left;
   filter: drop-shadow(4px 4px 4px var(--img3));
@@ -592,9 +592,8 @@ footer p {
 .lightbox img {
   display: none;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  inset: 0;
+  margin: auto;
 }
 .lightbox-info-expand {
   display: none;
