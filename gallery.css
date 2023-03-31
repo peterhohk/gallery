@@ -188,7 +188,7 @@ footer p {
   position: absolute;
   border-radius: 50%;
   font-size: 2rem;
-  line-height: 1em;
+  line-height: 1;
   width: 1em;
   height: 1em;
   color: var(--green6);
@@ -559,7 +559,7 @@ footer p {
   position: absolute;
   border-radius: 50%;
   font-size: 3rem;
-  line-height: 1em;
+  line-height: 1;
   width: 1em;
   height: 1em;
   color: var(--blue1);
