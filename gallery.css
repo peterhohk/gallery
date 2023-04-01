@@ -491,13 +491,14 @@ footer p {
 }
 .content-works-body {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 160px));
+  grid-template-columns: repeat(6, auto);
   justify-content: center;
   padding: 8px;
   gap: 8px;
 }
 .artwork-button {
   position: relative;
+  max-width: 160px;
   aspect-ratio: 1;
   border: 1px solid;
   border-radius: 12.5%;
@@ -535,7 +536,7 @@ footer p {
   display: block;
   font-weight: bold;
 }
-.artwork-button-overlay span:last-child {
+.artwork-button-overlay span:not(:first-child) {
   font-size: 0.75rem;
 }
 .lightbox-overlay {
@@ -627,7 +628,7 @@ footer p {
 }
 @media screen and (max-width: 768px) {
   .content-works-body {
-    grid-template-columns: repeat(4, minmax(0, 160px));
+    grid-template-columns: repeat(4, auto);
   }
 }
 /* SUBPAGE: ARTWORKS STYLE ENDS */

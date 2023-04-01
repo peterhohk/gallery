@@ -47,15 +47,16 @@ function init() {
       classString += (artwork.chara.includes("D") ? " davina" : "");
       buttonString += `
         <button type="button" class="artwork-button${classString}">
-          <img src="assets/artworks/${artwork.id}_thumb.png" alt="Open artwork ${artwork.title}" loading="lazy">
+          <img src="assets/artworks/${artwork.id}_thumb.png" alt="Open artwork ${artwork.title}" width="160" height="160" loading="lazy">
           <div class="artwork-button-overlay">
             <span>${artwork.title}</span>
-            <span>#${numArtworks - index} | ${dateFromId(artwork.id)}</span>
+            <span>#${numArtworks - index}</span>
+            <span>${dateFromId(artwork.id)}</span>
           </div>
         </button>
       `;
       lightboxString += `
-        <img src="assets/artworks/${artwork.id}_50.png" alt="${artwork.title}" loading="lazy">
+        <img src="assets/artworks/${artwork.id}_50.png" alt="${artwork.title}" width="1024" height="768" loading="lazy">
         <div class="lightbox-info-expand">
           <span class="artwork-title">${artwork.title}</span>
           <p>#${numArtworks - index}/${numArtworks}</p>
@@ -65,7 +66,7 @@ function init() {
       `;
       if (artwork.featured) {
         slideshowString += `
-          <img src="assets/artworks/${artwork.id}_50.png" alt="${artwork.title}">
+          <img src="assets/artworks/${artwork.id}_50.png" alt="${artwork.title}" width="648" height="648">
           <span>${artwork.title}</span>
         `;
       }
