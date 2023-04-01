@@ -388,7 +388,7 @@ footer p {
   width: 100%;
   background-color: var(--img2);
   border-radius: 25%;
-  transition: transform 0.4s;
+  transition: rotate 0.4s;
 }
 .chara-expr span {
   position: absolute;
@@ -419,7 +419,7 @@ footer p {
   border-left: 0.5em solid var(--img2);
 }
 .chara-expr img:hover {
-  transform: rotate(5deg);
+  rotate: 5deg;
 }
 .chara-expr img:hover + span {
   opacity: 1;
@@ -432,10 +432,10 @@ footer p {
   max-width: 25%;
   object-position: top left;
   filter: drop-shadow(4px 4px 4px var(--img3));
-  transition: transform 0.4s;
+  transition: rotate 0.4s;
 }
 .chara-portrait:hover {
-  transform: rotate(5deg);
+  rotate: 5deg;
 }
 .chara-button-tray {
   display: flex;
@@ -449,10 +449,10 @@ footer p {
   border: 4px solid var(--img3);
   border-radius: 50%;
   overflow: hidden;
-  transition: transform 0.4s
+  transition: translate 0.4s
 }
 .chara-button:hover {
-  transform: translateY(-1em);
+  translate: 0 -1em;
 }
 @media screen and (max-width: 768px) {
   .chara-details {
@@ -503,7 +503,7 @@ footer p {
   border: 1px solid;
   border-radius: 12.5%;
   overflow: hidden;
-  transition: transform 0.4s
+  transition: translate 0.4s
 }
 .artwork-button img {
   transition: filter 0.4s;
@@ -524,7 +524,7 @@ footer p {
   transition: opacity 0.4s;
 }
 .artwork-button:hover {
-  transform: translateY(-1em);
+  translate: 0 -1em;
 }
 .artwork-button:hover img {
   filter: blur(2px);
