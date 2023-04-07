@@ -140,7 +140,7 @@ header button {
   border-bottom: 2px solid var(--blue4);
   transition: background-color 0.4s;
 }
-header button:hover {
+header button:hover, header button:focus-visible {
   background-color: var(--blue3);
 }
 @media screen and (max-width: 768px) {
@@ -197,7 +197,7 @@ footer p {
   color: var(--green6);
   transition: background-color 0.4s;
 }
-.slideshow-button:hover {
+.slideshow-button:hover, .slideshow-button:focus-visible {
   background-color: var(--green3);
 }
 .slideshow-prev {
@@ -239,7 +239,7 @@ footer p {
   background-color: var(--green5);
   transition: background-color 0.4s;
 }
-.slideshow-pip:hover {
+.slideshow-pip:hover, .slideshow-pip:focus-visible {
   background-color: var(--green3);
 }
 .slideshow-pip.active {
@@ -418,10 +418,10 @@ footer p {
   border-top: 0.5em solid var(--img2);
   border-left: 0.5em solid var(--img2);
 }
-.chara-expr img:hover {
+.chara-expr img:hover, .chara-expr img:focus-visible {
   rotate: 5deg;
 }
-.chara-expr img:hover + span {
+.chara-expr img:hover + span, .chara-expr img:focus-visible + span {
   opacity: 1;
   bottom: 90%;
 }
@@ -434,7 +434,7 @@ footer p {
   filter: drop-shadow(4px 4px 4px var(--img3));
   transition: rotate 0.4s;
 }
-.chara-portrait:hover {
+.chara-portrait:hover, .chara-portrait:focus-visible {
   rotate: 5deg;
 }
 .chara-button-tray {
@@ -451,7 +451,7 @@ footer p {
   overflow: hidden;
   transition: translate 0.4s
 }
-.chara-button:hover {
+.chara-button:hover, .chara-button:focus-visible {
   translate: 0 -1em;
 }
 @media screen and (max-width: 768px) {
@@ -523,13 +523,13 @@ footer p {
   opacity: 0;
   transition: opacity 0.4s;
 }
-.artwork-button:hover {
+.artwork-button:hover, .artwork-button:focus-visible {
   translate: 0 -1em;
 }
-.artwork-button:hover img {
+.artwork-button:hover img, .artwork-button:focus-visible img {
   filter: blur(2px);
 }
-.artwork-button:hover .artwork-button-overlay {
+.artwork-button:hover .artwork-button-overlay, .artwork-button:focus-visible .artwork-button-overlay {
   opacity: 0.8;
 }
 .artwork-button-overlay span {
@@ -567,7 +567,7 @@ footer p {
   color: var(--blue1);
   transition: background-color 0.4s;
 }
-.lightbox-button:hover {
+.lightbox-button:hover, .lightbox-button:focus-visible {
   background-color: var(--green6);
 }
 .lightbox-prev {
