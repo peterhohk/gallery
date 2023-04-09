@@ -296,17 +296,28 @@ footer p {
   position: relative;
   height: 576px;
   margin: auto;
+  padding-top: 96px;
 }
 .chara-box:not(.default) {
   display: none;
 }
-.chara-details {
+.chara-portrait {
   position: absolute;
-  bottom: 0;
+  left: 1em;
+  top: 0;
+  max-height: 100%;
+  max-width: 25%;
+  object-position: top left;
+  filter: drop-shadow(4px 4px 4px var(--img3));
+  transition: rotate 0.4s;
+}
+.chara-portrait:hover, .chara-portrait:focus-visible {
+  rotate: 5deg;
+}
+.chara-details {
   display: flex;
   column-gap: 0.5em;
-  width: 100%;
-  height: 83.33%;
+  height: 100%;
   padding: 0.5em 0 0.5em 224px;
   border: 4px dashed var(--img3);
   border-radius: 1em;
@@ -439,18 +450,6 @@ footer p {
   opacity: 1;
   bottom: 90%;
 }
-.chara-portrait {
-  position: relative;
-  left: 1em;
-  max-height: 100%;
-  max-width: 25%;
-  object-position: top left;
-  filter: drop-shadow(4px 4px 4px var(--img3));
-  transition: rotate 0.4s;
-}
-.chara-portrait:hover, .chara-portrait:focus-visible {
-  rotate: 5deg;
-}
 .chara-button-tray {
   display: flex;
   justify-content: center;
@@ -469,6 +468,12 @@ footer p {
   translate: 0 -1em;
 }
 @media screen and (max-width: 768px) {
+  .chara-box {
+    padding-top: 0;
+  }
+  .chara-portrait {
+    left: 0;
+  }
   .chara-details {
     flex-direction: column;
     height: 100%;
@@ -483,9 +488,6 @@ footer p {
   }
   .chara-expr {
     max-width: 96px;
-  }
-  .chara-portrait {
-    left: 0;
   }
 }
 
