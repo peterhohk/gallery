@@ -139,7 +139,7 @@ header button {
   border-bottom: 2px solid var(--blue4);
   transition: background-color 0.4s;
 }
-header button:hover, header button:focus-visible {
+header :is(button:hover, button:focus-visible) {
   background-color: var(--blue3);
 }
 @media screen and (max-width: 768px) {
@@ -312,7 +312,7 @@ footer p {
   display: flex;
   column-gap: 0.5em;
   height: 100%;
-  padding: 0.5em 0 0.5em 224px;
+  padding: 0.5em 0.5em 0.5em 224px;
   border: 4px dashed var(--img3);
   border-radius: 1em;
   background-color: var(--img1);
@@ -441,10 +441,10 @@ footer p {
   border-top: 0.5em solid var(--img2);
   border-left: 0.5em solid var(--img2);
 }
-.chara-expr img:hover, .chara-expr img:focus-visible {
+.chara-expr :is(img:hover, img:focus-visible) {
   rotate: 5deg;
 }
-.chara-expr img:hover + span, .chara-expr img:focus-visible + span {
+.chara-expr :is(img:hover, img:focus-visible) + span {
   opacity: 1;
   bottom: 90%;
 }
@@ -526,7 +526,7 @@ footer p {
   border: 1px solid;
   border-radius: 12.5%;
   overflow: hidden;
-  transition: translate 0.4s
+  transition: translate 0.4s;
 }
 .artwork-button img {
   transition: filter 0.4s;
@@ -549,10 +549,10 @@ footer p {
 .artwork-button:hover, .artwork-button:focus-visible {
   translate: 0 -1em;
 }
-.artwork-button:hover img, .artwork-button:focus-visible img {
+:is(.artwork-button:hover, .artwork-button:focus-visible) img {
   filter: blur(2px);
 }
-.artwork-button:hover .artwork-button-overlay, .artwork-button:focus-visible .artwork-button-overlay {
+:is(.artwork-button:hover, .artwork-button:focus-visible) .artwork-button-overlay {
   opacity: 0.8;
 }
 .artwork-button-overlay span {
