@@ -139,7 +139,7 @@ header button {
   border-bottom: 2px solid var(--blue4);
   transition: background-color 0.4s;
 }
-header :is(button:hover, button:focus-visible) {
+header button:is(:hover, :focus-visible) {
   background-color: var(--blue3);
 }
 @media screen and (max-width: 768px) {
@@ -441,10 +441,10 @@ footer p {
   border-top: 0.5em solid var(--img2);
   border-left: 0.5em solid var(--img2);
 }
-.chara-expr :is(img:hover, img:focus-visible) {
+.chara-expr img:is(:hover, :focus-visible) {
   rotate: 5deg;
 }
-.chara-expr :is(img:hover, img:focus-visible) + span {
+.chara-expr img:is(:hover, :focus-visible) + span {
   opacity: 1;
   bottom: 90%;
 }
@@ -549,10 +549,10 @@ footer p {
 .artwork-button:hover, .artwork-button:focus-visible {
   translate: 0 -1em;
 }
-:is(.artwork-button:hover, .artwork-button:focus-visible) img {
+.artwork-button:is(:hover, :focus-visible) img {
   filter: blur(2px);
 }
-:is(.artwork-button:hover, .artwork-button:focus-visible) .artwork-button-overlay {
+.artwork-button:is(:hover, :focus-visible) .artwork-button-overlay {
   opacity: 0.8;
 }
 .artwork-button-overlay span {
