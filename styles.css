@@ -514,14 +514,13 @@ footer p {
 }
 .content-works-body {
   display: grid;
-  grid-template-columns: repeat(6, auto);
+  grid-template-columns: repeat(auto-fit, 12rem);
   justify-content: center;
   padding: 0.5em;
   gap: 0.5em;
 }
 .artwork-button {
   position: relative;
-  max-width: 160px;
   aspect-ratio: 1;
   border: 1px solid;
   border-radius: 12.5%;
@@ -646,11 +645,6 @@ footer p {
   color: var(--green1);
   font-size: 1.25rem;
   line-height: 1;
-}
-@media screen and (max-width: 768px) {
-  .content-works-body {
-    grid-template-columns: repeat(4, auto);
-  }
 }
 
 /* SUBPAGE: ARTWORKS STYLE ENDS */
