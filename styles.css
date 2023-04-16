@@ -230,7 +230,7 @@ footer p {
   border-radius: 1em;
   background-color: var(--blue2);
   text-align: center;
-  opacity: 0.8;
+  opacity: 0.9;
   box-shadow: var(--shadow);
 }
 .slideshow-pip-tray {
@@ -553,7 +553,7 @@ footer p {
   filter: blur(2px);
 }
 .artwork-button:is(:hover, :focus-visible) .artwork-button-overlay {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 .artwork-button-overlay span {
   display: block;
@@ -571,7 +571,7 @@ footer p {
   height: 100%;
   z-index: 1;
   padding: 4em;
-  background-color: rgb(0 0 0 / 0.8);
+  background-color: rgb(0 0 0 / 0.7);
 }
 .lightbox {
   position: relative;
@@ -628,7 +628,7 @@ footer p {
   transition: opacity 0.4s;
 }
 .lightbox-button:is(:hover, :focus-visible) + span {
-  opacity: 0.9;
+  opacity: 0.7;
 }
 .lightbox-prev + span {
   margin-left: -0.5rem;
