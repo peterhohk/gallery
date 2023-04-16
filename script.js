@@ -50,8 +50,7 @@ function init() {
           <img src="assets/artworks/${artwork.id}_thumb.png" alt="Open artwork ${artwork.title}" width="160" height="160" loading="lazy">
           <div class="artwork-button-overlay">
             <span>${artwork.title}</span>
-            <span>#${numArtworks - index}</span>
-            <span>${dateFromId(artwork.id)}</span>
+            <span>#${numArtworks - index} | ${dateFromId(artwork.id)}</span>
           </div>
         </button>
       `;
