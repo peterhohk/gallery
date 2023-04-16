@@ -18,6 +18,7 @@
   --blue7: hsl(225 80% 18%);
   --blue8: hsl(225 80% 8%);
   --blue9: hsl(225 80% 2%);
+  --shadow: 0 2px 4px 2px rgb(0 0 0 / 0.5);
   --img-ada1: #fff9ef;
   --img-ada2: #ffe8c0;
   --img-ada3: #ffa000;
@@ -202,7 +203,7 @@ footer p {
   color: var(--green6);
   transition: background-color 0.4s;
 }
-.slideshow-button:hover, .slideshow-button:focus-visible {
+.slideshow-button:is(:hover, :focus-visible) {
   background-color: var(--green3);
 }
 .slideshow-prev {
@@ -216,7 +217,7 @@ footer p {
   position: absolute;
   inset: 0;
   margin: auto;
-  box-shadow: 0 2px 4px 2px rgba(0,0,0,0.5);
+  box-shadow: var(--shadow);
 }
 .content-feat-body span {
   display: none;
@@ -229,8 +230,8 @@ footer p {
   border-radius: 1em;
   background-color: var(--blue2);
   text-align: center;
-  opacity: 0.9;
-  box-shadow: 0 2px 4px 2px rgba(0,0,0,0.5);
+  opacity: 0.8;
+  box-shadow: var(--shadow);
 }
 .slideshow-pip-tray {
   margin-top: 1em;
@@ -244,7 +245,7 @@ footer p {
   background-color: var(--green5);
   transition: background-color 0.4s;
 }
-.slideshow-pip:hover, .slideshow-pip:focus-visible {
+.slideshow-pip:is(:hover, :focus-visible) {
   background-color: var(--green3);
 }
 .slideshow-pip.active {
@@ -305,7 +306,7 @@ footer p {
   filter: drop-shadow(4px 4px 4px var(--img3));
   transition: rotate 0.4s;
 }
-.chara-portrait:hover, .chara-portrait:focus-visible {
+.chara-portrait:is(:hover, :focus-visible) {
   rotate: 5deg;
 }
 .chara-details {
@@ -462,7 +463,7 @@ footer p {
   overflow: hidden;
   transition: translate 0.4s
 }
-.chara-button:hover, .chara-button:focus-visible {
+.chara-button:is(:hover, :focus-visible) {
   translate: 0 -1em;
 }
 @media screen and (max-width: 768px) {
@@ -545,7 +546,7 @@ footer p {
   opacity: 0;
   transition: opacity 0.4s;
 }
-.artwork-button:hover, .artwork-button:focus-visible {
+.artwork-button:is(:hover, :focus-visible) {
   translate: 0 -1em;
 }
 .artwork-button:is(:hover, :focus-visible) img {
@@ -570,7 +571,7 @@ footer p {
   height: 100%;
   z-index: 1;
   padding: 4em;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgb(0 0 0 / 0.8);
 }
 .lightbox {
   position: relative;
@@ -589,26 +590,63 @@ footer p {
   color: var(--blue1);
   transition: background-color 0.4s;
 }
-.lightbox-button:hover, .lightbox-button:focus-visible {
+.lightbox-button:is(:hover, :focus-visible) {
   background-color: var(--green6);
 }
 .lightbox-prev {
-  margin-left: -1.17em;
+  margin-left: -3.5rem;
 }
 .lightbox-next {
-  margin-right: -1.17em;
+  margin-right: -3.5rem;
 }
 .lightbox-info {
-  margin-bottom: -1.17em;
-  margin-left: -1.17em;
+  margin-bottom: -3.5rem;
+  margin-left: -3.5rem;
 }
 .lightbox-expand {
-  margin-bottom: -1.17em;
-  margin-right: -1.17em;
+  margin-bottom: -3.5rem;
+  margin-right: -3.5rem;
 }
 .lightbox-close {
-  margin-top: -1.17em;
-  margin-right: -1.17em;
+  margin-top: -3.5rem;
+  margin-right: -3.5rem;
+}
+.lightbox-button + span {
+  /* display: none; */
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.5em 1em;
+  border-radius: 1.5em;
+  background-color: var(--green2);
+  font-size: 1.25em;
+  box-shadow: var(--shadow);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.lightbox-button:is(:hover, :focus-visible) + span {
+  opacity: 0.9;
+}
+.lightbox-prev + span {
+  margin-left: -0.5rem;
+}
+.lightbox-next + span {
+  margin-right: -0.5rem;
+}
+.lightbox-info + span {
+  margin-bottom: -3.5rem;
+  margin-left: -0.5rem;
+}
+.lightbox-expand + span {
+  margin-bottom: -3.5rem;
+  margin-right: -0.5rem;
+}
+.lightbox-close + span {
+  margin-top: -3.5rem;
+  margin-right: -0.5rem;
 }
 .lightbox img {
   display: none;
@@ -625,7 +663,7 @@ footer p {
   height: 0;
   border-radius: 2em 2em 2em 0;
   background-color: var(--blue2);
-  opacity: 0.9;
+  opacity: 0.7;
   overflow: hidden;
   transition: width 0.4s, height 0.4s , padding 0s 0.4s, box-shadow 0s 0.4s;
 }
@@ -633,7 +671,7 @@ footer p {
   width: min(32em, 100%);
   height: 12em;
   padding: 1em;
-  box-shadow: 2px -2px 4px 2px rgba(0,0,0,0.5);
+  box-shadow: var(--shadow);
   transition: width 0.4s, height 0.4s;
 }
 .artwork-title {

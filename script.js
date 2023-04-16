@@ -72,8 +72,8 @@ function init() {
       }
     });
     $(".content-works-body").append(buttonString);
-    $(".lightbox").append(lightboxString);
-    $(".content-feat-body").append(slideshowString);
+    $(".lightbox").prepend(lightboxString);
+    $(".content-feat-body").prepend(slideshowString);
     $(".slideshow-pip-tray").append(`<button type="button" class="slideshow-pip"></button>`.repeat(numFeatured));
     slideShow(Math.floor(Math.random()*numFeatured));
   });
@@ -103,6 +103,12 @@ function init() {
     $(".lightbox img").eq(index).show();
     $(".lightbox-info-expand").eq(index).show();
   }
+  function lightboxOpen() {
+    $(".lightbox-overlay").fadeIn();
+    $(".artwork-button").each(function() {
+      $(this).attr({"tabindex": -1})
+    });
+  }
   function lightboxPrev() {
     lightboxShow((lightboxCurrent-1+numArtworks) % numArtworks);
   }
@@ -117,10 +123,13 @@ function init() {
   }
   function lightboxClose() {
     $(".lightbox-overlay").fadeOut();
+    $(".artwork-button").each(function() {
+      $(this).attr({"tabindex": null})
+    });
   }
 
   $(".content-works-body").on("click", ".artwork-button", function() {
-    $(".lightbox-overlay").fadeIn();
+    lightboxOpen();
     lightboxShow($(this).index());
   });
   $(".lightbox-prev").on("click", lightboxPrev);
