@@ -47,7 +47,7 @@ function init() {
       classString += (artwork.chara.includes("D") ? " davina" : "");
       buttonString += `
         <button type="button" class="artwork-button${classString}">
-          <img src="assets/artworks/${artwork.id}_thumb.png" alt="Open artwork ${artwork.title}" width="160" height="160" loading="lazy">
+          <img src="assets/artworks/${artwork.id}_thumb.png" alt="Open artwork ${artwork.title}" width="144" height="144" loading="lazy">
           <div class="artwork-button-overlay">
             <span>${artwork.title}</span>
             <span>#${numArtworks - index} | ${dateFromId(artwork.id)}</span>

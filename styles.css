@@ -49,8 +49,7 @@
   box-sizing: border-box;
 }
 body {
-  width: max(768px, 75%);
-  max-width: calc(100% - 8px);
+  max-width: max(768px, 75%);
   margin: 0 auto;
   overflow-y: scroll;
   background: linear-gradient(var(--green1) 75%, var(--green2)) 0 0 / 100vw 100vh no-repeat fixed;
