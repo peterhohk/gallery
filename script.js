@@ -36,7 +36,7 @@ function init() {
   let slideshowString = "";
   const dateFromId = (id) => `20${id.slice(0,2)}-${id.slice(2,4)}-${id.slice(4,6)}`;
 
-  $.getJSON("artworks.json", function(data) {
+  $.getJSON("./artworks.json", function(data) {
     numArtworks = data.length;
     numFeatured = data.filter((artwork) => artwork.featured).length;
     data.reverse().forEach(function(artwork, index) {
@@ -47,7 +47,7 @@ function init() {
       classString += artwork.chara.includes("D") ? " davina" : "";
       buttonString += `
         <button type="button" class="artwork-button${classString}">
-          <img src="assets/artworks/${artwork.id}_thumb.png" alt="Open artwork ${artwork.title}" width="144" height="144" loading="lazy">
+          <img src="./assets/artworks/${artwork.id}_thumb.png" alt="Open artwork ${artwork.title}" width="144" height="144" loading="lazy">
           <div class="artwork-button-overlay">
             <span>${artwork.title}</span>
             <span>#${numArtworks - index} | ${dateFromId(artwork.id)}</span>
@@ -55,7 +55,7 @@ function init() {
         </button>
       `;
       lightboxString += `
-        <img src="assets/artworks/${artwork.id}_50.png" alt="${artwork.title}" width="1024" height="768" loading="lazy">
+        <img src="./assets/artworks/${artwork.id}_50.png" alt="${artwork.title}" width="1024" height="768" loading="lazy">
         <div class="lightbox-info-expand">
           <span class="artwork-title">${artwork.title}</span>
           <p>#${numArtworks - index}/${numArtworks}</p>
@@ -65,7 +65,7 @@ function init() {
       `;
       if (artwork.featured) {
         slideshowString += `
-          <img src="assets/artworks/${artwork.id}_50.png" alt="${artwork.title}" width="648" height="648">
+          <img src="./assets/artworks/${artwork.id}_50.png" alt="${artwork.title}" width="648" height="648">
           <span>${artwork.title}</span>
         `;
       }
