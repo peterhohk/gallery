@@ -41,10 +41,10 @@ function init() {
     numFeatured = data.filter((artwork) => artwork.featured).length;
     data.reverse().forEach(function(artwork, index) {
       let classString = "";
-      classString += (artwork.chara.includes("A") ? " ada" : "");
-      classString += (artwork.chara.includes("B") ? " bella" : "");
-      classString += (artwork.chara.includes("C") ? " celia" : "");
-      classString += (artwork.chara.includes("D") ? " davina" : "");
+      classString += artwork.chara.includes("A") ? " ada" : "";
+      classString += artwork.chara.includes("B") ? " bella" : "";
+      classString += artwork.chara.includes("C") ? " celia" : "";
+      classString += artwork.chara.includes("D") ? " davina" : "";
       buttonString += `
         <button type="button" class="artwork-button${classString}">
           <img src="assets/artworks/${artwork.id}_thumb.png" alt="Open artwork ${artwork.title}" width="144" height="144" loading="lazy">
