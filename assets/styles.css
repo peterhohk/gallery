@@ -55,6 +55,7 @@ body {
   background: linear-gradient(var(--green1) 75%, var(--green2)) 0 0 / 100vw 100vh no-repeat fixed;
   color: var(--green8);
   font-family: Handlee, Helvetica, Arial, sans-serif;
+  line-height: 1.25;
   letter-spacing: 0.0625ch;
 }
 :lang(ja) {
@@ -500,6 +501,9 @@ footer p {
 /* SUBPAGE: ARTWORKS STYLE STARTS */
 
 .artwork-filter {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 1em;
   width: fit-content;
   margin: auto;
   border: 1px dashed;
@@ -511,6 +515,9 @@ footer p {
   border-radius: 1em;
   background-color: var(--green6);
   color: var(--green1);
+}
+.artwork-filter select {
+  width: fit-content;
 }
 .content-works-body {
   display: grid;

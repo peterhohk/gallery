@@ -299,12 +299,33 @@
 <main class="content-works">
   <h2>Artwork Catalogue</h2>
   <fieldset class="artwork-filter">
-    <legend><i class="fa-solid fa-filter"></i> character filter</legend>
-    <input type="checkbox" name="artwork-filter-ada" id="artwork-filter-ada" checked><label for="artwork-filter-ada">Ada</label>
-    <input type="checkbox" name="artwork-filter-bella" id="artwork-filter-bella" checked><label for="artwork-filter-bella">Bella</label>
-    <input type="checkbox" name="artwork-filter-celia" id="artwork-filter-celia" checked><label for="artwork-filter-celia">Celia</label>
-    <input type="checkbox" name="artwork-filter-davina" id="artwork-filter-davina" checked><label for="artwork-filter-davina">Davina</label>
-  </fieldset>
+    <legend><i class="fa-solid fa-filter"></i> Filters</legend>
+    <strong>Characters:</strong>
+    <div>
+      <input type="checkbox" id="chara-filter-ada" checked><label for="chara-filter-ada">Ada</label>
+      <input type="checkbox" id="chara-filter-bella" checked><label for="chara-filter-bella">Bella</label>
+      <input type="checkbox" id="chara-filter-celia" checked><label for="chara-filter-celia">Celia</label>
+      <input type="checkbox" id="chara-filter-davina" checked><label for="chara-filter-davina">Davina</label>
+    </div>
+    <strong>Category:</strong>
+    <select id="category-filter">
+      <option value="all">All</option>
+      <optgroup label="Outfit Designs">
+        <option value="outfit-all">Outfit Design - All</option>
+        <option value="outfit-vu">Outfit Design - Uniform</option>
+        <option value="outfit-scw">Outfit Design - Seasonal Casual Wear</option>
+        <option value="outfit-tcw">Outfit Design - Themed Casual Wear</option>
+        <option value="outfit-s">Outfit Design - Swimsuit</option>
+        <option value="outfit-u">Outfit Design - Underwear</option>
+        <option value="outfit-v">Outfit Design - Variety</option>
+      </optgroup>
+      <optgroup label="Other">
+        <option value="chibi">Chibi Batch</option>
+        <option value="pocky">Pocky Day</option>
+        <option value="random">Random</option>
+      </optgroup>
+    </select>
+    </fieldset>
   <div class="content-works-body">
     <!-- buttonString goes here -->
   </div>

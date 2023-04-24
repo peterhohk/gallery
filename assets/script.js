@@ -41,10 +41,14 @@ function init() {
     numFeatured = data.filter((artwork) => artwork.featured).length;
     data.reverse().forEach(function(artwork, index) {
       let classString = "";
-      classString += artwork.chara.includes("A") ? " ada" : "";
-      classString += artwork.chara.includes("B") ? " bella" : "";
-      classString += artwork.chara.includes("C") ? " celia" : "";
-      classString += artwork.chara.includes("D") ? " davina" : "";
+      classString += artwork.chara.includes("A") ? " chara-ada" : "";
+      classString += artwork.chara.includes("B") ? " chara-bella" : "";
+      classString += artwork.chara.includes("C") ? " chara-celia" : "";
+      classString += artwork.chara.includes("D") ? " chara-davina" : "";
+      classString += ` category-${artwork.category}`;
+      if (artwork.category.startsWith("outfit")) {
+        classString += " category-outfit";
+      }
       buttonString += `
         <button type="button" class="artwork-button${classString}">
           <img src="./assets/img/artworks/${artwork.id}_thumb.png" alt="Open artwork ${artwork.title}" width="144" height="144" loading="lazy">
@@ -79,18 +83,33 @@ function init() {
 
   // artwork catalogue filters
 
-  const hideCharas = Object.fromEntries(charas.map((val) => [val, false]));
-  for (let chara of charas) {
-    $("#artwork-filter-"+chara).on("click", function() {
-      hideCharas[chara] = !$(this).is(":checked");
-      $(".artwork-button").show();
-      for (let chara of charas) {
-        if (hideCharas[chara]) {
-          $(".artwork-button."+chara).hide();
-        }
+  const filterCharas = Object.fromEntries(charas.map((val) => [val, true]));
+  let filterCategory = "all";
+  function filterArtworks() {
+    $(".artwork-button").show();
+    for (let chara in filterCharas) {
+      if (!filterCharas[chara]) {
+        $(`.artwork-button.chara-${chara}`).hide();
       }
+    }
+    if (filterCategory === "all") return;
+    if (filterCategory === "outfit-all") {
+      $(".artwork-button").not(".category-outfit").hide();
+    } else {
+      $(".artwork-button").not(`.category-${filterCategory}`).hide();
+    }
+  }
+
+  for (let chara of charas) {
+    $(`#chara-filter-${chara}`).on("click", function() {
+      filterCharas[chara] = $(this).is(":checked");
+      filterArtworks();
     });
   }
+  $("#category-filter").on("change", function() {
+    filterCategory = $(this).val();
+    filterArtworks();
+  });
 
   // artwork catalogue & lightbox controls
 
