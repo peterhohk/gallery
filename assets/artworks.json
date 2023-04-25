@@ -105,5 +105,6 @@
   {"id": "221226", "title": "Seasons aren't real", "caption": "By all definitions of seasons, it's winter right now.", "chara": ["B", "D"], "category": "outfit-scw", "featured": true},
   {"id": "230131", "title": "Hot Chocolate", "caption": "Warms your body, warms your soul.", "chara": ["B", "D"], "category": "random", "featured": false},
   {"id": "230228", "title": "School Bag", "caption": "Should've been included in the Viridis Attire Overhaul. Oh well.", "chara": ["A", "B"], "category": "random", "featured": false},
-  {"id": "230320", "title": "Pristine Purity", "caption": "After all these years, my shading is still a mess.", "chara": ["A", "B", "C", "D"], "category": "outfit-tcw", "featured": true}
+  {"id": "230320", "title": "Pristine Purity", "caption": "After all these years, my shading is still a mess.", "chara": ["A", "B", "C", "D"], "category": "outfit-tcw", "featured": true},
+  {"id": "230426", "title": "Cabbage Neo", "caption": "Had to throw the old one out, it'd gotten mouldy.", "chara": ["D"], "category": "random", "featured": false}
 ]
