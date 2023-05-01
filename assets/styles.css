@@ -168,14 +168,13 @@ footer p {
 /* SCROLLBAR STYLE STARTS */
 
 ::-webkit-scrollbar {
-  background-color: transparent;
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-thumb {
   background-color: var(--green6);
 }
-::-webkit-scrollbar-track {
+::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {
   background-color: var(--green3);
 }
 
