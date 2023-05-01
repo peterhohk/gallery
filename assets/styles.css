@@ -168,6 +168,7 @@ footer p {
 /* SCROLLBAR STYLE STARTS */
 
 ::-webkit-scrollbar {
+  background-color: transparent;
   width: 6px;
   height: 6px;
 }
