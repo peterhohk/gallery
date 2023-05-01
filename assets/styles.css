@@ -162,8 +162,11 @@ footer {
 footer p {
   text-align: right;
 }
+
 /* FOOTER STYLE ENDS */
+
 /* SCROLLBAR STYLE STARTS */
+
 ::-webkit-scrollbar {
   background-color: transparent;
   width: 6px;
