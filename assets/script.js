@@ -11,7 +11,7 @@ function init() {
 
   for (let subpage of subpages) {
     $("#button-"+subpage).on("click", function() {
-      $("main").not(".content-"+subpage).hide();
+      $("section").not(".content-"+subpage).hide();
       $(".content-"+subpage).fadeIn();
     });
   }
