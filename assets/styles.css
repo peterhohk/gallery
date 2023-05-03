@@ -18,7 +18,7 @@
   --blue7: hsl(225 80% 18%);
   --blue8: hsl(225 80% 8%);
   --blue9: hsl(225 80% 2%);
-  --shadow: 0 2px 4px 2px rgb(0 0 0 / 0.5);
+  --shadow: 0 0.125rem 0.25rem 0.125rem rgb(0 0 0 / 0.5);
   --img-ada1: #fff9ef;
   --img-ada2: #ffe8c0;
   --img-ada3: #ffa000;
@@ -62,7 +62,7 @@ body {
   font-family: "Klee One", "Yu Mincho", sans-serif;
 }
 p, ul, ol {
-  margin-top: 0.17em;
+  margin-top: 0.25em;
   margin-bottom: 0.5em;
 }
 img {
@@ -96,8 +96,7 @@ h1 { /* page header */
   white-space: nowrap;
 }
 h2 { /* subpage header */
-  margin-top: 0.5em;
-  margin-bottom: 0.33em;
+  margin: 0.25rem;
   border-bottom: 1px solid;
   font-size: 1.25rem;
   font-weight: normal;
@@ -114,33 +113,33 @@ i[class^="fa-"] {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 0 4em;
+  padding: 0 4rem;
   color: var(--green7);
   background-color: var(--blue2);
 }
 .title-tray, .button-tray {
   display: flex;
-  gap: 0.5em;
+  gap: 0.5rem;
 }
 .title-tray {
-  height: 4em;
+  height: 4rem;
   align-items: center;
 }
-header img {
-  width: 48px;
-  height: 48px;
+.title-tray img {
+  width: 3rem;
+  height: 3rem;
 }
 .button-tray {
   align-items: flex-end;
 }
-header button {
-  margin-bottom: 0.25em;
+.button-tray button {
+  margin-bottom: 0.25rem;
   padding: 0.125em 0.5em 0;
   border-radius: 0.25em 0.25em 0 0;
   border-bottom: 2px solid var(--blue4);
   transition: background-color 0.4s;
 }
-header button:is(:hover, :focus-visible) {
+.button-tray button:is(:hover, :focus-visible) {
   background-color: var(--blue3);
 }
 @media screen and (max-width: 768px) {
@@ -156,7 +155,7 @@ header button:is(:hover, :focus-visible) {
 /* FOOTER STYLE STARTS */
 
 footer {
-  margin: 0.33em 0 0;
+  margin: 0.25rem;
   border-top: 1px solid;
 }
 footer p {
@@ -188,8 +187,8 @@ footer p {
   aspect-ratio: 1;
   width: 648px;
   height: 648px;
-  max-width: calc(100vmin - 8em);
-  max-height: calc(100vmin - 8em);
+  max-width: calc(100vmin - 8rem);
+  max-height: calc(100vmin - 8rem);
   margin: auto;
 }
 .slideshow-button {
@@ -237,13 +236,16 @@ footer p {
   box-shadow: var(--shadow);
 }
 .slideshow-pip-tray {
-  margin-top: 1em;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 .slideshow-pip {
-  margin: 0 0.125em;
-  width: 1em;
-  height: 1em;
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
   background-color: var(--green5);
   transition: background-color 0.4s;
@@ -301,12 +303,12 @@ footer p {
 }
 .chara-portrait {
   position: absolute;
-  left: 1em;
+  left: 1rem;
   top: 0;
   max-height: 100%;
   max-width: 25%;
   object-position: top left;
-  filter: drop-shadow(4px 4px 4px var(--img3));
+  filter: drop-shadow(0.25rem 0.25rem 0.25rem var(--img3));
   transition: rotate 0.4s;
 }
 .chara-portrait:is(:hover, :focus-visible) {
@@ -314,11 +316,11 @@ footer p {
 }
 .chara-details {
   display: flex;
-  column-gap: 0.5em;
+  column-gap: 0.5rem;
   height: 100%;
-  padding: 0.5em 0.5em 0.5em 224px;
+  padding: 0.5rem 0.5rem 0.5rem 224px;
   border: 4px dashed var(--img3);
-  border-radius: 1em;
+  border-radius: 1rem;
   background-color: var(--img1);
   color: var(--img4);
   overflow: auto;
@@ -334,8 +336,8 @@ footer p {
 }
 .chara-details h4 {
   display: inline-block;
-  margin-top: 0.33em;
-  margin-bottom: 0.17em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
   padding: 0.25em 0.5em;
   border-radius: 1em;
   background-color: var(--img2);
@@ -347,7 +349,7 @@ footer p {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  row-gap: 0.5em;
+  row-gap: 0.5rem;
   width: 75%;
 }
 .chara-names {
@@ -376,7 +378,7 @@ footer p {
   font-size: smaller;
 }
 .chara-bio li:first-of-type {
-  grid-column: span 2 / auto;
+  grid-column: auto / span 2;
 }
 .chara-bio li span {
   display: inline-block;
@@ -387,9 +389,9 @@ footer p {
 }
 .chara-about {
   width: 100%;
-  padding: 0.25em 0.5em;
+  padding: 0.25rem 0.75rem;
   border: 4px double var(--img3);
-  border-radius: 0.5em;
+  border-radius: 1rem;
   font-size: 1.25rem;
 }
 .chara-likes, .chara-dislikes {
@@ -402,12 +404,12 @@ footer p {
   display: grid;
   grid-template-columns: auto;
   justify-content: center;
-  margin-top: 0.5em;
-  gap: 0.5em;
+  margin-top: 0.5rem;
+  gap: 0.5rem;
 }
 .chara-expr {
   position: relative;
-  max-width: 128px;
+  max-width: 8rem;
   margin: auto;
 }
 .chara-expr img {
@@ -426,7 +428,7 @@ footer p {
   padding: 0.5em;
   border-radius: 1em;
   background-color: var(--img2);
-  filter: drop-shadow(0 2px 4px var(--img4));
+  filter: drop-shadow(0 0.125rem 0.25rem var(--img4));
   text-align: center;
   font-style: italic;
   pointer-events: none;
@@ -437,13 +439,13 @@ footer p {
   content: "";
   position: absolute;
   top: 100%;
-  right: 2em;
+  right: 2rem;
   display: block;
   width: 0;
   height: 0;
-  border: 0.5em solid transparent;
-  border-top: 0.5em solid var(--img2);
-  border-left: 0.5em solid var(--img2);
+  border: 0.5rem solid transparent;
+  border-top: 0.5rem solid var(--img2);
+  border-left: 0.5rem solid var(--img2);
 }
 .chara-expr img:is(:hover, :focus-visible) {
   rotate: 5deg;
@@ -455,8 +457,8 @@ footer p {
 .chara-button-tray {
   display: flex;
   justify-content: center;
-  margin-top: 0.5em;
-  gap: 0.25em;
+  margin-top: 0.5rem;
+  gap: 0.25rem;
 }
 .chara-button {
   aspect-ratio: 1;
@@ -467,7 +469,7 @@ footer p {
   transition: translate 0.4s
 }
 .chara-button:is(:hover, :focus-visible) {
-  translate: 0 -1em;
+  translate: 0 -1rem;
 }
 @media screen and (max-width: 768px) {
   .chara-box {
@@ -488,14 +490,11 @@ footer p {
     grid-template-columns: max-content;
   }
   .chara-bio li:first-of-type {
-    grid-column: span 1 / auto;
+    grid-column: auto / span 1;
   }
   .chara-expr-container {
     grid-template-columns: repeat(3, auto);
     justify-content: start;
-  }
-  .chara-expr {
-    max-width: 96px;
   }
 }
 
@@ -526,8 +525,8 @@ footer p {
   display: grid;
   grid-template-columns: repeat(auto-fit, 9rem);
   justify-content: center;
-  padding: 0.5em;
-  gap: 0.5em;
+  padding: 0.5rem;
+  gap: 0.5rem;
 }
 .artwork-button {
   position: relative;
@@ -548,15 +547,15 @@ footer p {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  padding: 0 0.5em;
+  padding: 0 0.5rem;
   background-color: var(--green6);
   color: var(--green1);
-  text-shadow: 0 2px 2px var(--green8);
+  text-shadow: 0 0.125rem 0.125rem var(--green8);
   opacity: 0;
   transition: opacity 0.4s;
 }
 .artwork-button:is(:hover, :focus-visible) {
-  translate: 0 -1em;
+  translate: 0 -1rem;
 }
 .artwork-button:is(:hover, :focus-visible) img {
   filter: blur(2px);
@@ -579,7 +578,7 @@ footer p {
   width: 100%;
   height: 100%;
   z-index: 1;
-  padding: 4em;
+  padding: 4rem;
   background-color: rgb(0 0 0 / 0.7);
 }
 .lightbox {
@@ -665,27 +664,27 @@ footer p {
 .lightbox-info-expand {
   display: none;
   position: absolute;
-  bottom: -0.25em;
-  left: -0.25em;
+  bottom: -0.25rem;
+  left: -0.25rem;
   width: 0;
   height: 0;
-  border-radius: 2em 2em 2em 0;
+  border-radius: 2rem 2rem 2rem 0;
   background-color: var(--blue2);
   opacity: 0.9;
   overflow: hidden;
   transition: width 0.4s, height 0.4s , padding 0s 0.4s, box-shadow 0s 0.4s;
 }
 .lightbox-info-expand.pinned {
-  width: min(32em, 100%);
-  height: 12em;
-  padding: 1em;
+  width: min(32rem, 100%);
+  height: 12rem;
+  padding: 1rem;
   box-shadow: var(--shadow);
   transition: width 0.4s, height 0.4s;
 }
 .artwork-title {
   display: inline-block;
   padding: 0.25em 0.5em;
-  margin-bottom: 0.17em;
+  margin-bottom: 0.125em;
   border-radius: 1em;
   background-color: var(--green6);
   color: var(--green1);
