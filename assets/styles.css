@@ -570,6 +570,13 @@ footer p {
 .artwork-button-overlay span:not(:first-child) {
   font-size: 0.75rem;
 }
+.feature-badge {
+  position: absolute;
+  top: 0;
+  right: 0.25rem;
+  width: 2rem;
+  height: 2rem;
+}
 .lightbox-overlay {
   display: none;
   position: fixed;

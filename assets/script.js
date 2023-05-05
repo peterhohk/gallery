@@ -41,6 +41,7 @@ function init() {
     numFeatured = data.filter((artwork) => artwork.featured).length;
     data.reverse().forEach(function(artwork, index) {
       let classString = "";
+      classString += artwork.featured ? " featured" : "";
       classString += artwork.chara.includes("A") ? " chara-ada" : "";
       classString += artwork.chara.includes("B") ? " chara-bella" : "";
       classString += artwork.chara.includes("C") ? " chara-celia" : "";
@@ -56,6 +57,7 @@ function init() {
             <span>${artwork.title}</span>
             <span>#${numArtworks - index} | ${dateFromId(artwork.id)}</span>
           </div>
+          ${artwork.featured ? `<img src="./assets/img/feature_badge.png" alt="Featured artwork badge" width="48" height="48" class="feature-badge">` : ``}
         </button>
       `;
       lightboxString += `
@@ -83,23 +85,32 @@ function init() {
 
   // artwork catalogue filters
 
+  let filterFeatured = false;
   const filterCharas = Object.fromEntries(charas.map((val) => [val, true]));
   let filterCategory = "all";
   function filterArtworks() {
     $(".artwork-button").show();
+    if (filterFeatured) {
+      $(".artwork-button").not(".featured").hide();
+    }
     for (let chara in filterCharas) {
       if (!filterCharas[chara]) {
         $(`.artwork-button.chara-${chara}`).hide();
       }
     }
-    if (filterCategory === "all") return;
-    if (filterCategory === "outfit-all") {
-      $(".artwork-button").not(".category-outfit").hide();
-    } else {
-      $(".artwork-button").not(`.category-${filterCategory}`).hide();
+    if (filterCategory !== "all") {
+      if (filterCategory === "outfit-all") {
+        $(".artwork-button").not(".category-outfit").hide();
+      } else {
+        $(".artwork-button").not(`.category-${filterCategory}`).hide();
+      }
     }
   }
 
+  $("#featured-filter").on("change", function() {
+    filterFeatured = $(this).is(":checked");
+    filterArtworks();
+  });
   for (let chara of charas) {
     $(`#chara-filter-${chara}`).on("click", function() {
       filterCharas[chara] = $(this).is(":checked");
