@@ -554,15 +554,6 @@ footer p {
   opacity: 0;
   transition: opacity 0.4s;
 }
-.artwork-button:is(:hover, :focus-visible) {
-  translate: 0 -1rem;
-}
-.artwork-button:is(:hover, :focus-visible) img {
-  filter: blur(2px);
-}
-.artwork-button:is(:hover, :focus-visible) .artwork-button-overlay {
-  opacity: 0.7;
-}
 .artwork-button-overlay span {
   display: block;
   font-weight: bold;
@@ -570,12 +561,21 @@ footer p {
 .artwork-button-overlay span:not(:first-child) {
   font-size: 0.75rem;
 }
-.feature-badge {
+.artwork-feature-badge {
   position: absolute;
   top: 0;
   right: 0.25rem;
   width: 2rem;
   height: 2rem;
+}
+.artwork-button:is(:hover, :focus-visible) {
+  translate: 0 -1rem;
+}
+.artwork-button:is(:hover, :focus-visible) .artwork-thumb {
+  filter: blur(2px);
+}
+.artwork-button:is(:hover, :focus-visible) .artwork-button-overlay {
+  opacity: 0.7;
 }
 .lightbox-overlay {
   display: none;

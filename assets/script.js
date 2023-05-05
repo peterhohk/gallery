@@ -46,18 +46,16 @@ function init() {
       classString += artwork.chara.includes("B") ? " chara-bella" : "";
       classString += artwork.chara.includes("C") ? " chara-celia" : "";
       classString += artwork.chara.includes("D") ? " chara-davina" : "";
+      classString += artwork.category.startsWith("outfit") ? " category-outfit" : "";
       classString += ` category-${artwork.category}`;
-      if (artwork.category.startsWith("outfit")) {
-        classString += " category-outfit";
-      }
       buttonString += `
         <button type="button" class="artwork-button${classString}">
-          <img src="./assets/img/artworks/${artwork.id}_thumb.png" alt="Open artwork ${artwork.title}" width="144" height="144" loading="lazy">
+          <img src="./assets/img/artworks/${artwork.id}_thumb.png" alt="Open artwork ${artwork.title}" width="144" height="144" loading="lazy" class="artwork-thumb">
           <div class="artwork-button-overlay">
             <span>${artwork.title}</span>
             <span>#${numArtworks - index} | ${dateFromId(artwork.id)}</span>
           </div>
-          ${artwork.featured ? `<img src="./assets/img/feature_badge.png" alt="Featured artwork badge" width="48" height="48" class="feature-badge">` : ``}
+          ${artwork.featured ? `<img src="./assets/img/feature_badge.png" alt="Featured artwork badge" width="48" height="48" class="artwork-feature-badge">` : ``}
         </button>
       `;
       lightboxString += `
