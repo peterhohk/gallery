@@ -35,12 +35,7 @@
   --img-davina2: #f2e5ff;
   --img-davina3: #d165ff;
   --img-davina4: #7c00b2;
-  font-size: 16px;
-}
-@media screen and (max-width: 768px) {
-  :root {
-    font-size: 12px;
-  }
+  font-size: clamp(12px, 1.5vw, 16px);
 }
 
 /* GENERAL STYLE STARTS */
@@ -344,6 +339,7 @@ footer p {
   color: var(--img3);
   font-size: 1.25rem;
   line-height: 1;
+  white-space: nowrap;
 }
 .chara-details-left {
   display: flex;
@@ -375,7 +371,6 @@ footer p {
   gap: 0.25em 0.5em;
   padding: 0;
   list-style-type: none;
-  font-size: smaller;
 }
 .chara-bio li:first-of-type {
   grid-column: auto / span 2;
