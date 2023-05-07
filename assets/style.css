@@ -519,6 +519,7 @@ footer p {
   column-gap: 1em;
   width: fit-content;
   margin: auto;
+  padding: 0.5em 0.75em;
   border: 1px dashed;
   border-radius: 1em;
   background-color: var(--green2);
