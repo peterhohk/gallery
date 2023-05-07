@@ -21,9 +21,9 @@ function init() {
 
   for (let chara of charas) {
     $(".chara-button."+chara).on("click", function() {
-      $(".chara-box.default").hide();
-      $(".chara-box").not("."+chara).hide();
-      $(".chara-box."+chara).fadeIn();
+      $(".chara-details.default").hide();
+      $(".chara-details").not("."+chara).hide();
+      $(".chara-details."+chara).fadeIn().css({"display": "grid"});
     });
   }
 

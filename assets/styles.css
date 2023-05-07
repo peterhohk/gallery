@@ -42,6 +42,7 @@
 
 *, *::before, *::after {
   box-sizing: border-box;
+  margin: 0;
 }
 body {
   max-width: max(768px, 75%);
@@ -57,8 +58,7 @@ body {
   font-family: "Klee One", "Yu Mincho", sans-serif;
 }
 p, ul, ol {
-  margin-top: 0.25em;
-  margin-bottom: 0.5em;
+  margin-block: 0.25em;
 }
 img {
   display: block;
@@ -137,7 +137,7 @@ header {
 .button-tray button:is(:hover, :focus-visible) {
   background-color: var(--blue3);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   header {
     flex-direction: column;
     align-items: center;
@@ -287,42 +287,38 @@ footer p {
   --img4: var(--img-davina4);
   text-transform: lowercase;
 }
-.chara-box {
+.chara-details {
   position: relative;
-  height: 576px;
-  margin: auto;
-  padding-top: 96px;
+  isolation: isolate;
+  display: grid;
+  grid-template-areas:
+    "portrait .     .        .   "
+    "portrait names bio      expr"
+    "portrait about about    expr"
+    "portrait likes dislikes expr";
+  grid-template-columns: 12rem auto auto 12rem;
+  grid-template-rows: 6rem auto auto 1fr;
+  gap: 1rem 0.5rem;
+  padding: 1rem;
+  min-height: 36rem;
+  color: var(--img4);
 }
-.chara-box:not(.default) {
+.chara-details:not(.default) {
   display: none;
 }
-.chara-portrait {
+.chara-details::after {
+  display: block;
+  content: "";
   position: absolute;
-  left: 1rem;
-  top: 0;
-  max-height: 100%;
-  max-width: 25%;
-  object-position: top left;
-  filter: drop-shadow(0.25rem 0.25rem 0.25rem var(--img3));
-  transition: rotate 0.4s;
-}
-.chara-portrait:is(:hover, :focus-visible) {
-  rotate: 5deg;
-}
-.chara-details {
-  display: flex;
-  column-gap: 0.5rem;
-  height: 100%;
-  padding: 0.5rem 0.5rem 0.5rem 224px;
+  inset: 7rem 0 0 0;
+  z-index: -1;
   border: 4px dashed var(--img3);
   border-radius: 1rem;
   background-color: var(--img1);
-  color: var(--img4);
-  overflow: auto;
 }
 .default-text {
   position: absolute;
-  inset: 0;
+  inset: 6rem 0 0 0;
   margin: auto;
   width: fit-content;
   height: fit-content;
@@ -331,9 +327,10 @@ footer p {
 }
 .chara-details h4 {
   display: inline-block;
-  margin-top: 0.25em;
   margin-bottom: 0.25em;
   padding: 0.25em 0.5em;
+  width: fit-content;
+  height: fit-content;
   border-radius: 1em;
   background-color: var(--img2);
   color: var(--img3);
@@ -341,15 +338,18 @@ footer p {
   line-height: 1;
   white-space: nowrap;
 }
-.chara-details-left {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  row-gap: 0.5rem;
-  width: 75%;
+.chara-portrait {
+  grid-area: portrait;
+  max-height: 32rem;
+  margin-inline: auto;
+  filter: drop-shadow(0.25rem 0.25rem 0.25rem var(--img3));
+  transition: rotate 0.4s;
+}
+.chara-portrait:is(:hover, :focus-visible) {
+  rotate: 5deg;
 }
 .chara-names {
-  width: 40%;
+  grid-area: names;
   font-size: 1.25rem;
   font-weight: bold;
 }
@@ -363,7 +363,7 @@ footer p {
   text-align: center;
 }
 .chara-bio {
-  width: 60%;
+  grid-area: bio;
 }
 .chara-bio ul {
   display: grid;
@@ -373,7 +373,7 @@ footer p {
   list-style-type: none;
 }
 .chara-bio li:first-of-type {
-  grid-column: auto / span 2;
+  grid-column: 1 / -1;
 }
 .chara-bio li span {
   display: inline-block;
@@ -383,29 +383,31 @@ footer p {
   font-weight: bold;
 }
 .chara-about {
-  width: 100%;
-  padding: 0.25rem 0.75rem;
+  grid-area: about;
+  padding: 0.5rem 0.75rem;
   border: 4px double var(--img3);
   border-radius: 1rem;
   font-size: 1.25rem;
 }
-.chara-likes, .chara-dislikes {
-  width: 50%;
+.chara-likes {
+  grid-area: likes;
 }
-.chara-details-right {
-  width: 25%;
+.chara-dislikes {
+  grid-area: dislikes;
 }
 .chara-expr-container {
+  grid-area: expr;
   display: grid;
-  grid-template-columns: auto;
-  justify-content: center;
-  margin-top: 0.5rem;
+  grid-template-rows: repeat(4, max-content);
   gap: 0.5rem;
+}
+.chara-expr-container h4 {
+  grid-column: 1 / -1;
 }
 .chara-expr {
   position: relative;
   max-width: 8rem;
-  margin: auto;
+  justify-self: center;
 }
 .chara-expr img {
   aspect-ratio: 1;
@@ -457,7 +459,7 @@ footer p {
 }
 .chara-button {
   aspect-ratio: 1;
-  max-width: 128px;
+  max-width: 8rem;
   border: 4px solid var(--img3);
   border-radius: 50%;
   overflow: hidden;
@@ -466,30 +468,41 @@ footer p {
 .chara-button:is(:hover, :focus-visible) {
   translate: 0 -1rem;
 }
-@media screen and (max-width: 768px) {
-  .chara-box {
-    padding-top: 0;
-  }
-  .chara-portrait {
-    left: 0;
-  }
+@media screen and (max-width: 600px) {
   .chara-details {
-    flex-direction: column;
-    height: 100%;
-    padding-left: 25%;
+    grid-template-areas:
+      "portrait names bio     "
+      "portrait about about   "
+      "portrait likes dislikes"
+      "portrait expr  expr    ";
+    grid-template-columns: 12rem auto auto;
+    grid-template-rows: auto;
+    gap: 0.5rem;
   }
-  .chara-details-left, .chara-details-right {
-    width: 100%;
+  .chara-details::after {
+    top: 0;
   }
   .chara-bio ul {
     grid-template-columns: max-content;
   }
-  .chara-bio li:first-of-type {
-    grid-column: auto / span 1;
-  }
   .chara-expr-container {
-    grid-template-columns: repeat(3, auto);
-    justify-content: start;
+    grid-template-columns: repeat(3, minmax(0, max-content));
+    row-gap: 0;
+  }
+}
+@media screen and (max-width: 400px) {
+  .chara-details {
+    grid-template-areas:
+      "portrait names   "
+      "portrait bio     "
+      "portrait about   "
+      "likes    likes   "
+      "dislikes dislikes"
+      "expr     expr    ";
+    grid-template-columns: 12rem auto;
+  }
+  .chara-about {
+    font-size: 1rem;
   }
 }
 
