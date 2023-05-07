@@ -292,11 +292,11 @@ footer p {
   isolation: isolate;
   display: grid;
   grid-template-areas:
-    "portrait .     .        .   "
-    "portrait names bio      expr"
-    "portrait about about    expr"
-    "portrait likes dislikes expr";
-  grid-template-columns: 12rem auto auto 12rem;
+    "portrait .     .     .        .   "
+    "portrait names bio   bio      expr"
+    "portrait about about about    expr"
+    "portrait likes likes dislikes expr";
+  grid-template-columns: 12rem 2fr 1fr 3fr 12rem;
   grid-template-rows: 6rem auto auto 1fr;
   gap: 1rem 0.5rem;
   padding: 1rem;
