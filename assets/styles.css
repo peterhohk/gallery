@@ -496,10 +496,9 @@ footer p {
       "portrait names   "
       "portrait bio     "
       "portrait about   "
-      "likes    likes   "
-      "dislikes dislikes"
+      "likes    dislikes"
       "expr     expr    ";
-    grid-template-columns: 12rem auto;
+    grid-template-columns: 1fr 1fr;
   }
   .chara-about {
     font-size: 1rem;
