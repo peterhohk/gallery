@@ -404,7 +404,7 @@ footer p {
 .chara-expr-container {
   grid-area: expr;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, max-content));
   gap: 0.5rem;
 }
 .chara-expr-container h4 {
@@ -424,7 +424,7 @@ footer p {
 }
 .chara-expr span {
   position: absolute;
-  left: -25%;
+  left: 0;
   right: 0;
   bottom: 80%;
   display: block;
@@ -482,6 +482,9 @@ footer p {
       "portrait likes dislikes"
       "portrait expr  expr    ";
     grid-template-columns: 12rem auto auto;
+  }
+  .chara-expr span {
+    left: -25%;
   }
 }
 @media screen and (min-width: 600px) {
