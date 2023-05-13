@@ -62,7 +62,7 @@ p, ul, ol {
   margin-block: 0.25em;
 }
 ul, ol {
-  padding-left: 1.5rem;
+  padding-left: 1.5em;
 }
 img {
   display: block;
@@ -72,16 +72,18 @@ img {
   max-width: 100%;
   max-height: 100%;
 }
-button, input, label, select {
-  font-size: inherit;
-  cursor: pointer;
-}
 button {
   border: none;
   background: none;
   font: inherit;
   color: inherit;
   letter-spacing: inherit;
+}
+input, select {
+  font-size: inherit;
+}
+label, button, select, summary, [type="radio"], [type="checkbox"], [type="submit"] {
+  cursor: pointer;
 }
 section {
   display: none;
@@ -344,6 +346,7 @@ footer p {
 .chara-portrait {
   grid-area: portrait;
   max-height: 32rem;
+  margin-top: -1rem;
   margin-inline: auto;
   filter: drop-shadow(0.25rem 0.25rem 0.25rem var(--img3));
   transition: rotate 0.4s;
@@ -491,11 +494,10 @@ footer p {
     "portrait about about about    expr"
     "portrait likes likes dislikes expr";
     grid-template-columns: 12rem 2fr 1fr 3fr 12rem;
-    gap: 1rem 0.5rem;
     grid-template-rows: 6rem auto auto 1fr;
   }
   .chara-details::after {
-    top: 7rem;
+    top: 6.5rem;
   }
   .chara-bio ul {
     grid-template-columns: repeat(2, max-content);
