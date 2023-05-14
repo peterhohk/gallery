@@ -93,7 +93,7 @@
   {"id": "220507", "title": "Chibi Batch (Outfit Swaps)", "caption": "Something's wrong, I can feel it.", "chara": ["A", "B", "C", "D"], "category": "chibi", "featured": true},
   {"id": "220519", "title": "Hanami Hues", "caption": "Both of them share the same five colours.", "chara": ["C", "D"], "category": "outfit-scw", "featured": false},
   {"id": "220524", "title": "Vernal Vibes", "caption": "Both of them also share the same five colours.", "chara": ["A", "B"], "category": "outfit-scw", "featured": false},
-  {"id": "220625", "title": "Lab Girl", "caption": "Lab coat!", "chara": ["B"], "category": "outfit-vu", "featured": false},
+  {"id": "220625", "title": "Lab Girl", "caption": "Lab coat!", "chara": ["B"], "category": "random", "featured": false},
   {"id": "220721", "title": "Vibrancy", "caption": "Did you notice the sun and moon motif?", "chara": ["A", "B"], "category": "outfit-scw", "featured": false},
   {"id": "220801", "title": "Brilliancy", "caption": "Both designs are based on stars, although I'd say one is more apparent than the other.", "chara": ["C", "D"], "category": "outfit-scw", "featured": false},
   {"id": "220827", "title": "Summer Means Ice Cream!", "caption": "Mint chocolate and rum raisin. This year's theme is ice cream flavours.", "chara": ["A", "C"], "category": "outfit-s", "featured": false},
