@@ -106,5 +106,6 @@
   {"id": "230131", "title": "Hot Chocolate", "caption": "Warms your body, warms your soul.", "chara": ["B", "D"], "category": "random", "featured": false},
   {"id": "230228", "title": "School Bag", "caption": "Should've been included in the Viridis Attire Overhaul. Oh well.", "chara": ["A", "B"], "category": "random", "featured": false},
   {"id": "230320", "title": "Pristine Purity", "caption": "After all these years, my shading is still a mess.", "chara": ["A", "B", "C", "D"], "category": "outfit-tcw", "featured": true},
-  {"id": "230426", "title": "Cabbage Neo", "caption": "Had to throw the old one out, it'd gotten mouldy.", "chara": ["D"], "category": "random", "featured": false}
+  {"id": "230426", "title": "Cabbage Neo", "caption": "Had to throw the old one out, it'd gotten mouldy.", "chara": ["D"], "category": "random", "featured": false},
+  {"id": "230523", "title": "Wistful", "caption": "There's no deep meaning or anything, I just thought this was a neat pose to draw.", "chara": ["B"], "category": "random", "featured": false}
 ]
