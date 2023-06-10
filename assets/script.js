@@ -53,7 +53,7 @@ function init() {
           <img src="./assets/img/artworks/${artwork.id}_thumb.png" alt="Open artwork ${artwork.title}" width="144" height="144" loading="lazy" class="artwork-thumb">
           <div class="artwork-button-overlay">
             <span>${artwork.title}</span>
-            <span>#${numArtworks - index} | ${dateFromId(artwork.id)}</span>
+            <span class="artwork-meta">#${numArtworks - index} | ${dateFromId(artwork.id)}</span>
           </div>
           ${artwork.featured ? `<img src="./assets/img/feature_badge.png" alt="Featured artwork badge" width="48" height="48" class="artwork-feature-badge">` : ``}
         </button>
@@ -77,7 +77,7 @@ function init() {
     $(".content-works-body").append(buttonString);
     $(".lightbox").prepend(lightboxString);
     $(".content-feat-body").prepend(slideshowString);
-    $(".slideshow-pip-tray").append(`<button type="button" class="slideshow-pip"></button>`.repeat(numFeatured));
+    $(".slideshow-pip-tray").append(`<button type="button" class="round-button slideshow-pip"></button>`.repeat(numFeatured));
     slideShow(Math.floor(Math.random()*numFeatured));
   });
 
