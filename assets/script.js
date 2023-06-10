@@ -61,7 +61,7 @@ function init() {
       lightboxString += `
         <img src="./assets/img/artworks/${artwork.id}_50.png" alt="${artwork.title}" width="1024" height="768" loading="lazy">
         <div class="lightbox-info-expand">
-          <span class="artwork-title">${artwork.title}</span>
+          <span class="lightbox-info-artwork-title">${artwork.title}</span>
           <p>#${numArtworks - index}/${numArtworks}</p>
           <p>Date: ${dateFromId(artwork.id)}</p>
           <p>${artwork.caption}</p>
@@ -69,8 +69,8 @@ function init() {
       `;
       if (artwork.featured) {
         slideshowString += `
-          <img src="./assets/img/artworks/${artwork.id}_50.png" alt="${artwork.title}" width="648" height="648">
-          <span>${artwork.title}</span>
+          <img src="./assets/img/artworks/${artwork.id}_50.png" alt="${artwork.title}" width="648" height="648" class="slideshow-artwork">
+          <span class="slideshow-artwork-title">${artwork.title}</span>
         `;
       }
     });

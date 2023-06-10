@@ -208,14 +208,14 @@ footer p {
 .slideshow-next {
   margin-right: -1.5em;
 }
-.content-feat-body img {
+.slideshow-artwork {
   display: none;
   position: absolute;
   inset: 0;
   margin: auto;
   box-shadow: var(--bshadow);
 }
-.content-feat-body span {
+.slideshow-artwork-title {
   display: none;
   position: absolute;
   inset: 0;
@@ -405,14 +405,14 @@ footer p {
   max-width: 8rem;
   justify-self: center;
 }
-.chara-expr img {
+.chara-expr-thumb {
   aspect-ratio: 1;
   width: 100%;
   background-color: var(--img2);
   border-radius: 25%;
   transition: rotate 0.4s;
 }
-.chara-expr span {
+.chara-expr-quote {
   position: absolute;
   left: 0;
   right: 0;
@@ -428,7 +428,7 @@ footer p {
   opacity: 0;
   transition: opacity 0.4s, bottom 0.4s;
 }
-.chara-expr span::after {
+.chara-expr-quote::after {
   content: "";
   position: absolute;
   top: 100%;
@@ -440,10 +440,10 @@ footer p {
   border-top: 0.5rem solid var(--img2);
   border-left: 0.5rem solid var(--img2);
 }
-.chara-expr img:is(:hover, :focus-visible) {
+.chara-expr-thumb:is(:hover, :focus-visible) {
   rotate: 5deg;
 }
-.chara-expr img:is(:hover, :focus-visible) + span {
+.chara-expr-thumb:is(:hover, :focus-visible) + .chara-expr-quote {
   opacity: 1;
   bottom: 90%;
 }
@@ -473,7 +473,7 @@ footer p {
       "portrait expr  expr    ";
     grid-template-columns: 12rem auto auto;
   }
-  .chara-expr span {
+  .chara-expr-quote {
     left: -25%;
   }
 }
@@ -685,7 +685,7 @@ footer p {
   box-shadow: var(--bshadow);
   transition: width 0.4s, height 0.4s;
 }
-.artwork-title {
+.lightbox-info-artwork-title {
   display: inline-block;
   padding: 0.25em 0.5em;
   margin-bottom: 0.125em;
