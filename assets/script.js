@@ -178,11 +178,11 @@ function init() {
     slideCurrent = index;
     clearInterval(slideIntervalId);
     slideIntervalId = setInterval(slideNext, 10000);
-    $(".content-feat-body img").not($(".content-feat-body img").eq(index)).hide();
-    $(".content-feat-body span").not($(".content-feat-body span").eq(index)).hide();
+    $(".slideshow-artwork").not($(".slideshow-artwork").eq(index)).hide();
+    $(".slideshow-artwork-title").not($(".slideshow-artwork-title").eq(index)).hide();
     $(".slideshow-pip").not($(".slideshow-pip").eq(index)).removeClass("active");
-    $(".content-feat-body img").eq(index).fadeIn();
-    $(".content-feat-body span").eq(index).fadeIn();
+    $(".slideshow-artwork").eq(index).fadeIn();
+    $(".slideshow-artwork-title").eq(index).fadeIn();
     $(".slideshow-pip").eq(index).addClass("active");
   }
   function slidePrev() {
