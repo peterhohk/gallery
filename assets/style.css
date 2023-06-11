@@ -53,7 +53,7 @@ label, button, select, summary, [type="radio"], [type="checkbox"], [type="submit
   --img-davina2: #f2e5ff;
   --img-davina3: #d165ff;
   --img-davina4: #7c00b2;
-  font-size: clamp(12px, 1.5vw, 16px);
+  font-size: clamp(12px, 2vw, 16px);
 }
 body {
   max-width: max(48rem, 75vw);
@@ -70,6 +70,9 @@ body {
 }
 i[class^="fa-"] {
   font-size: 75%;
+}
+a {
+  color: var(--blue);
 }
 p, ul, ol {
   margin-block: 0.25em;
@@ -112,10 +115,18 @@ h2 { /* subpage header */
 /* HEADER STYLE STARTS */
 
 header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  background-color: color-mix(in srgb, var(--very-light-green) 70%, transparent);
+  backdrop-filter: blur(2px);
+  transition: background-color 0.4s;
+}
+header:hover {
   background-color: var(--very-light-green);
 }
 .title-tray, .button-tray {
@@ -605,6 +616,12 @@ footer p {
   font-size: 3rem;
   width: 1em;
   height: 1em;
+  opacity: 0.3;
+  box-shadow: var(--bshadow);
+  transition: background-color 0.4s, color 0.4s, opacity 0.4s;
+}
+.lightbox:has(.lightbox-button:is(:hover, :focus-visible)) .lightbox-button {
+  opacity: 1;
 }
 .lightbox-prev {
   margin-left: -3.5rem;
