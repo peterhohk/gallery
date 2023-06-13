@@ -61,9 +61,9 @@ body {
   overflow-y: scroll;
   background-color: var(--off-white);
   color: var(--dark-green);
-  font-family: Handlee, Helvetica, Arial, sans-serif;
+  font-family: "Comic Neue", cursive;
   line-height: 1.25;
-  letter-spacing: 0.0625ch;
+  word-spacing: -0.125ch;
 }
 :lang(ja) {
   font-family: "Klee One", "Yu Mincho", sans-serif;
@@ -82,14 +82,12 @@ button {
   background: none;
   font: inherit;
   color: inherit;
-  letter-spacing: inherit;
 }
 section {
   display: none;
 }
 h1 { /* page header */
   font-size: 2rem;
-  letter-spacing: 0.125ch;
   white-space: nowrap;
 }
 h2 { /* subpage header */
@@ -97,7 +95,6 @@ h2 { /* subpage header */
   border-bottom: 1px solid;
   font-size: 1.25rem;
   font-weight: normal;
-  letter-spacing: 0.125ch;
 }
 .round-button {
   border-radius: 50%;
