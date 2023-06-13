@@ -82,6 +82,7 @@ button {
   background: none;
   font: inherit;
   color: inherit;
+  word-spacing: inherit;
 }
 section {
   display: none;
