@@ -346,7 +346,6 @@ footer p {
 }
 .chara-portrait {
   grid-area: portrait;
-  max-height: 32rem;
   margin-top: -1rem;
   margin-inline: auto;
   filter: drop-shadow(0.25rem 0.25rem 0.25rem var(--img3));

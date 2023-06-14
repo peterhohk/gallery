@@ -55,7 +55,7 @@ function init() {
             <span>${artwork.title}</span>
             <span class="artwork-meta">#${numArtworks - index} | ${dateFromId(artwork.id)}</span>
           </div>
-          ${artwork.featured ? `<img src="./assets/img/feature_badge.png" alt="Featured artwork badge" width="48" height="48" class="artwork-feature-badge">` : ``}
+          ${artwork.featured ? `<img src="./assets/img/feature_badge.png" alt="Featured artwork badge" width="32" height="32" class="artwork-feature-badge">` : ``}
         </button>
       `;
       lightboxString += `
@@ -69,7 +69,7 @@ function init() {
       `;
       if (artwork.featured) {
         slideshowString += `
-          <img src="./assets/img/artworks/${artwork.id}_50.png" alt="${artwork.title}" width="648" height="648" class="slideshow-artwork">
+          <img src="./assets/img/artworks/${artwork.id}_50.png" alt="${artwork.title}" width="640" height="640" class="slideshow-artwork">
           <span class="slideshow-artwork-title">${artwork.title}</span>
         `;
       }
