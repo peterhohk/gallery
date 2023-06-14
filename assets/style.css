@@ -533,6 +533,13 @@ footer p {
   background-color: var(--dark-green);
   color: var(--very-light-green);
 }
+.artwork-filter ul {
+  display: flex;
+  gap: 0.5em;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
 .artwork-filter select {
   width: fit-content;
 }
