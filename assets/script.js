@@ -47,7 +47,7 @@ function init() {
       classString += artwork.chara.includes("C") ? " chara-celia" : "";
       classString += artwork.chara.includes("D") ? " chara-davina" : "";
       classString += artwork.category.startsWith("outfit") ? " category-outfit" : "";
-      classString += ` category-${artwork.category}`;
+      classString += " category-" + artwork.category;
       buttonString += `
         <button type="button" class="artwork-button${classString}">
           <img src="./assets/img/artworks/${artwork.id}_thumb.png" alt="Open artwork ${artwork.title}" width="144" height="144" loading="lazy" class="artwork-thumb">
@@ -93,14 +93,14 @@ function init() {
     }
     for (let chara in filterCharas) {
       if (!filterCharas[chara]) {
-        $(`.artwork-button.chara-${chara}`).hide();
+        $(".artwork-button.chara-"+chara).hide();
       }
     }
     if (filterCategory !== "all") {
       if (filterCategory === "outfit-all") {
         $(".artwork-button").not(".category-outfit").hide();
       } else {
-        $(".artwork-button").not(`.category-${filterCategory}`).hide();
+        $(".artwork-button").not(".category-"+filterCategory).hide();
       }
     }
   }
@@ -110,7 +110,7 @@ function init() {
     filterArtworks();
   });
   for (let chara of charas) {
-    $(`#chara-filter-${chara}`).on("click", function() {
+    $("#chara-filter-"+chara).on("click", function() {
       filterCharas[chara] = $(this).is(":checked");
       filterArtworks();
     });
