@@ -7,49 +7,41 @@ function init() {
   const subpages = ["feat", "chara", "works"];
   const charas = ["ada", "bella", "celia", "davina"];
 
-  // subpage controls
+  const mouseMid = 2;
+  const keyLeft  = 37;
+  const keyRight = 39;
+  const keyI     = 73;
+  const keyO     = 79;
+  const keyEsc   = 27;
 
-  for (let subpage of subpages) {
-    $("#button-"+subpage).on("click", function() {
-      $("section").not(".content-"+subpage).hide();
-      $(".content-"+subpage).fadeIn();
-    });
-  }
-  $("#button-feat").trigger("click");
+  // fetch artworks data
 
-  // character introduction controls
-
-  for (let chara of charas) {
-    $(".chara-button."+chara).on("click", function() {
-      $(".chara-details.default").hide();
-      $(".chara-details").not("."+chara).hide();
-      $(".chara-details."+chara).fadeIn().css({"display": "grid"});
-    });
-  }
-
-  // json data magic
-
-  let numArtworks = 0;
-  let numFeatured = 0;
-  let buttonString = "";
-  let lightboxString = "";
+  let numArtworks     = 0;
+  let numFeatured     = 0;
+  let buttonString    = "";
+  let lightboxString  = "";
   let slideshowString = "";
-  const dateFromId = (id) => `20${id.slice(0,2)}-${id.slice(2,4)}-${id.slice(4,6)}`;
+  let pipString       = "";
+  function dateFromId(id) {
+    return `20${id.slice(0,2)}-${id.slice(2,4)}-${id.slice(4,6)}`;
+  }
 
-  $.getJSON("./assets/artworks.json", function(data) {
-    numArtworks = data.length;
-    numFeatured = data.filter((artwork) => artwork.featured).length;
-    data.reverse().forEach(function(artwork, index) {
-      let classString = "";
-      classString += artwork.featured ? " featured" : "";
-      classString += artwork.chara.includes("A") ? " chara-ada" : "";
-      classString += artwork.chara.includes("B") ? " chara-bella" : "";
-      classString += artwork.chara.includes("C") ? " chara-celia" : "";
-      classString += artwork.chara.includes("D") ? " chara-davina" : "";
-      classString += artwork.category.startsWith("outfit") ? " category-outfit" : "";
-      classString += " category-" + artwork.category;
+  $.getJSON("./assets/artworks.json", (artworks) => {
+    artworks.reverse();
+    const featuredArtworks = artworks.filter((artwork) => artwork.featured);
+    numArtworks = artworks.length;
+    numFeatured = featuredArtworks.length;
+
+    artworks.forEach((artwork, index) => {
+      const buttonAttr = {
+        index: index,
+        featured: artwork.featured,
+        charas: artwork.chara.join(""),
+        category: artwork.category,
+      };
+      const buttonAttrString = Object.keys(buttonAttr).map((key) => `data-${key}="${buttonAttr[key]}"`).join(" ");
       buttonString += `
-        <button type="button" class="artwork-button${classString}">
+        <button type="button" class="artwork-button" ${buttonAttrString}>
           <img src="./assets/img/artworks/${artwork.id}_thumb.png" alt="Open artwork ${artwork.title}" width="144" height="144" loading="lazy" class="artwork-thumb">
           <div class="artwork-button-overlay">
             <span>${artwork.title}</span>
@@ -59,27 +51,82 @@ function init() {
         </button>
       `;
       lightboxString += `
-        <img src="./assets/img/artworks/${artwork.id}_50.png" alt="${artwork.title}" width="1024" height="768" loading="lazy">
-        <div class="lightbox-info-expand">
-          <span class="lightbox-info-artwork-title">${artwork.title}</span>
-          <p>#${numArtworks - index}/${numArtworks}</p>
-          <p>Date: ${dateFromId(artwork.id)}</p>
-          <p>${artwork.caption}</p>
+        <div class="lightbox-entry" data-index="${index}">
+          <img src="./assets/img/artworks/${artwork.id}_50.png" alt="${artwork.title}" width="1024" height="768" loading="lazy" class="lightbox-img">
+          <div class="lightbox-info-expand">
+            <span class="lightbox-info-artwork-title">${artwork.title}</span>
+            <p>#${numArtworks - index}/${numArtworks}</p>
+            <p>Date: ${dateFromId(artwork.id)}</p>
+            <p>${artwork.caption}</p>
+          </div>
         </div>
       `;
-      if (artwork.featured) {
-        slideshowString += `
+    });
+
+    featuredArtworks.forEach((artwork, index) => {
+      slideshowString += `
+        <div class="slideshow-entry" data-index="${index}">
           <img src="./assets/img/artworks/${artwork.id}_50.png" alt="${artwork.title}" width="640" height="640" class="slideshow-artwork">
           <span class="slideshow-artwork-title">${artwork.title}</span>
-        `;
-      }
+        </div>
+      `;
+      pipString += `
+        <button type="button" class="round-button slideshow-pip" data-index="${index}"></button>
+      `;
     });
-    $(".content-works-body").append(buttonString);
+
+    $(".content-works-body").prepend(buttonString);
     $(".lightbox").prepend(lightboxString);
     $(".content-feat-body").prepend(slideshowString);
-    $(".slideshow-pip-tray").append(`<button type="button" class="round-button slideshow-pip"></button>`.repeat(numFeatured));
+    $(".slideshow-pip-tray").prepend(pipString);
     slideShow(Math.floor(Math.random()*numFeatured));
   });
+
+  // subpage controls
+
+  for (let subpage of subpages) {
+    $(`#button-${subpage}`).on("click", function() {
+      $(`section:not(.content-${subpage})`).hide();
+      $(`.content-${subpage}`).fadeIn();
+    });
+  }
+  $("#button-feat").trigger("click");
+
+  // featured artworks controls
+
+  let slideCurrent = 0;
+  let slideIntervalId = 0;
+  function slideShow(index) {
+    slideCurrent = index;
+    clearInterval(slideIntervalId);
+    slideIntervalId = setInterval(slideNext, 10000);
+    $(`.slideshow-entry:not([data-index="${index}"])`).hide();
+    $(`.slideshow-pip:not([data-index="${index}"])`).removeClass("active");
+    $(`.slideshow-entry[data-index="${index}"]`).fadeIn();
+    $(`.slideshow-pip[data-index="${index}"]`).addClass("active");
+  }
+  function slidePrev() {
+    slideShow((slideCurrent-1+numFeatured) % numFeatured);
+  }
+  function slideNext() {
+    slideShow((slideCurrent+1+numFeatured) % numFeatured);
+  }
+
+  $(".slideshow-prev").on("click", slidePrev);
+  $(".slideshow-next").on("click", slideNext);
+  $(".slideshow-pip-tray").on("click", ".slideshow-pip", function() {
+    slideShow($(this).attr("data-index"));
+  });
+
+  // character introduction controls
+
+  for (let chara of charas) {
+    $(`.chara-button.${chara}`).on("click", function() {
+      $(".chara-details.default").hide();
+      $(`.chara-details:not(.${chara})`).hide();
+      $(`.chara-details.${chara}`).fadeIn().css({"display": "grid"});
+    });
+  }
 
   // artwork catalogue filters
 
@@ -89,18 +136,18 @@ function init() {
   function filterArtworks() {
     $(".artwork-button").show();
     if (filterFeatured) {
-      $(".artwork-button").not(".featured").hide();
+      $(`.artwork-button:not([data-featured="true"])`).hide();
     }
     for (let chara in filterCharas) {
       if (!filterCharas[chara]) {
-        $(".artwork-button.chara-"+chara).hide();
+        $(`.artwork-button[data-charas*=${chara[0].toUpperCase()}]`).hide();
       }
     }
     if (filterCategory !== "all") {
       if (filterCategory === "outfit-all") {
-        $(".artwork-button").not(".category-outfit").hide();
+        $(`.artwork-button:not([data-category^="outfit"])`).hide();
       } else {
-        $(".artwork-button").not(".category-"+filterCategory).hide();
+        $(`.artwork-button:not([data-category="${filterCategory}"])`).hide();
       }
     }
   }
@@ -125,10 +172,8 @@ function init() {
   let lightboxCurrent = 0;
   function lightboxShow(index) {
     lightboxCurrent = index;
-    $(".lightbox img").not($(".lightbox img").eq(index)).hide();
-    $(".lightbox-info-expand").not($(".lightbox-info-expand").eq(index)).hide();
-    $(".lightbox img").eq(index).show();
-    $(".lightbox-info-expand").eq(index).show();
+    $(`.lightbox-entry:not([data-index="${index}"])`).hide();
+    $(`.lightbox-entry[data-index="${index}"]`).show();
   }
   function lightboxOpen() {
     $(".lightbox-overlay").fadeIn();
@@ -146,7 +191,7 @@ function init() {
     $(".lightbox-info-expand").toggleClass("pinned");
   }
   function lightboxOrig() {
-    window.open($(".lightbox img").filter(":visible").attr("src"));
+    window.open($(`.lightbox-entry[data-index="${lightboxCurrent}"] .lightbox-img`).attr("src"));
   }
   function lightboxClose() {
     $(".lightbox-overlay").fadeOut();
@@ -157,7 +202,13 @@ function init() {
 
   $(".content-works-body").on("click", ".artwork-button", function() {
     lightboxOpen();
-    lightboxShow($(this).index());
+    lightboxShow($(this).attr("data-index"));
+  });
+  $(".content-works-body").on("mousedown", ".artwork-button", function(event) {
+    if (event.which === mouseMid) {
+      event.preventDefault();
+      window.open($(`.lightbox-entry[data-index="${$(this).attr("data-index")}"] .lightbox-img`).attr("src"));
+    }
   });
   $(".lightbox-prev").on("click", lightboxPrev);
   $(".lightbox-next").on("click", lightboxNext);
@@ -170,41 +221,8 @@ function init() {
     }
   });
 
-  // featured artworks controls
-
-  let slideCurrent = 0;
-  let slideIntervalId = 0;
-  function slideShow(index) {
-    slideCurrent = index;
-    clearInterval(slideIntervalId);
-    slideIntervalId = setInterval(slideNext, 10000);
-    $(".slideshow-artwork").not($(".slideshow-artwork").eq(index)).hide();
-    $(".slideshow-artwork-title").not($(".slideshow-artwork-title").eq(index)).hide();
-    $(".slideshow-pip").not($(".slideshow-pip").eq(index)).removeClass("active");
-    $(".slideshow-artwork").eq(index).fadeIn();
-    $(".slideshow-artwork-title").eq(index).fadeIn();
-    $(".slideshow-pip").eq(index).addClass("active");
-  }
-  function slidePrev() {
-    slideShow((slideCurrent-1+numFeatured) % numFeatured);
-  }
-  function slideNext() {
-    slideShow((slideCurrent+1+numFeatured) % numFeatured);
-  }
-
-  $(".slideshow-prev").on("click", slidePrev);
-  $(".slideshow-next").on("click", slideNext);
-  $(".slideshow-pip-tray").on("click", ".slideshow-pip", function() {
-    slideShow($(this).index());
-  });
-
   // keyboard controls
 
-  const keyLeft  = 37;
-  const keyRight = 39;
-  const keyI     = 73;
-  const keyO     = 79;
-  const keyEsc   = 27;
   $(window).on("keydown", function(event) {
     if ($(".content-feat-body").is(":visible")) {
       switch (event.which) {

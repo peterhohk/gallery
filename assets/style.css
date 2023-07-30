@@ -202,12 +202,13 @@ footer p {
   max-height: calc(100vmin - 8rem);
   margin: auto;
 }
+.slideshow-entry {
+  display: none;
+}
 .slideshow-button {
   position: absolute;
   inset: 0;
   margin: auto;
-  width: fit-content;
-  height: fit-content;
   font-size: 2rem;
   width: 1em;
   height: 1em;
@@ -219,14 +220,12 @@ footer p {
   margin-right: -1.5em;
 }
 .slideshow-artwork {
-  display: none;
   position: absolute;
   inset: 0;
   margin: auto;
   box-shadow: var(--bshadow);
 }
 .slideshow-artwork-title {
-  display: none;
   position: absolute;
   inset: 0;
   margin: auto auto 0.5em auto;
@@ -613,8 +612,10 @@ footer p {
 }
 .lightbox {
   position: relative;
-  width: 100%;
   height: 100%;
+}
+.lightbox-entry {
+  display: none;
 }
 .lightbox-button {
   position: absolute;
@@ -685,14 +686,12 @@ footer p {
   margin-top: -3.5rem;
   margin-right: -0.25rem;
 }
-.lightbox img {
-  display: none;
+.lightbox-img {
   position: absolute;
   inset: 0;
   margin: auto;
 }
 .lightbox-info-expand {
-  display: none;
   position: absolute;
   bottom: -0.25rem;
   left: -0.25rem;
