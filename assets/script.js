@@ -115,7 +115,7 @@ function init() {
   $(".slideshow-prev").on("click", slidePrev);
   $(".slideshow-next").on("click", slideNext);
   $(".slideshow-pip-tray").on("click", ".slideshow-pip", function() {
-    slideShow($(this).attr("data-index"));
+    slideShow(parseInt($(this).attr("data-index")));
   });
 
   // character introduction controls
@@ -202,7 +202,7 @@ function init() {
 
   $(".content-works-body").on("click", ".artwork-button", function() {
     lightboxOpen();
-    lightboxShow($(this).attr("data-index"));
+    lightboxShow(parseInt($(this).attr("data-index")));
   });
   $(".content-works-body").on("mousedown", ".artwork-button", function(event) {
     if (event.which === mouseMid) {
