@@ -84,9 +84,6 @@ button {
   color: inherit;
   word-spacing: inherit;
 }
-section {
-  display: none;
-}
 h1 { /* page header */
   font-size: clamp(1.5rem, 4vw, 2rem);
   white-space: nowrap;
@@ -202,9 +199,6 @@ footer p {
   max-height: calc(100vmin - 8rem);
   margin: auto;
 }
-.slideshow-entry {
-  display: none;
-}
 .slideshow-button {
   position: absolute;
   inset: 0;
@@ -307,9 +301,6 @@ footer p {
   max-width: 64rem;
   min-height: 37.5rem;
   color: var(--img4);
-}
-.chara-details:not(.default) {
-  display: none;
 }
 .chara-details::after {
   display: block;
@@ -600,7 +591,6 @@ footer p {
   filter: drop-shadow(0 0.125rem 0.25rem var(--gold));
 }
 .lightbox-overlay {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -614,9 +604,6 @@ footer p {
 .lightbox {
   position: relative;
   height: 100%;
-}
-.lightbox-entry {
-  display: none;
 }
 .lightbox-button {
   position: absolute;

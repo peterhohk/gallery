@@ -51,24 +51,24 @@ function init() {
         </button>
       `;
       lightboxString += `
-        <div class="lightbox-entry" data-index="${index}">
+        <figure class="lightbox-entry" data-index="${index}" style="display: none;">
           <img src="./assets/img/artworks/${artwork.id}_50.png" alt="${artwork.title}" width="1024" height="768" loading="lazy" class="lightbox-img">
-          <div class="lightbox-info-expand">
+          <figcaption class="lightbox-info-expand">
             <span class="lightbox-info-artwork-title">${artwork.title}</span>
             <p>#${numArtworks - index}/${numArtworks}</p>
             <p>Date: ${dateFromId(artwork.id)}</p>
             <p>${artwork.caption}</p>
-          </div>
-        </div>
+          </figcaption>
+        </figure>
       `;
     });
 
     featuredArtworks.forEach((artwork, index) => {
       slideshowString += `
-        <div class="slideshow-entry" data-index="${index}">
+        <figure class="slideshow-entry" data-index="${index}" style="display: none;">
           <img src="./assets/img/artworks/${artwork.id}_50.png" alt="${artwork.title}" width="640" height="640" class="slideshow-artwork">
-          <span class="slideshow-artwork-title">${artwork.title}</span>
-        </div>
+          <figcaption class="slideshow-artwork-title">${artwork.title}</figcaption>
+        </figure>
       `;
       pipString += `
         <button type="button" class="round-button slideshow-pip" data-index="${index}"></button>
@@ -90,7 +90,6 @@ function init() {
       $(`.content-${subpage}`).fadeIn();
     });
   }
-  $("#button-feat").trigger("click");
 
   // featured artworks controls
 
