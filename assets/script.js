@@ -123,7 +123,7 @@ function init() {
     $(`.chara-button.${chara}`).on("click", function() {
       $(".chara-details.default").hide();
       $(`.chara-details:not(.${chara})`).hide();
-      $(`.chara-details.${chara}`).fadeIn().css({"display": "grid"});
+      $(`.chara-details.${chara}`).fadeIn();
     });
   }
 
