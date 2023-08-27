@@ -47,7 +47,7 @@ function init() {
             <span>${artwork.title}</span>
             <span class="artwork-meta">#${numArtworks - index} | ${dateFromId(artwork.id)}</span>
           </div>
-          ${artwork.featured ? `<img src="./assets/img/feature_badge.png" alt="Featured artwork badge" width="32" height="32" class="artwork-feature-badge">` : ``}
+          ${artwork.featured ? `<div class="artwork-feature-badge-glow"></div><img src="./assets/img/feature_badge.png" alt="Featured artwork badge" width="32" height="32" class="artwork-feature-badge">` : ``}
         </button>
       `;
       lightboxString += `
