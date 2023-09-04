@@ -82,16 +82,17 @@ button {
   background: none;
   font: inherit;
   color: inherit;
+  letter-spacing: inherit;
   word-spacing: inherit;
 }
 h1 { /* page header */
-  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-size: 2rem;
   white-space: nowrap;
 }
 h2 { /* subpage header */
   margin: 0.25rem;
   border-bottom: 0.0625rem solid;
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-size: 1.25rem;
   font-weight: normal;
 }
 .round-button {
