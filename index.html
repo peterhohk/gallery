@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;0,700;1,400&family=Klee+One&display=swap" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/59b21ce732.js" crossorigin="anonymous"></script>
   <script src="./assets/script.js"></script>
   <title>J-ColourS Gallery</title>
 </head>
@@ -35,8 +34,12 @@
     <h2>Featured Artworks</h2>
     <div class="content-feat-body">
       <!-- slideshowString goes here -->
-      <button type="button" aria-label="Previous featured artwork" class="round-button slideshow-button slideshow-prev"><i class="fa-solid fa-angle-left"></i></button>
-      <button type="button" aria-label="Next featured artwork" class="round-button slideshow-button slideshow-next"><i class="fa-solid fa-angle-right"></i></button>
+      <button type="button" aria-label="Previous featured artwork" class="round-button slideshow-button slideshow-prev">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+      </button>
+      <button type="button" aria-label="Next featured artwork" class="round-button slideshow-button slideshow-next">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+      </button>
     </div>
     <div class="slideshow-pip-tray">
       <!-- pipString goes here -->
@@ -57,7 +60,10 @@
           (Kasuga Haru)
         </div>
         <div class="chara-bio">
-          <h4><i class="fa-solid fa-user"></i> Bio</h4>
+          <h4>
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
+            Bio
+          </h4>
           <ul>
             <li><span>Age</span> 14</li>
             <li><span>Height</span> 148 cm</li>
@@ -67,11 +73,17 @@
           </ul>
         </div>
         <div class="chara-about">
-          <h4><i class="fa-solid fa-circle-info"></i> About</h4>
+          <h4>
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+            About
+          </h4>
           <p>President of the school's junior track and field team. An all-in-one package of strength, confidence and a bundle of sunshine. Radiates an aura that makes it impossible to feel sad around her.</p>
         </div>
         <div class="chara-likes">
-          <h4><i class="fa-solid fa-heart"></i> Likes</h4>
+          <h4>
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+            Likes
+          </h4>
           <ul>
             <li>Fruits (esp. strawberries)</li>
             <li>Bubble tea</li>
@@ -80,7 +92,10 @@
           </ul>
         </div>
         <div class="chara-dislikes">
-          <h4><i class="fa-solid fa-heart-crack"></i> Dislikes</h4>
+          <h4>
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M119.4 44.1c23.3-3.9 46.8-1.9 68.6 5.3l49.8 77.5-75.4 75.4c-1.5 1.5-2.4 3.6-2.3 5.8s1 4.2 2.6 5.7l112 104c2.9 2.7 7.4 2.9 10.5 .3s3.8-7 1.7-10.4l-60.4-98.1 90.7-75.6c2.6-2.1 3.5-5.7 2.4-8.8L296.8 61.8c28.5-16.7 62.4-23.2 95.7-17.6C461.5 55.6 512 115.2 512 185.1v5.8c0 41.5-17.2 81.2-47.6 109.5L283.7 469.1c-7.5 7-17.4 10.9-27.7 10.9s-20.2-3.9-27.7-10.9L47.6 300.4C17.2 272.1 0 232.4 0 190.9v-5.8c0-69.9 50.5-129.5 119.4-141z"/></svg>
+            Dislikes
+          </h4>
           <ul>
             <li>Spiders</li>
             <li>Spicy food</li>
@@ -88,7 +103,10 @@
           </ul>
         </div>
         <div class="chara-expr-container">
-          <h4><i class="fa-solid fa-face-smile"></i> Expressions</h4>
+          <h4>
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM164.1 325.5C182 346.2 212.6 368 256 368s74-21.8 91.9-42.5c5.8-6.7 15.9-7.4 22.6-1.6s7.4 15.9 1.6 22.6C349.8 372.1 311.1 400 256 400s-93.8-27.9-116.1-53.5c-5.8-6.7-5.1-16.8 1.6-22.6s16.8-5.1 22.6 1.6zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+            Expressions
+          </h4>
           <div class="chara-expr">
             <img src="./assets/img/chara/expr_ada1.png" alt="Ada expression 1" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
             <span class="chara-expr-quote">Let's go get some cake!</span>
@@ -111,7 +129,10 @@
           (Kisaragi Rikako)
         </div>
         <div class="chara-bio">
-          <h4><i class="fa-solid fa-user"></i> Bio</h4>
+          <h4>
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
+            Bio
+          </h4>
           <ul>
             <li><span>Age</span> 15</li>
             <li><span>Height</span> 155 cm</li>
@@ -121,11 +142,17 @@
           </ul>
         </div>
         <div class="chara-about">
-          <h4><i class="fa-solid fa-circle-info"></i> About</h4>
+          <h4>
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+            About
+          </h4>
           <p>Academic top-achiever beyond anyone's reach. Unanimously admired by her classmates, but remains humble and willing to help them. Gentle, serene, elegant, like a crescent moon.</p>
         </div>
         <div class="chara-likes">
-          <h4><i class="fa-solid fa-heart"></i> Likes</h4>
+          <h4>
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+            Likes
+          </h4>
           <ul>
             <li>Almonds</li>
             <li>Herbal tea</li>
@@ -134,7 +161,10 @@
           </ul>
         </div>
         <div class="chara-dislikes">
-          <h4><i class="fa-solid fa-heart-crack"></i> Dislikes</h4>
+          <h4>
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M119.4 44.1c23.3-3.9 46.8-1.9 68.6 5.3l49.8 77.5-75.4 75.4c-1.5 1.5-2.4 3.6-2.3 5.8s1 4.2 2.6 5.7l112 104c2.9 2.7 7.4 2.9 10.5 .3s3.8-7 1.7-10.4l-60.4-98.1 90.7-75.6c2.6-2.1 3.5-5.7 2.4-8.8L296.8 61.8c28.5-16.7 62.4-23.2 95.7-17.6C461.5 55.6 512 115.2 512 185.1v5.8c0 41.5-17.2 81.2-47.6 109.5L283.7 469.1c-7.5 7-17.4 10.9-27.7 10.9s-20.2-3.9-27.7-10.9L47.6 300.4C17.2 272.1 0 232.4 0 190.9v-5.8c0-69.9 50.5-129.5 119.4-141z"/></svg>
+            Dislikes
+          </h4>
           <ul>
             <li>Fatty food</li>
             <li>Hot weather</li>
@@ -142,7 +172,10 @@
           </ul>
         </div>
         <div class="chara-expr-container">
-          <h4><i class="fa-solid fa-face-smile"></i> Expressions</h4>
+          <h4>
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM164.1 325.5C182 346.2 212.6 368 256 368s74-21.8 91.9-42.5c5.8-6.7 15.9-7.4 22.6-1.6s7.4 15.9 1.6 22.6C349.8 372.1 311.1 400 256 400s-93.8-27.9-116.1-53.5c-5.8-6.7-5.1-16.8 1.6-22.6s16.8-5.1 22.6 1.6zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+            Expressions
+          </h4>
           <div class="chara-expr">
             <img src="./assets/img/chara/expr_bella1.png" alt="Bella expression 1" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
             <span class="chara-expr-quote">Hmmm... what was the formula again?</span>
@@ -165,7 +198,10 @@
           (Hoshikawa Tsubaki)
         </div>
         <div class="chara-bio">
-          <h4><i class="fa-solid fa-user"></i> Bio</h4>
+          <h4>
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
+            Bio
+          </h4>
           <ul>
             <li><span>Age</span> 13</li>
             <li><span>Height</span> 140 cm</li>
@@ -175,11 +211,17 @@
           </ul>
         </div>
         <div class="chara-about">
-          <h4><i class="fa-solid fa-circle-info"></i> About</h4>
+          <h4>
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+            About
+          </h4>
           <p>Attention-seeker, star of the crowd. Loves to spice up every conversation with her witty jokes. An excellent mood-maker, but can be somewhat of an airhead at times.</p>
         </div>
         <div class="chara-likes">
-          <h4><i class="fa-solid fa-heart"></i> Likes</h4>
+          <h4>
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+            Likes
+          </h4>
           <ul>
             <li>Lollipop</li>
             <li>Drawing</li>
@@ -188,7 +230,10 @@
           </ul>
         </div>
         <div class="chara-dislikes">
-          <h4><i class="fa-solid fa-heart-crack"></i> Dislikes</h4>
+          <h4>
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M119.4 44.1c23.3-3.9 46.8-1.9 68.6 5.3l49.8 77.5-75.4 75.4c-1.5 1.5-2.4 3.6-2.3 5.8s1 4.2 2.6 5.7l112 104c2.9 2.7 7.4 2.9 10.5 .3s3.8-7 1.7-10.4l-60.4-98.1 90.7-75.6c2.6-2.1 3.5-5.7 2.4-8.8L296.8 61.8c28.5-16.7 62.4-23.2 95.7-17.6C461.5 55.6 512 115.2 512 185.1v5.8c0 41.5-17.2 81.2-47.6 109.5L283.7 469.1c-7.5 7-17.4 10.9-27.7 10.9s-20.2-3.9-27.7-10.9L47.6 300.4C17.2 272.1 0 232.4 0 190.9v-5.8c0-69.9 50.5-129.5 119.4-141z"/></svg>
+            Dislikes
+          </h4>
           <ul>
             <li>Vegetables (esp. broccolis)</li>
             <li>Insects</li>
@@ -196,7 +241,10 @@
           </ul>
         </div>
         <div class="chara-expr-container">
-          <h4><i class="fa-solid fa-face-smile"></i> Expressions</h4>
+          <h4>
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM164.1 325.5C182 346.2 212.6 368 256 368s74-21.8 91.9-42.5c5.8-6.7 15.9-7.4 22.6-1.6s7.4 15.9 1.6 22.6C349.8 372.1 311.1 400 256 400s-93.8-27.9-116.1-53.5c-5.8-6.7-5.1-16.8 1.6-22.6s16.8-5.1 22.6 1.6zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+            Expressions
+          </h4>
           <div class="chara-expr">
             <img src="./assets/img/chara/expr_celia1.png" alt="Celia expression 1" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
             <span class="chara-expr-quote">Cheese!</span>
@@ -219,7 +267,10 @@
           (Hoshikawa Shion)
         </div>
         <div class="chara-bio">
-          <h4><i class="fa-solid fa-user"></i> Bio</h4>
+          <h4>
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
+            Bio
+          </h4>
           <ul>
             <li><span>Age</span> 11</li>
             <li><span>Height</span> 134 cm</li>
@@ -229,11 +280,17 @@
           </ul>
         </div>
         <div class="chara-about">
-          <h4><i class="fa-solid fa-circle-info"></i> About</h4>
+          <h4>
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+            About
+          </h4>
           <p>Silent, poker-faced, a perpetually veiled dainty blossom. The inside of her mind is a constellation of mystery, only decipherable by her big sis Celia. The key to unlocking her heart is affection.</p>
         </div>
         <div class="chara-likes">
-          <h4><i class="fa-solid fa-heart"></i> Likes</h4>
+          <h4>
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+            Likes
+          </h4>
           <ul>
             <li>Cats</li>
             <li>Dark chocolate</li>
@@ -242,7 +299,10 @@
           </ul>
         </div>
         <div class="chara-dislikes">
-          <h4><i class="fa-solid fa-heart-crack"></i> Dislikes</h4>
+          <h4>
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M119.4 44.1c23.3-3.9 46.8-1.9 68.6 5.3l49.8 77.5-75.4 75.4c-1.5 1.5-2.4 3.6-2.3 5.8s1 4.2 2.6 5.7l112 104c2.9 2.7 7.4 2.9 10.5 .3s3.8-7 1.7-10.4l-60.4-98.1 90.7-75.6c2.6-2.1 3.5-5.7 2.4-8.8L296.8 61.8c28.5-16.7 62.4-23.2 95.7-17.6C461.5 55.6 512 115.2 512 185.1v5.8c0 41.5-17.2 81.2-47.6 109.5L283.7 469.1c-7.5 7-17.4 10.9-27.7 10.9s-20.2-3.9-27.7-10.9L47.6 300.4C17.2 272.1 0 232.4 0 190.9v-5.8c0-69.9 50.5-129.5 119.4-141z"/></svg>
+            Dislikes
+          </h4>
           <ul>
             <li>Puns (Celia's puns, in particular)</li>
             <li>Horror movies</li>
@@ -250,7 +310,10 @@
           </ul>
         </div>
         <div class="chara-expr-container">
-          <h4><i class="fa-solid fa-face-smile"></i> Expressions</h4>
+          <h4>
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM164.1 325.5C182 346.2 212.6 368 256 368s74-21.8 91.9-42.5c5.8-6.7 15.9-7.4 22.6-1.6s7.4 15.9 1.6 22.6C349.8 372.1 311.1 400 256 400s-93.8-27.9-116.1-53.5c-5.8-6.7-5.1-16.8 1.6-22.6s16.8-5.1 22.6 1.6zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+            Expressions
+          </h4>
           <div class="chara-expr">
             <img src="./assets/img/chara/expr_davina1.png" alt="Davina expression 1" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
             <span class="chara-expr-quote">I... don't know you?</span>
@@ -277,7 +340,10 @@
   <section class="content-works" style="display: none;">
     <h2>Artwork Catalogue</h2>
     <fieldset class="artwork-filter">
-      <legend><i class="fa-solid fa-filter"></i> Filters</legend>
+      <legend>
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M3.9 54.9C10.5 40.9 24.5 32 40 32H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9V448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6V320.9L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z"/></svg>
+        Filters
+      </legend>
       <strong>Featured:</strong>
       <div>
         <input type="checkbox" id="featured-filter"> <label for="featured-filter">Show featured artworks only</label>
@@ -314,15 +380,25 @@
     <div class="lightbox-overlay" style="display: none;">
       <div class="lightbox">
         <!-- lightboxString goes here -->
-        <button type="button" aria-label="Newer artwork" class="round-button lightbox-button lightbox-prev"><i class="fa-solid fa-angle-left"></i></button>
+        <button type="button" aria-label="Newer artwork" class="round-button lightbox-button lightbox-prev">
+          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+        </button>
         <span>Newer Artwork (Left)</span>
-        <button type="button" aria-label="Older artwork" class="round-button lightbox-button lightbox-next"><i class="fa-solid fa-angle-right"></i></button>
+        <button type="button" aria-label="Older artwork" class="round-button lightbox-button lightbox-next">
+          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+        </button>
         <span>Older Artwork (Right)</span>
-        <button type="button" aria-label="Artwork info" class="round-button lightbox-button lightbox-info"><i class="fa-solid fa-info"></i></button>
+        <button type="button" aria-label="Artwork info" class="round-button lightbox-button lightbox-info">
+          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 192 512"><path d="M48 80a48 48 0 1 1 96 0A48 48 0 1 1 48 80zM0 224c0-17.7 14.3-32 32-32H96c17.7 0 32 14.3 32 32V448h32c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H64V256H32c-17.7 0-32-14.3-32-32z"/></svg>
+        </button>
         <span>Artwork Info (I)</span>
-        <button type="button" aria-label="Open original" class="round-button lightbox-button lightbox-expand"><i class="fa-solid fa-expand"></i></button>
+        <button type="button" aria-label="Open original" class="round-button lightbox-button lightbox-expand">
+          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H320zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V352z"/></svg>
+        </button>
         <span>Open Original (O)</span>
-        <button type="button" aria-label="Close lightbox" class="round-button lightbox-button lightbox-close"><i class="fa-solid fa-xmark"></i></button>
+        <button type="button" aria-label="Close lightbox" class="round-button lightbox-button lightbox-close">
+          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+        </button>
         <span>Close Lightbox (Esc)</span>
       </div>
     </div>
@@ -331,7 +407,7 @@
 </main>
 
 <footer>
-  <p><i class="fa-regular fa-copyright"></i>2023 <a href="https://github.com/peterhohk" target="_blank">peterhohk</a></p>
+  <p>© 2023 <a href="https://github.com/peterhohk" target="_blank">peterhohk</a></p>
 </footer>
 
 </body>
