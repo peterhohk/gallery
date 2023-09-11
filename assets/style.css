@@ -12,6 +12,14 @@ img {
   max-width: 100%;
   max-height: 100%;
 }
+button {
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+}
 ul, ol {
   padding-left: 1.5em;
 }
@@ -76,14 +84,6 @@ a {
 }
 p, ul, ol {
   margin-block: 0.25em;
-}
-button {
-  border: none;
-  background: none;
-  font: inherit;
-  color: inherit;
-  letter-spacing: inherit;
-  word-spacing: inherit;
 }
 h1 { /* page header */
   font-size: 2rem;
