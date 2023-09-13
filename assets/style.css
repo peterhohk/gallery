@@ -539,8 +539,7 @@ footer p {
   list-style-type: none;
 }
 .artwork-filter select {
-  width: fit-content;
-  font-size: 75%;
+  max-width: 12rem;
 }
 .content-works-body {
   display: grid;
@@ -731,9 +730,6 @@ footer p {
 @media (min-width: 36rem) {
   .artwork-filter {
     grid-template-columns: repeat(2, auto);
-  }
-  .artwork-filter select {
-    font-size: 100%;
   }
   .lightbox-info-expand.pinned {
     height: 12rem;
