@@ -4,7 +4,7 @@ Gallery page for a personal digital art series.
 
 Created as a demonstration of my web design skills and as a place to host my art.
 
-## Techs used
+## Tech stack
 
 - HTML & CSS
 - JavaScript
