@@ -346,10 +346,6 @@ footer p {
   margin-top: -1rem;
   margin-inline: auto;
   filter: drop-shadow(0.25rem 0.25rem 0.25rem var(--img3));
-  transition: rotate 0.4s;
-}
-.chara-portrait:is(:hover, :focus-visible) {
-  rotate: 5deg;
 }
 .chara-names {
   grid-area: names;
