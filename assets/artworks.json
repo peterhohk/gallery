@@ -75,7 +75,7 @@
   {"id": "210511", "title": "Chibi Batch (Oops, All Celia!)", "caption": "Maybe I do have a favourite OC after all.", "chara": ["C"], "category": "chibi", "featured": false},
   {"id": "210629", "title": "I still have no idea", "caption": "I don't understand, I just do.", "chara": ["A"], "category": "random", "featured": false},
   {"id": "210716", "title": "Tehepero", "caption": "Was flipping through my old artworks and found this masterpiece of apparel, so I put it in a fitting situation.", "chara": ["C"], "category": "random", "featured": false},
-  {"id": "210820", "title": "Hairstyle Swap", "caption": "Hair length not swapped, however.", "chara": ["B", "D"], "category": "random", "featured": true},
+  {"id": "210820", "title": "Hairstyle Swap", "caption": "Hair length not swapped, however.", "chara": ["B", "D"], "category": "random", "featured": false},
   {"id": "210826", "title": "Spicy Summer Garments", "caption": "This year's theme is fusion bikini, which combines the iconic swimsuit with various costumes!", "chara": ["A", "C"], "category": "outfit-s", "featured": false},
   {"id": "210911", "title": "What Is Life Without Some Spice?", "caption": "Living life on the edge, I see.", "chara": ["B", "D"], "category": "outfit-s", "featured": false},
   {"id": "211006", "title": "Viridis, Coming Soon", "caption": "A work in progress.", "chara": ["D"], "category": "outfit-vu", "featured": false},
@@ -108,5 +108,6 @@
   {"id": "230320", "title": "Pristine Purity", "caption": "After all these years, my shading is still a mess.", "chara": ["A", "B", "C", "D"], "category": "outfit-tcw", "featured": true},
   {"id": "230426", "title": "Cabbage Neo", "caption": "Had to throw the old one out, it'd gotten mouldy.", "chara": ["D"], "category": "random", "featured": false},
   {"id": "230523", "title": "Wistful", "caption": "There's no deep meaning or anything, I just thought this was a neat pose to draw.", "chara": ["B"], "category": "random", "featured": false},
-  {"id": "230615", "title": "An unimportant announcement", "caption": "J-ColourS will be put on an indefinite hiatus starting today, due to priority shifts. This announcement is mostly for myself so I can focus on the matter at hand.", "chara": ["B"], "category": "random", "featured": false}
+  {"id": "230615", "title": "An unimportant announcement", "caption": "J-ColourS will be put on an indefinite hiatus starting today, due to priority shifts. This announcement is mostly for myself so I can focus on the matter at hand.", "chara": ["B"], "category": "random", "featured": false},
+  {"id": "231008", "title": "Elemental Jacket Squad", "caption": "Long ago, the four girls lived together in harmony…", "chara": ["A", "B", "C", "D"], "category": "outfit-tcw", "featured": true}
 ]
