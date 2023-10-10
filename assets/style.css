@@ -647,7 +647,7 @@ footer p {
   box-shadow: var(--bshadow);
   transition: background-color 0.4s, color 0.4s, opacity 0.4s;
 }
-.lightbox:has(.lightbox-button:is(:hover, :focus-visible)) .lightbox-button {
+.lightbox-button:is(:hover, :focus-visible) {
   opacity: 1;
 }
 .lightbox-prev {
