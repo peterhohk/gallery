@@ -68,7 +68,6 @@ body {
   overflow-y: scroll;
   background-color: var(--off-white);
   color: var(--dark-green);
-  font-size: 1rem;
   font-family: "Comic Neue", Helvetica, Arial, sans-serif;
   line-height: 1.25;
   word-spacing: -0.125ch;
