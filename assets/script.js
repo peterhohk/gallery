@@ -4,7 +4,7 @@ function init() {
 
   // general constants
 
-  const subpages = ["feat", "chara", "works"];
+  const subpages = ["feat", "chara", "artworks"];
   const charas = ["ada", "bella", "celia", "davina"];
 
   const mouseMid = 2;
@@ -79,9 +79,9 @@ function init() {
       `;
     });
 
-    $(".content-works-body").prepend(buttonString);
+    $(".artwork-button-container").prepend(buttonString);
     $(".lightbox").prepend(lightboxString);
-    $(".content-feat-body").prepend(slideshowString);
+    $(".slideshow-container").prepend(slideshowString);
     $(".slideshow-pip-tray").prepend(pipString);
     slideShow(Math.floor(Math.random()*numFeatured));
   });
@@ -90,8 +90,8 @@ function init() {
 
   for (let subpage of subpages) {
     $(`#button-${subpage}`).on("click", function() {
-      $(`section:not(.content-${subpage})`).hide();
-      $(`.content-${subpage}`).fadeIn();
+      $(`section:not(#${subpage})`).hide();
+      $(`#${subpage}`).fadeIn();
     });
   }
 
@@ -191,7 +191,7 @@ function init() {
     lightboxShow((lightboxCurrent+1+numArtworks) % numArtworks);
   }
   function lightboxInfo() {
-    $(".lightbox-info-expand").toggleClass("pinned");
+    $(".lightbox-info-expand").toggleClass("expanded");
   }
   function lightboxOrig() {
     window.open($(`.lightbox-entry[data-index="${lightboxCurrent}"] .lightbox-img`).attr("src"));
@@ -203,11 +203,11 @@ function init() {
     });
   }
 
-  $(".content-works-body").on("click", ".artwork-button", function() {
+  $(".artwork-button-container").on("click", ".artwork-button", function() {
     lightboxOpen();
     lightboxShow(parseInt($(this).attr("data-index")));
   });
-  $(".content-works-body").on("mousedown", ".artwork-button", function(event) {
+  $(".artwork-button-container").on("mousedown", ".artwork-button", function(event) {
     if (event.which === mouseMid) {
       event.preventDefault();
       window.open($(`.lightbox-entry[data-index="${$(this).attr("data-index")}"] .lightbox-img`).attr("src"));
@@ -227,7 +227,7 @@ function init() {
   // keyboard controls
 
   $(window).on("keydown", function(event) {
-    if ($(".content-feat-body").is(":visible")) {
+    if ($("#feat").is(":visible")) {
       switch (event.which) {
         case keyLeft:
           slidePrev();

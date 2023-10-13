@@ -121,7 +121,7 @@ header {
   backdrop-filter: blur(0.125rem);
   transition: background-color 0.4s;
 }
-header:hover {
+header:is(:hover, :focus-within) {
   background-color: var(--very-light-green);
 }
 .title-tray, .button-tray {
@@ -196,7 +196,7 @@ footer p {
 
 /* SUBPAGE: FEATURED STYLE STARTS */
 
-.content-feat-body {
+.slideshow-container {
   position: relative;
   aspect-ratio: 1;
   width: 40rem;
@@ -258,31 +258,31 @@ footer p {
 
 /* SUBPAGE: CHARACTERS STYLE STARTS */
 
-.content-chara-body .default {
+.chara-details.default {
   --img1: var(--very-light-green);
   --img2: var(--light-green);
   --img3: var(--green);
   --img4: var(--dark-green);
 }
-.content-chara-body .ada {
+.chara-details.ada, .chara-button.ada {
   --img1: var(--img-ada1);
   --img2: var(--img-ada2);
   --img3: var(--img-ada3);
   --img4: var(--img-ada4);
 }
-.content-chara-body .bella {
+.chara-details.bella, .chara-button.bella {
   --img1: var(--img-bella1);
   --img2: var(--img-bella2);
   --img3: var(--img-bella3);
   --img4: var(--img-bella4);
 }
-.content-chara-body .celia {
+.chara-details.celia, .chara-button.celia {
   --img1: var(--img-celia1);
   --img2: var(--img-celia2);
   --img3: var(--img-celia3);
   --img4: var(--img-celia4);
 }
-.content-chara-body .davina {
+.chara-details.davina, .chara-button.davina {
   --img1: var(--img-davina1);
   --img2: var(--img-davina2);
   --img3: var(--img-davina3);
@@ -422,12 +422,13 @@ footer p {
   padding: 0.5em;
   border-radius: 1em;
   background-color: var(--img2);
-  filter: drop-shadow(0 0.125rem 0.25rem var(--img4));
+  filter: drop-shadow(0 0.125rem 0.125rem var(--img4));
   text-align: center;
   font-style: italic;
   pointer-events: none;
+  visibility: hidden;
   opacity: 0;
-  transition: opacity 0.4s, bottom 0.4s;
+  transition: visibility 0.4s, opacity 0.4s, bottom 0.4s;
 }
 .chara-expr-quote::after {
   content: "";
@@ -445,6 +446,7 @@ footer p {
   rotate: 5deg;
 }
 .chara-expr-thumb:is(:hover, :focus-visible) + .chara-expr-quote {
+  visibility: visible;
   opacity: 1;
   bottom: 90%;
 }
@@ -536,7 +538,7 @@ footer p {
 .artwork-filter select {
   max-width: 12rem;
 }
-.content-works-body {
+.artwork-button-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, 9rem);
   justify-content: center;
@@ -720,7 +722,7 @@ footer p {
   overflow: hidden;
   transition: width 0.4s, height 0.4s , padding 0s 0.4s, box-shadow 0s 0.4s;
 }
-.lightbox-info-expand.pinned {
+.lightbox-info-expand.expanded {
   width: min(32rem, 100%);
   height: 50%;
   padding: 1rem;
@@ -741,7 +743,7 @@ footer p {
   .artwork-filter {
     grid-template-columns: repeat(2, auto);
   }
-  .lightbox-info-expand.pinned {
+  .lightbox-info-expand.expanded {
     height: 12rem;
   }
 }

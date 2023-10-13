@@ -25,15 +25,15 @@
   <nav class="button-tray">
     <button type="button" id="button-feat">featured</button>
     <button type="button" id="button-chara">characters</button>
-    <button type="button" id="button-works">artworks</button>
+    <button type="button" id="button-artworks">artworks</button>
   </nav>
 </header>
 
 <main>
 
-  <section class="content-feat">
+  <section id="feat">
     <h2>Featured Artworks</h2>
-    <div class="content-feat-body">
+    <div class="slideshow-container">
       <!-- slideshowString goes here -->
       <button type="button" aria-label="Previous featured artwork" class="round-button slideshow-button slideshow-prev"><i class="fa-solid fa-angle-left"></i></button>
       <button type="button" aria-label="Next featured artwork" class="round-button slideshow-button slideshow-next"><i class="fa-solid fa-angle-right"></i></button>
@@ -43,238 +43,236 @@
     </div>
   </section>
 
-  <section class="content-chara" style="display: none;">
+  <section id="chara" style="display: none;">
     <h2>Character Introduction</h2>
-    <div class="content-chara-body">
-      <article class="chara-details default">
-        <span class="default-text">Select a character!</span>
-      </article>
-      <article class="chara-details ada" style="display: none;">
-        <img src="./assets/img/chara/portrait_ada.png" alt="Ada portrait" width="192" height="545" loading="lazy" class="chara-portrait">
-        <div class="chara-names">
-          <h3>Ada</h3><br>
-          <ruby lang="ja">春日<rp>(</rp><rt>かすが</rt><rp>)</rp></ruby><ruby lang="ja">晴<rp>(</rp><rt>はる</rt><rp>)</rp></ruby><br>
-          (Kasuga Haru)
-        </div>
-        <div class="chara-bio">
-          <h4><i class="fa-solid fa-user"></i> Bio</h4>
-          <ul>
-            <li><span>Age</span> 14</li>
-            <li><span>Height</span> 148 cm</li>
-            <li><span>Weight</span> 46 kg</li>
-            <li><span>Birthday</span> 12 Feb</li>
-            <li><span>Blood type</span> O</li>
-          </ul>
-        </div>
-        <div class="chara-about">
-          <h4><i class="fa-solid fa-circle-info"></i> About</h4>
-          <p>President of the school's junior track and field team. An all-in-one package of strength, confidence and a bundle of sunshine. Radiates an aura that makes it impossible to feel sad around her.</p>
-        </div>
-        <div class="chara-likes">
-          <h4><i class="fa-solid fa-heart"></i> Likes</h4>
-          <ul>
-            <li>Fruits (esp. strawberries)</li>
-            <li>Bubble tea</li>
-            <li>Hot springs</li>
-            <li>Photography</li>
-          </ul>
-        </div>
-        <div class="chara-dislikes">
-          <h4><i class="fa-solid fa-heart-crack"></i> Dislikes</h4>
-          <ul>
-            <li>Spiders</li>
-            <li>Spicy food</li>
-            <li>Maths lectures</li>
-          </ul>
-        </div>
-        <div class="chara-expr-container">
-          <h4><i class="fa-solid fa-face-smile"></i> Expressions</h4>
-          <div class="chara-expr">
-            <img src="./assets/img/chara/expr_ada1.png" alt="Ada expression 1" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
-            <span class="chara-expr-quote">Let's go get some cake!</span>
-          </div>
-          <div class="chara-expr">
-            <img src="./assets/img/chara/expr_ada2.png" alt="Ada expression 2" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
-            <span class="chara-expr-quote">Hey! What the heck are you doing there?</span>
-          </div>
-          <div class="chara-expr">
-            <img src="./assets/img/chara/expr_ada3.png" alt="Ada expression 3" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
-            <span class="chara-expr-quote">Ahaha! That's a good one!</span>
-          </div>
-        </div>
-      </article>
-      <article class="chara-details bella" style="display: none;">
-        <img src="./assets/img/chara/portrait_bella.png" alt="Bella portrait" width="192" height="545" loading="lazy" class="chara-portrait">
-        <div class="chara-names">
-          <h3>Bella</h3><br>
-          <ruby lang="ja">如月<rp>(</rp><rt>きさらぎ</rt><rp>)</rp></ruby><ruby lang="ja">理香子<rp>(</rp><rt>りかこ</rt><rp>)</rp></ruby><br>
-          (Kisaragi Rikako)
-        </div>
-        <div class="chara-bio">
-          <h4><i class="fa-solid fa-user"></i> Bio</h4>
-          <ul>
-            <li><span>Age</span> 15</li>
-            <li><span>Height</span> 155 cm</li>
-            <li><span>Weight</span> 44 kg</li>
-            <li><span>Birthday</span> 28 Nov</li>
-            <li><span>Blood type</span> AB</li>
-          </ul>
-        </div>
-        <div class="chara-about">
-          <h4><i class="fa-solid fa-circle-info"></i> About</h4>
-          <p>Academic top-achiever beyond anyone's reach. Unanimously admired by her classmates, but remains humble and willing to help them. Gentle, serene, elegant, like a crescent moon.</p>
-        </div>
-        <div class="chara-likes">
-          <h4><i class="fa-solid fa-heart"></i> Likes</h4>
-          <ul>
-            <li>Almonds</li>
-            <li>Herbal tea</li>
-            <li>Mystery / fantasy novels</li>
-            <li>Puzzle games</li>
-          </ul>
-        </div>
-        <div class="chara-dislikes">
-          <h4><i class="fa-solid fa-heart-crack"></i> Dislikes</h4>
-          <ul>
-            <li>Fatty food</li>
-            <li>Hot weather</li>
-            <li>Pop music</li>
-          </ul>
-        </div>
-        <div class="chara-expr-container">
-          <h4><i class="fa-solid fa-face-smile"></i> Expressions</h4>
-          <div class="chara-expr">
-            <img src="./assets/img/chara/expr_bella1.png" alt="Bella expression 1" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
-            <span class="chara-expr-quote">Hmmm... what was the formula again?</span>
-          </div>
-          <div class="chara-expr">
-            <img src="./assets/img/chara/expr_bella2.png" alt="Bella expression 2" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
-            <span class="chara-expr-quote">Please keep quiet in the library.</span>
-          </div>
-          <div class="chara-expr">
-            <img src="./assets/img/chara/expr_bella3.png" alt="Bella expression 3" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
-            <span class="chara-expr-quote">Thank you very much for the gift!</span>
-          </div>
-        </div>
-      </article>
-      <article class="chara-details celia" style="display: none;">
-        <img src="./assets/img/chara/portrait_celia.png" alt="Celia portrait" width="192" height="545" loading="lazy" class="chara-portrait">
-        <div class="chara-names">
-          <h3>Celia</h3><br>
-          <ruby lang="ja">星川<rp>(</rp><rt>ほしかわ</rt><rp>)</rp></ruby><ruby lang="ja">椿<rp>(</rp><rt>つばき</rt><rp>)</rp></ruby><br>
-          (Hoshikawa Tsubaki)
-        </div>
-        <div class="chara-bio">
-          <h4><i class="fa-solid fa-user"></i> Bio</h4>
-          <ul>
-            <li><span>Age</span> 13</li>
-            <li><span>Height</span> 140 cm</li>
-            <li><span>Weight</span> 39 kg</li>
-            <li><span>Birthday</span> 31 Mar</li>
-            <li><span>Blood type</span> B</li>
-          </ul>
-        </div>
-        <div class="chara-about">
-          <h4><i class="fa-solid fa-circle-info"></i> About</h4>
-          <p>Attention-seeker, star of the crowd. Loves to spice up every conversation with her witty jokes. An excellent mood-maker, but can be somewhat of an airhead at times.</p>
-        </div>
-        <div class="chara-likes">
-          <h4><i class="fa-solid fa-heart"></i> Likes</h4>
-          <ul>
-            <li>Lollipop</li>
-            <li>Drawing</li>
-            <li>Watching anime</li>
-            <li>Taking care of house plants</li>
-          </ul>
-        </div>
-        <div class="chara-dislikes">
-          <h4><i class="fa-solid fa-heart-crack"></i> Dislikes</h4>
-          <ul>
-            <li>Vegetables (esp. broccolis)</li>
-            <li>Insects</li>
-            <li>Homework</li>
-          </ul>
-        </div>
-        <div class="chara-expr-container">
-          <h4><i class="fa-solid fa-face-smile"></i> Expressions</h4>
-          <div class="chara-expr">
-            <img src="./assets/img/chara/expr_celia1.png" alt="Celia expression 1" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
-            <span class="chara-expr-quote">Cheese!</span>
-          </div>
-          <div class="chara-expr">
-            <img src="./assets/img/chara/expr_celia2.png" alt="Celia expression 2" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
-            <span class="chara-expr-quote">When can I go home and watch anime...</span>
-          </div>
-          <div class="chara-expr">
-            <img src="./assets/img/chara/expr_celia3.png" alt="Celia expression 3" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
-            <span class="chara-expr-quote">Can I... skip the broccoli for just one day pleeeeeease?</span>
-          </div>
-        </div>
-      </article>
-      <article class="chara-details davina" style="display: none;">
-        <img src="./assets/img/chara/portrait_davina.png" alt="Davina portrait" width="192" height="545" loading="lazy" class="chara-portrait">
-        <div class="chara-names">
-          <h3>Davina</h3><br>
-          <ruby lang="ja">星川<rp>(</rp><rt>ほしかわ</rt><rp>)</rp></ruby><ruby lang="ja">紫苑<rp>(</rp><rt>しおん</rt><rp>)</rp></ruby><br>
-          (Hoshikawa Shion)
-        </div>
-        <div class="chara-bio">
-          <h4><i class="fa-solid fa-user"></i> Bio</h4>
-          <ul>
-            <li><span>Age</span> 11</li>
-            <li><span>Height</span> 134 cm</li>
-            <li><span>Weight</span> 30 kg</li>
-            <li><span>Birthday</span> 4 Aug</li>
-            <li><span>Blood type</span> A</li>
-          </ul>
-        </div>
-        <div class="chara-about">
-          <h4><i class="fa-solid fa-circle-info"></i> About</h4>
-          <p>Silent, poker-faced, a perpetually veiled dainty blossom. The inside of her mind is a constellation of mystery, only decipherable by her big sis Celia. The key to unlocking her heart is affection.</p>
-        </div>
-        <div class="chara-likes">
-          <h4><i class="fa-solid fa-heart"></i> Likes</h4>
-          <ul>
-            <li>Cats</li>
-            <li>Dark chocolate</li>
-            <li>Black tea</li>
-            <li>Classical / orchestral music</li>
-          </ul>
-        </div>
-        <div class="chara-dislikes">
-          <h4><i class="fa-solid fa-heart-crack"></i> Dislikes</h4>
-          <ul>
-            <li>Puns (Celia's puns, in particular)</li>
-            <li>Horror movies</li>
-            <li>Household chores</li>
-          </ul>
-        </div>
-        <div class="chara-expr-container">
-          <h4><i class="fa-solid fa-face-smile"></i> Expressions</h4>
-          <div class="chara-expr">
-            <img src="./assets/img/chara/expr_davina1.png" alt="Davina expression 1" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
-            <span class="chara-expr-quote">I... don't know you?</span>
-          </div>
-          <div class="chara-expr">
-            <img src="./assets/img/chara/expr_davina2.png" alt="Davina expression 2" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
-            <span class="chara-expr-quote">85% really is the best.</span>
-          </div>
-          <div class="chara-expr">
-            <img src="./assets/img/chara/expr_davina3.png" alt="Davina expression 3" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
-            <span class="chara-expr-quote">Nee-chan, eat your veggies!</span>
-          </div>
-        </div>
-      </article>
-      <div class="chara-button-tray">
-        <button type="button" class="chara-button ada"><img src="./assets/img/chara/thumb_ada.png" alt="Select character Ada" width="120" height="120" loading="lazy"></button>
-        <button type="button" class="chara-button bella"><img src="./assets/img/chara/thumb_bella.png" alt="Select character Bella" width="120" height="120" loading="lazy"></button>
-        <button type="button" class="chara-button celia"><img src="./assets/img/chara/thumb_celia.png" alt="Select character Celia" width="120" height="120" loading="lazy"></button>
-        <button type="button" class="chara-button davina"><img src="./assets/img/chara/thumb_davina.png" alt="Select character Davina" width="120" height="120" loading="lazy"></button>
+    <article class="chara-details default">
+      <span class="default-text">Select a character!</span>
+    </article>
+    <article class="chara-details ada" style="display: none;">
+      <img src="./assets/img/chara/portrait_ada.png" alt="Ada portrait" width="192" height="545" loading="lazy" class="chara-portrait">
+      <div class="chara-names">
+        <h3>Ada</h3><br>
+        <ruby lang="ja">春日<rp>(</rp><rt>かすが</rt><rp>)</rp></ruby><ruby lang="ja">晴<rp>(</rp><rt>はる</rt><rp>)</rp></ruby><br>
+        (Kasuga Haru)
       </div>
+      <div class="chara-bio">
+        <h4><i class="fa-solid fa-user"></i> Bio</h4>
+        <ul>
+          <li><span>Age</span> 14</li>
+          <li><span>Height</span> 148 cm</li>
+          <li><span>Weight</span> 46 kg</li>
+          <li><span>Birthday</span> 12 Feb</li>
+          <li><span>Blood type</span> O</li>
+        </ul>
+      </div>
+      <div class="chara-about">
+        <h4><i class="fa-solid fa-circle-info"></i> About</h4>
+        <p>President of the school's junior track and field team. An all-in-one package of strength, confidence and a bundle of sunshine. Radiates an aura that makes it impossible to feel sad around her.</p>
+      </div>
+      <div class="chara-likes">
+        <h4><i class="fa-solid fa-heart"></i> Likes</h4>
+        <ul>
+          <li>Fruits (esp. strawberries)</li>
+          <li>Bubble tea</li>
+          <li>Hot springs</li>
+          <li>Photography</li>
+        </ul>
+      </div>
+      <div class="chara-dislikes">
+        <h4><i class="fa-solid fa-heart-crack"></i> Dislikes</h4>
+        <ul>
+          <li>Spiders</li>
+          <li>Spicy food</li>
+          <li>Maths lectures</li>
+        </ul>
+      </div>
+      <div class="chara-expr-container">
+        <h4><i class="fa-solid fa-face-smile"></i> Expressions</h4>
+        <div class="chara-expr">
+          <img src="./assets/img/chara/expr_ada1.png" alt="Ada expression 1" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
+          <span class="chara-expr-quote">Let's go get some cake!</span>
+        </div>
+        <div class="chara-expr">
+          <img src="./assets/img/chara/expr_ada2.png" alt="Ada expression 2" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
+          <span class="chara-expr-quote">Hey! What the heck are you doing there?</span>
+        </div>
+        <div class="chara-expr">
+          <img src="./assets/img/chara/expr_ada3.png" alt="Ada expression 3" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
+          <span class="chara-expr-quote">Ahaha! That's a good one!</span>
+        </div>
+      </div>
+    </article>
+    <article class="chara-details bella" style="display: none;">
+      <img src="./assets/img/chara/portrait_bella.png" alt="Bella portrait" width="192" height="545" loading="lazy" class="chara-portrait">
+      <div class="chara-names">
+        <h3>Bella</h3><br>
+        <ruby lang="ja">如月<rp>(</rp><rt>きさらぎ</rt><rp>)</rp></ruby><ruby lang="ja">理香子<rp>(</rp><rt>りかこ</rt><rp>)</rp></ruby><br>
+        (Kisaragi Rikako)
+      </div>
+      <div class="chara-bio">
+        <h4><i class="fa-solid fa-user"></i> Bio</h4>
+        <ul>
+          <li><span>Age</span> 15</li>
+          <li><span>Height</span> 155 cm</li>
+          <li><span>Weight</span> 44 kg</li>
+          <li><span>Birthday</span> 28 Nov</li>
+          <li><span>Blood type</span> AB</li>
+        </ul>
+      </div>
+      <div class="chara-about">
+        <h4><i class="fa-solid fa-circle-info"></i> About</h4>
+        <p>Academic top-achiever beyond anyone's reach. Unanimously admired by her classmates, but remains humble and willing to help them. Gentle, serene, elegant, like a crescent moon.</p>
+      </div>
+      <div class="chara-likes">
+        <h4><i class="fa-solid fa-heart"></i> Likes</h4>
+        <ul>
+          <li>Almonds</li>
+          <li>Herbal tea</li>
+          <li>Mystery / fantasy novels</li>
+          <li>Puzzle games</li>
+        </ul>
+      </div>
+      <div class="chara-dislikes">
+        <h4><i class="fa-solid fa-heart-crack"></i> Dislikes</h4>
+        <ul>
+          <li>Fatty food</li>
+          <li>Hot weather</li>
+          <li>Pop music</li>
+        </ul>
+      </div>
+      <div class="chara-expr-container">
+        <h4><i class="fa-solid fa-face-smile"></i> Expressions</h4>
+        <div class="chara-expr">
+          <img src="./assets/img/chara/expr_bella1.png" alt="Bella expression 1" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
+          <span class="chara-expr-quote">Hmmm... what was the formula again?</span>
+        </div>
+        <div class="chara-expr">
+          <img src="./assets/img/chara/expr_bella2.png" alt="Bella expression 2" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
+          <span class="chara-expr-quote">Please keep quiet in the library.</span>
+        </div>
+        <div class="chara-expr">
+          <img src="./assets/img/chara/expr_bella3.png" alt="Bella expression 3" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
+          <span class="chara-expr-quote">Thank you very much for the gift!</span>
+        </div>
+      </div>
+    </article>
+    <article class="chara-details celia" style="display: none;">
+      <img src="./assets/img/chara/portrait_celia.png" alt="Celia portrait" width="192" height="545" loading="lazy" class="chara-portrait">
+      <div class="chara-names">
+        <h3>Celia</h3><br>
+        <ruby lang="ja">星川<rp>(</rp><rt>ほしかわ</rt><rp>)</rp></ruby><ruby lang="ja">椿<rp>(</rp><rt>つばき</rt><rp>)</rp></ruby><br>
+        (Hoshikawa Tsubaki)
+      </div>
+      <div class="chara-bio">
+        <h4><i class="fa-solid fa-user"></i> Bio</h4>
+        <ul>
+          <li><span>Age</span> 13</li>
+          <li><span>Height</span> 140 cm</li>
+          <li><span>Weight</span> 39 kg</li>
+          <li><span>Birthday</span> 31 Mar</li>
+          <li><span>Blood type</span> B</li>
+        </ul>
+      </div>
+      <div class="chara-about">
+        <h4><i class="fa-solid fa-circle-info"></i> About</h4>
+        <p>Attention-seeker, star of the crowd. Loves to spice up every conversation with her witty jokes. An excellent mood-maker, but can be somewhat of an airhead at times.</p>
+      </div>
+      <div class="chara-likes">
+        <h4><i class="fa-solid fa-heart"></i> Likes</h4>
+        <ul>
+          <li>Lollipop</li>
+          <li>Drawing</li>
+          <li>Watching anime</li>
+          <li>Taking care of house plants</li>
+        </ul>
+      </div>
+      <div class="chara-dislikes">
+        <h4><i class="fa-solid fa-heart-crack"></i> Dislikes</h4>
+        <ul>
+          <li>Vegetables (esp. broccolis)</li>
+          <li>Insects</li>
+          <li>Homework</li>
+        </ul>
+      </div>
+      <div class="chara-expr-container">
+        <h4><i class="fa-solid fa-face-smile"></i> Expressions</h4>
+        <div class="chara-expr">
+          <img src="./assets/img/chara/expr_celia1.png" alt="Celia expression 1" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
+          <span class="chara-expr-quote">Cheese!</span>
+        </div>
+        <div class="chara-expr">
+          <img src="./assets/img/chara/expr_celia2.png" alt="Celia expression 2" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
+          <span class="chara-expr-quote">When can I go home and watch anime...</span>
+        </div>
+        <div class="chara-expr">
+          <img src="./assets/img/chara/expr_celia3.png" alt="Celia expression 3" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
+          <span class="chara-expr-quote">Can I... skip the broccoli for just one day pleeeeeease?</span>
+        </div>
+      </div>
+    </article>
+    <article class="chara-details davina" style="display: none;">
+      <img src="./assets/img/chara/portrait_davina.png" alt="Davina portrait" width="192" height="545" loading="lazy" class="chara-portrait">
+      <div class="chara-names">
+        <h3>Davina</h3><br>
+        <ruby lang="ja">星川<rp>(</rp><rt>ほしかわ</rt><rp>)</rp></ruby><ruby lang="ja">紫苑<rp>(</rp><rt>しおん</rt><rp>)</rp></ruby><br>
+        (Hoshikawa Shion)
+      </div>
+      <div class="chara-bio">
+        <h4><i class="fa-solid fa-user"></i> Bio</h4>
+        <ul>
+          <li><span>Age</span> 11</li>
+          <li><span>Height</span> 134 cm</li>
+          <li><span>Weight</span> 30 kg</li>
+          <li><span>Birthday</span> 4 Aug</li>
+          <li><span>Blood type</span> A</li>
+        </ul>
+      </div>
+      <div class="chara-about">
+        <h4><i class="fa-solid fa-circle-info"></i> About</h4>
+        <p>Silent, poker-faced, a perpetually veiled dainty blossom. The inside of her mind is a constellation of mystery, only decipherable by her big sis Celia. The key to unlocking her heart is affection.</p>
+      </div>
+      <div class="chara-likes">
+        <h4><i class="fa-solid fa-heart"></i> Likes</h4>
+        <ul>
+          <li>Cats</li>
+          <li>Dark chocolate</li>
+          <li>Black tea</li>
+          <li>Classical / orchestral music</li>
+        </ul>
+      </div>
+      <div class="chara-dislikes">
+        <h4><i class="fa-solid fa-heart-crack"></i> Dislikes</h4>
+        <ul>
+          <li>Puns (Celia's puns, in particular)</li>
+          <li>Horror movies</li>
+          <li>Household chores</li>
+        </ul>
+      </div>
+      <div class="chara-expr-container">
+        <h4><i class="fa-solid fa-face-smile"></i> Expressions</h4>
+        <div class="chara-expr">
+          <img src="./assets/img/chara/expr_davina1.png" alt="Davina expression 1" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
+          <span class="chara-expr-quote">I... don't know you?</span>
+        </div>
+        <div class="chara-expr">
+          <img src="./assets/img/chara/expr_davina2.png" alt="Davina expression 2" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
+          <span class="chara-expr-quote">85% really is the best.</span>
+        </div>
+        <div class="chara-expr">
+          <img src="./assets/img/chara/expr_davina3.png" alt="Davina expression 3" width="128" height="128" loading="lazy" tabindex="0" class="chara-expr-thumb">
+          <span class="chara-expr-quote">Nee-chan, eat your veggies!</span>
+        </div>
+      </div>
+    </article>
+    <div class="chara-button-tray">
+      <button type="button" class="chara-button ada"><img src="./assets/img/chara/thumb_ada.png" alt="Select character Ada" width="120" height="120" loading="lazy"></button>
+      <button type="button" class="chara-button bella"><img src="./assets/img/chara/thumb_bella.png" alt="Select character Bella" width="120" height="120" loading="lazy"></button>
+      <button type="button" class="chara-button celia"><img src="./assets/img/chara/thumb_celia.png" alt="Select character Celia" width="120" height="120" loading="lazy"></button>
+      <button type="button" class="chara-button davina"><img src="./assets/img/chara/thumb_davina.png" alt="Select character Davina" width="120" height="120" loading="lazy"></button>
     </div>
   </section>
 
-  <section class="content-works" style="display: none;">
+  <section id="artworks" style="display: none;">
     <h2>Artwork Catalogue</h2>
     <fieldset class="artwork-filter">
       <legend><i class="fa-solid fa-filter"></i> Filters</legend>
@@ -308,7 +306,7 @@
         </optgroup>
       </select>
     </fieldset>
-    <div class="content-works-body">
+    <div class="artwork-button-container">
       <!-- buttonString goes here -->
     </div>
     <div class="lightbox-overlay" style="display: none;">
