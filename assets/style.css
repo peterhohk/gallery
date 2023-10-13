@@ -45,6 +45,7 @@ label, button, select, summary, [type="radio"], [type="checkbox"], [type="submit
   --dark-green: hsl(120 80% 18%);
   --gold: hsl(45 100% 68%);
   --bshadow: 0 0.125rem 0.25rem 0.125rem rgb(0 0 0 / 0.25);
+  --tshadow: 0 0.125rem 0.125rem var(--dark-green);
   --img-ada1: #fff9ef;
   --img-ada2: #ffe8c0;
   --img-ada3: #ffa000;
@@ -566,7 +567,7 @@ footer p {
   background-color: color-mix(in srgb, var(--dark-green) 70%, transparent);
   color: var(--very-light-green);
   font-weight: bold;
-  text-shadow: 0 0.125rem 0.125rem var(--dark-green);
+  text-shadow: var(--tshadow);
   opacity: 0;
   transition: opacity 0.4s;
 }
@@ -585,7 +586,7 @@ footer p {
   font-weight: bold;
   color: var(--gold);
   text-transform: uppercase;
-  text-shadow: 0 0.125rem 0.125rem var(--dark-green);
+  text-shadow: var(--tshadow);
   transition: left 0.4s;
 }
 .artwork-feature-badge-glow {
