@@ -564,6 +564,7 @@ footer p {
   inset: 0;
   display: grid;
   place-content: center;
+  gap: 0.25rem;
   padding: 0 0.5rem;
   border-radius: 0.4375rem;
   background-color: color-mix(in srgb, var(--dark-green) 70%, transparent);
@@ -572,6 +573,9 @@ footer p {
   text-shadow: var(--tshadow);
   opacity: 0;
   transition: opacity 0.4s;
+}
+.artwork-title {
+  line-height: 1;
 }
 .artwork-meta {
   font-size: 0.75rem;

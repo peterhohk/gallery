@@ -44,7 +44,7 @@ function init() {
         <button type="button" class="artwork-button" ${buttonAttrString}>
           <img src="./assets/img/artworks/${artwork.id}_thumb.png" alt="Open artwork ${artwork.title}" width="144" height="144" loading="lazy" class="artwork-thumb">
           <div class="artwork-button-overlay">
-            <span>${artwork.title}</span>
+            <span class="artwork-title">${artwork.title}</span>
             <span class="artwork-meta">#${numArtworks - index} | ${dateFromId(artwork.id)}</span>
           </div>
           ${artwork.featured ? `
