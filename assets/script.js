@@ -22,6 +22,9 @@ function init() {
   let lightboxString  = "";
   let slideshowString = "";
   let pipString       = "";
+  function yearFromId(id) {
+    return 2000 + parseInt(id.slice(0,2));
+  }
   function dateFromId(id) {
     return `20${id.slice(0,2)}-${id.slice(2,4)}-${id.slice(4,6)}`;
   }
@@ -32,7 +35,16 @@ function init() {
     numArtworks = artworks.length;
     numFeatured = featuredArtworks.length;
 
+    let indicatorYear = new Date().getFullYear();
+    if (yearFromId(artworks[0].id) === indicatorYear) {
+      buttonString += `<div class="year-indicator"><span>${indicatorYear}</span></div>`;
+    }
+
     artworks.forEach((artwork, index) => {
+      if (yearFromId(artwork.id) !== indicatorYear) {
+        indicatorYear = yearFromId(artwork.id);
+        buttonString += `<div class="year-indicator"><span>${indicatorYear}</span></div>`;
+      }
       const buttonAttr = {
         index: index,
         featured: artwork.featured,
@@ -153,6 +165,12 @@ function init() {
         $(`.artwork-button:not([data-category="${filterCategory}"])`).hide();
       }
     }
+    $(".year-indicator").show();
+    $(".year-indicator").each(function() {
+      if (!$(this).nextUntil(".year-indicator").is(":visible")) {
+        $(this).hide();
+      }
+    });
   }
 
   $("#featured-filter").on("change", function() {
