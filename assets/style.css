@@ -514,20 +514,26 @@ footer p {
 /* SUBPAGE: ARTWORKS STYLE STARTS */
 
 .artwork-filter {
+  position: relative;
   display: grid;
   column-gap: 1em;
   width: fit-content;
-  margin: auto;
-  padding: 0.25em 0.75em 0.5em;
+  margin-top: 1rem;
+  margin-inline: auto;
+  padding: 1rem 0.75rem 0.5rem;
   border: 0.0625rem dashed;
   border-radius: 1em;
   background-color: var(--very-light-green);
 }
-.artwork-filter legend {
+.artwork-filter h3 {
+  position: absolute;
+  top: -0.75rem;
+  left: 0.75rem;
   padding: 0.125em 0.5em;
   border-radius: 1em;
   background-color: var(--dark-green);
   color: var(--very-light-green);
+  font-size: 1rem;
 }
 .artwork-filter ul {
   display: flex;
