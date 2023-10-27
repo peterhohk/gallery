@@ -15,7 +15,7 @@
   {"id": "180910", "title": "Cheebs and Foods", "caption": "What's your favourite food?", "chara": ["A", "B", "C", "D"], "category": "random", "featured": false},
   {"id": "180925", "title": "SUPERNOVA", "caption": "Stella Stream debut!", "chara": ["C", "D"], "category": "outfit-v", "featured": false},
   {"id": "181007", "title": "Cinderella Bust", "caption": "It's a lingerie brand specifically designed for girls with flat chests. Ah, how considerate!", "chara": ["A", "B"], "category": "outfit-u", "featured": false},
-  {"id": "181017", "title": "Pout", "caption": "I don't remember giving her the tsundere trait…?", "chara": ["A"], "category": "random", "featured": false},
+  {"id": "181017", "title": "Pout", "caption": "I don't remember giving her the tsundere trait...?", "chara": ["A"], "category": "random", "featured": false},
   {"id": "181109", "title": "Autumn Fashion", "caption": "It's the season of roasted sweet potatoes!", "chara": ["A", "B", "C", "D"], "category": "outfit-scw", "featured": false},
   {"id": "181111", "title": "Sharing Pocky (Platonically?)", "caption": "Happy Pocky Day!", "chara": ["A", "C"], "category": "pocky", "featured": false},
   {"id": "181206", "title": "They Keep Getting Longer", "caption": "This is getting out of control.", "chara": ["C"], "category": "random", "featured": false},
@@ -109,5 +109,5 @@
   {"id": "230426", "title": "Cabbage Neo", "caption": "Had to throw the old one out, it'd gotten mouldy.", "chara": ["D"], "category": "random", "featured": false},
   {"id": "230523", "title": "Wistful", "caption": "There's no deep meaning or anything, I just thought this was a neat pose to draw.", "chara": ["B"], "category": "random", "featured": false},
   {"id": "230615", "title": "An unimportant announcement", "caption": "J-ColourS will be put on an indefinite hiatus starting today, due to priority shifts. This announcement is mostly for myself so I can focus on the matter at hand.", "chara": ["B"], "category": "random", "featured": false},
-  {"id": "231008", "title": "Elemental Jacket Squad", "caption": "Long ago, the four girls lived together in harmony…", "chara": ["A", "B", "C", "D"], "category": "outfit-tcw", "featured": true}
+  {"id": "231008", "title": "Elemental Jacket Squad", "caption": "Long ago, the four girls lived together in harmony...", "chara": ["A", "B", "C", "D"], "category": "outfit-tcw", "featured": true}
 ]
