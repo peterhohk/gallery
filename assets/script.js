@@ -155,7 +155,7 @@ function init() {
     }
     for (let chara in filterCharas) {
       if (!filterCharas[chara]) {
-        $(`.artwork-button[data-charas*=${chara[0].toUpperCase()}]`).hide();
+        $(`.artwork-button[data-charas*="${chara[0].toUpperCase()}"]`).hide();
       }
     }
     if (filterCategory !== "all") {
