@@ -145,27 +145,31 @@ function init() {
 
   // artwork catalogue filters
 
-  let filterFeatured = false;
-  const filterCharas = Object.fromEntries(charas.map((val) => [val, true]));
-  let filterCategory = "all";
+  let showFeatured = false;
+  const showCharas = Object.fromEntries(charas.map((val) => [val, true]));
+  let showCategory = "all";
+  let showYearIndicator = true;
   function filterArtworks() {
     $(".artwork-button").show();
-    if (filterFeatured) {
+    if (showFeatured) {
       $(`.artwork-button:not([data-featured="true"])`).hide();
     }
-    for (let chara in filterCharas) {
-      if (!filterCharas[chara]) {
+    for (let chara in showCharas) {
+      if (!showCharas[chara]) {
         $(`.artwork-button[data-charas*="${chara[0].toUpperCase()}"]`).hide();
       }
     }
-    if (filterCategory !== "all") {
-      if (filterCategory === "outfit-all") {
+    if (showCategory !== "all") {
+      if (showCategory === "outfit-all") {
         $(`.artwork-button:not([data-category^="outfit"])`).hide();
       } else {
-        $(`.artwork-button:not([data-category="${filterCategory}"])`).hide();
+        $(`.artwork-button:not([data-category="${showCategory}"])`).hide();
       }
     }
     $(".year-indicator").show();
+    if (!showYearIndicator) {
+      $(".year-indicator").hide();
+    }
     $(".year-indicator").each(function() {
       if (!$(this).nextUntil(".year-indicator").is(":visible")) {
         $(this).hide();
@@ -173,18 +177,22 @@ function init() {
     });
   }
 
-  $("#featured-filter").on("change", function() {
-    filterFeatured = $(this).is(":checked");
+  $("#featured-filter").on("click", function() {
+    showFeatured = $(this).is(":checked");
     filterArtworks();
   });
   for (let chara of charas) {
     $("#chara-filter-"+chara).on("click", function() {
-      filterCharas[chara] = $(this).is(":checked");
+      showCharas[chara] = $(this).is(":checked");
       filterArtworks();
     });
   }
   $("#category-filter").on("change", function() {
-    filterCategory = $(this).val();
+    showCategory = $(this).val();
+    filterArtworks();
+  });
+  $("#year-indicator-filter").on("change", function() {
+    showYearIndicator = $(this).is(":checked");
     filterArtworks();
   });
 

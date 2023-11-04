@@ -516,13 +516,13 @@ footer p {
 .artwork-filter {
   position: relative;
   display: grid;
-  column-gap: 1em;
+  gap: 0.125rem 1rem;
   width: fit-content;
   margin-top: 1rem;
   margin-inline: auto;
   padding: 1rem 0.75rem 0.5rem;
   border: 0.0625rem dashed;
-  border-radius: 1em;
+  border-radius: 1rem;
   background-color: var(--very-light-green);
 }
 .artwork-filter h3 {
@@ -544,6 +544,7 @@ footer p {
 }
 .artwork-filter select {
   max-width: 12rem;
+  height: 1.25rem;
 }
 .artwork-button-container {
   display: grid;
