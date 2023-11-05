@@ -150,6 +150,7 @@ function init() {
   let showCategory = "all";
   let showYearIndicator = true;
   function filterArtworks() {
+
     $(".artwork-button").show();
     if (showFeatured) {
       $(`.artwork-button:not([data-featured="true"])`).hide();
@@ -166,15 +167,22 @@ function init() {
         $(`.artwork-button:not([data-category="${showCategory}"])`).hide();
       }
     }
+
     $(".year-indicator").show();
     if (!showYearIndicator) {
       $(".year-indicator").hide();
     }
     $(".year-indicator").each(function() {
-      if (!$(this).nextUntil(".year-indicator").is(":visible")) {
+      if (!$(this).nextUntil(".year-indicator, .no-artwork-msg").is(":visible")) {
         $(this).hide();
       }
     });
+
+    $(".no-artwork-msg").show();
+    if ($(".artwork-button").is(":visible")) {
+      $(".no-artwork-msg").hide();
+    }
+
   }
 
   $("#featured-filter").on("click", function() {

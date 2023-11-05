@@ -660,6 +660,12 @@ footer p {
 .artwork-button:is(:hover, :focus-visible) .artwork-feature-badge-glow {
   opacity: 1;
 }
+.no-artwork-msg {
+  grid-column: 1 / -1;
+  margin-block: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
 .lightbox-overlay {
   position: fixed;
   top: 0;
