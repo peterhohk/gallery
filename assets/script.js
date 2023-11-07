@@ -95,7 +95,10 @@ function init() {
     $(".lightbox").prepend(lightboxString);
     $(".slideshow-container").prepend(slideshowString);
     $(".slideshow-pip-tray").prepend(pipString);
+
     slideShow(Math.floor(Math.random()*numFeatured));
+    filterArtworks();
+    $(".no-artwork-msg").hide();
   });
 
   // subpage controls
@@ -145,11 +148,11 @@ function init() {
 
   // artwork catalogue filters
 
-  let showFeatured = false;
-  const showCharas = Object.fromEntries(charas.map((val) => [val, true]));
-  let showCategory = "all";
-  let showYearIndicator = true;
   function filterArtworks() {
+    const showFeatured = $("#featured-filter").is(":checked");
+    const showCharas = Object.fromEntries(charas.map((chara) => [chara, $("#chara-filter-"+chara).is(":checked")]));
+    const showCategory = $("#category-filter").val();
+    const showYearIndicator = $("#year-indicator-filter").is(":checked");
 
     $(".artwork-button").show();
     if (showFeatured) {
@@ -185,24 +188,7 @@ function init() {
 
   }
 
-  $("#featured-filter").on("click", function() {
-    showFeatured = $(this).is(":checked");
-    filterArtworks();
-  });
-  for (let chara of charas) {
-    $("#chara-filter-"+chara).on("click", function() {
-      showCharas[chara] = $(this).is(":checked");
-      filterArtworks();
-    });
-  }
-  $("#category-filter").on("change", function() {
-    showCategory = $(this).val();
-    filterArtworks();
-  });
-  $("#year-indicator-filter").on("change", function() {
-    showYearIndicator = $(this).is(":checked");
-    filterArtworks();
-  });
+  $(".artwork-filter").on("change", filterArtworks);
 
   // artwork catalogue & lightbox controls
 
