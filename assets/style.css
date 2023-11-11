@@ -76,7 +76,7 @@ body {
 :lang(ja) {
   font-family: "Klee One", "Yu Mincho", sans-serif;
 }
-i[class^="fa-"] {
+.bi {
   font-size: 75%;
 }
 a {
