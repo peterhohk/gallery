@@ -606,6 +606,31 @@ footer p {
 .artwork-meta {
   font-size: 0.75rem;
 }
+.artwork-chara-container {
+  position: absolute;
+  inset: auto 0 0.25rem 0;
+  text-shadow:
+    0 0.0625rem  var(--very-light-green),
+    0 -0.0625rem var(--very-light-green),
+    0.0625rem 0  var(--very-light-green),
+    -0.0625rem 0 var(--very-light-green);
+}
+.artwork-chara-ada {
+  color: var(--img-ada3);
+}
+.artwork-chara-bella {
+  color: var(--img-bella3);
+}
+.artwork-chara-celia {
+  color: var(--img-celia3);
+}
+.artwork-chara-davina {
+  color: var(--img-davina3);
+}
+.artwork-feature-info {
+  position: absolute;
+  inset: 0 0 auto 0;
+}
 .artwork-feature-text-container {
   position: absolute;
   inset: 0.25rem 2rem auto 0;
@@ -639,6 +664,7 @@ footer p {
   right: 0.25rem;
   width: 2rem;
   height: 2rem;
+  max-height: none;
 }
 .artwork-button:is(:hover, :focus-visible) {
   translate: 0 -1rem;

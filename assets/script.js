@@ -58,11 +58,19 @@ function init() {
           <div class="artwork-button-overlay">
             <span class="artwork-title">${artwork.title}</span>
             <span class="artwork-meta">#${numArtworks - index} | ${dateFromId(artwork.id)}</span>
+            <div class="artwork-chara-container">
+              ${artwork.chara.includes("A") ? `<i class="artwork-chara-ada bi bi-circle-fill"></i>` : ``}
+              ${artwork.chara.includes("B") ? `<i class="artwork-chara-bella bi bi-hexagon-fill"></i>` : ``}
+              ${artwork.chara.includes("C") ? `<i class="artwork-chara-celia bi bi-star-fill"></i>` : ``}
+              ${artwork.chara.includes("D") ? `<i class="artwork-chara-davina bi bi-suit-diamond-fill"></i>` : ``}
+            </div>
           </div>
           ${artwork.featured ? `
-            <div class="artwork-feature-text-container"><span class="artwork-feature-text">Featured</span></div>
-            <div class="artwork-feature-badge-glow"></div>
-            <img src="./assets/img/feature_badge.png" alt="Featured artwork badge" width="32" height="32" class="artwork-feature-badge">
+            <div class="artwork-feature-info">
+              <div class="artwork-feature-text-container"><span class="artwork-feature-text">Featured</span></div>
+              <div class="artwork-feature-badge-glow"></div>
+              <img src="./assets/img/feature_badge.png" alt="Featured artwork badge" width="32" height="32" class="artwork-feature-badge">
+            </div>
           ` : ``}
         </button>
       `;
