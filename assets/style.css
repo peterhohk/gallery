@@ -432,11 +432,10 @@ footer p {
   top: 100%;
   right: 2rem;
   display: block;
-  width: 0;
-  height: 0;
-  border: 0.5rem solid transparent;
-  border-top: 0.5rem solid var(--img2);
-  border-left: 0.5rem solid var(--img2);
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--img2);
+  clip-path: polygon(25% 0%, 100% 0%, 0% 100%);
 }
 .chara-expr-thumb:is(:hover, :focus-visible) {
   rotate: 5deg;
