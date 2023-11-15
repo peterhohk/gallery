@@ -54,7 +54,7 @@ function init() {
       const buttonAttrString = Object.keys(buttonAttr).map((key) => `data-${key}="${buttonAttr[key]}"`).join(" ");
       buttonString += `
         <button type="button" class="artwork-button" ${buttonAttrString}>
-          <img src="./assets/img/artworks/${artwork.id}_thumb.png" alt="Open artwork ${artwork.title}" width="144" height="144" loading="lazy" class="artwork-thumb">
+          <img src="./assets/img/artworks/${artwork.id}_thumb.png" alt="Open artwork ${artwork.title}" loading="lazy" class="artwork-thumb">
           <div class="artwork-button-overlay">
             <span class="artwork-title">${artwork.title}</span>
             <span class="artwork-meta">#${numArtworks - index} | ${dateFromId(artwork.id)}</span>
@@ -69,14 +69,14 @@ function init() {
             <div class="artwork-feature-info">
               <div class="artwork-feature-text-container"><span class="artwork-feature-text">Featured</span></div>
               <div class="artwork-feature-badge-glow"></div>
-              <img src="./assets/img/feature_badge.png" alt="Featured artwork badge" width="32" height="32" class="artwork-feature-badge">
+              <img src="./assets/img/feature_badge.png" alt="Featured artwork badge" class="artwork-feature-badge">
             </div>
           ` : ``}
         </button>
       `;
       lightboxString += `
         <figure class="lightbox-entry" data-index="${index}" style="display: none;">
-          <img src="./assets/img/artworks/${artwork.id}_50.png" alt="${artwork.title}" width="1024" height="768" loading="lazy" class="lightbox-img">
+          <img src="./assets/img/artworks/${artwork.id}_50.png" alt="${artwork.title}" loading="lazy" class="lightbox-img">
           <figcaption class="lightbox-info-expand">
             <span class="lightbox-info-artwork-title">${artwork.title}</span>
             <p>#${numArtworks - index}/${numArtworks}</p>
@@ -90,7 +90,7 @@ function init() {
     featuredArtworks.forEach((artwork, index) => {
       slideshowString += `
         <figure class="slideshow-entry" data-index="${index}" style="display: none;">
-          <img src="./assets/img/artworks/${artwork.id}_50.png" alt="${artwork.title}" width="640" height="640" class="slideshow-artwork">
+          <img src="./assets/img/artworks/${artwork.id}_50.png" alt="${artwork.title}" class="slideshow-artwork">
           <figcaption class="slideshow-artwork-title">${artwork.title}</figcaption>
         </figure>
       `;
