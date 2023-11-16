@@ -22,11 +22,16 @@ function init() {
   let lightboxString  = "";
   let slideshowString = "";
   let pipString       = "";
-  function yearFromId(id) {
+  function idToYear(id) {
     return 2000 + parseInt(id.slice(0,2));
   }
-  function dateFromId(id) {
-    return `20${id.slice(0,2)}-${id.slice(2,4)}-${id.slice(4,6)}`;
+  function idToDateString(id) {
+    return `${idToYear(id)}-${id.slice(2,4)}-${id.slice(4,6)}`;
+  }
+  function idToDaysAgo(id) {
+    const today = new Date().setHours(0,0,0,0);
+    const awday = new Date(idToDateString(id)).setHours(0,0,0,0);
+    return Math.floor((today - awday) / 86400000);
   }
 
   $.getJSON("./assets/artworks.json", (artworks) => {
@@ -36,13 +41,13 @@ function init() {
     numFeatured = featuredArtworks.length;
 
     let indicatorYear = new Date().getFullYear();
-    if (yearFromId(artworks[0].id) === indicatorYear) {
+    if (idToYear(artworks[0].id) === indicatorYear) {
       buttonString += `<div class="year-indicator"><span>${indicatorYear}</span></div>`;
     }
 
     artworks.forEach((artwork, index) => {
-      if (yearFromId(artwork.id) !== indicatorYear) {
-        indicatorYear = yearFromId(artwork.id);
+      if (idToYear(artwork.id) !== indicatorYear) {
+        indicatorYear = idToYear(artwork.id);
         buttonString += `<div class="year-indicator"><span>${indicatorYear}</span></div>`;
       }
       const buttonAttr = {
@@ -57,7 +62,7 @@ function init() {
           <img src="./assets/img/artworks/${artwork.id}_thumb.png" alt="Open artwork ${artwork.title}" loading="lazy" class="artwork-thumb">
           <div class="artwork-button-overlay">
             <span class="artwork-title">${artwork.title}</span>
-            <span class="artwork-meta">#${numArtworks - index} | ${dateFromId(artwork.id)}</span>
+            <span class="artwork-meta">#${numArtworks - index}<i class="bi bi-dot"></i>${idToDateString(artwork.id)}</span>
             <div class="artwork-chara-container">
               ${artwork.chara.includes("A") ? `<i class="artwork-chara-ada bi bi-circle-fill"></i>` : ``}
               ${artwork.chara.includes("B") ? `<i class="artwork-chara-bella bi bi-hexagon-fill"></i>` : ``}
@@ -79,8 +84,9 @@ function init() {
           <img src="./assets/img/artworks/${artwork.id}_50.png" alt="${artwork.title}" loading="lazy" class="lightbox-img">
           <figcaption class="lightbox-info-expand">
             <span class="lightbox-info-artwork-title">${artwork.title}</span>
-            <p>#${numArtworks - index}/${numArtworks}</p>
-            <p>Date: ${dateFromId(artwork.id)}</p>
+            <p><i class="bi bi-hash"></i> ${numArtworks - index}/${numArtworks}</p>
+            <p><i class="bi bi-calendar4-event"></i> ${idToDateString(artwork.id)} (${idToDaysAgo(artwork.id)} days ago)</p>
+            <hr>
             <p>${artwork.caption}</p>
           </figcaption>
         </figure>
