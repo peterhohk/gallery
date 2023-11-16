@@ -14,6 +14,52 @@ function init() {
   const keyO     = 79;
   const keyEsc   = 27;
 
+  // utility functions
+
+  function isLeap(year) {
+    if (year % 400 === 0) { return true; }
+    if (year % 100 === 0) { return false; }
+    if (year % 4 === 0) { return true; }
+    return false;
+  }
+
+  function daysInMonth(year, month) {
+    switch (month) {
+      case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+        return 31;
+      case 4: case 6: case 9: case 11:
+        return 30;
+      case 2:
+        return (isLeap(year) ? 29 : 28);
+    }
+  }
+
+  function howLongAgo(date) {
+    const tday = new Date();
+    tday.setHours(0,0,0,0);
+    date.setHours(0,0,0,0);
+    let yearDiff = tday.getFullYear() - date.getFullYear();
+    let monthDiff = (tday.getMonth()+1) - (date.getMonth()+1);
+    let dayDiff = tday.getDate() - date.getDate();
+    if (dayDiff < 0) {
+      dayDiff += daysInMonth(tday.getFullYear(), tday.getMonth()+1);
+      monthDiff--;
+    }
+    if (monthDiff < 0) {
+      monthDiff += 12;
+      yearDiff--;
+    }
+    if (yearDiff > 0) {
+      return `${yearDiff} year${yearDiff === 1 ? "" : "s"} ago`;
+    }
+    else if (monthDiff > 0) {
+      return `${monthDiff} month${monthDiff === 1 ? "" : "s"} ago`;
+    }
+    else {
+      return `${dayDiff} day${dayDiff === 1 ? "" : "s"} ago`;
+    }
+  }
+
   // fetch artworks data
 
   let numArtworks     = 0;
@@ -27,11 +73,6 @@ function init() {
   }
   function idToDateString(id) {
     return `${idToYear(id)}-${id.slice(2,4)}-${id.slice(4,6)}`;
-  }
-  function idToDaysAgo(id) {
-    const today = new Date().setHours(0,0,0,0);
-    const awday = new Date(idToDateString(id)).setHours(0,0,0,0);
-    return Math.floor((today - awday) / 86400000);
   }
 
   $.getJSON("./assets/artworks.json", (artworks) => {
@@ -85,7 +126,7 @@ function init() {
           <figcaption class="lightbox-info-expand">
             <span class="lightbox-info-artwork-title">${artwork.title}</span>
             <p><i class="bi bi-hash"></i> ${numArtworks - index}/${numArtworks}</p>
-            <p><i class="bi bi-calendar4-event"></i> ${idToDateString(artwork.id)} (${idToDaysAgo(artwork.id)} days ago)</p>
+            <p><i class="bi bi-calendar4-event"></i> ${idToDateString(artwork.id)} (${howLongAgo(new Date(idToDateString(artwork.id)))})</p>
             <hr>
             <p>${artwork.caption}</p>
           </figcaption>
