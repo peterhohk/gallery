@@ -42,7 +42,7 @@ function init() {
     let monthDiff = (tday.getMonth()+1) - (date.getMonth()+1);
     let dayDiff = tday.getDate() - date.getDate();
     if (dayDiff < 0) {
-      dayDiff += daysInMonth(tday.getFullYear(), tday.getMonth()+1);
+      dayDiff += daysInMonth(tday.getFullYear(), (tday.getMonth()+1)-1);
       monthDiff--;
     }
     if (monthDiff < 0) {
