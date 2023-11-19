@@ -112,7 +112,7 @@ function init() {
             <div class="artwork-feature-info">
               <div class="artwork-feature-text-container"><span class="artwork-feature-text">Featured</span></div>
               <div class="artwork-feature-badge-glow"></div>
-              <img src="./assets/img/feature_badge.png" alt="Featured artwork badge" class="artwork-feature-badge">
+              <img src="./assets/img/feature_badge.svg" alt="Featured artwork badge" class="artwork-feature-badge">
             </div>
           ` : ``}
         </button>
