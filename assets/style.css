@@ -109,23 +109,6 @@ hr {
   background-color: var(--dark-green);
   color: var(--very-light-green);
 }
-::-webkit-scrollbar {
-  background-color: transparent;
-  width: 0.5rem;
-  height: 0.5rem;
-}
-::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {
-  background-color: var(--very-light-green);
-}
-::-webkit-scrollbar-thumb {
-  border: 0.0625rem solid transparent;
-  border-radius: 0.25rem;
-  background-color: var(--light-green);
-  background-clip: padding-box;
-}
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--dark-green);
-}
 
 /* GENERAL STYLE ENDS */
 
