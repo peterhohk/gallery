@@ -122,9 +122,8 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: color-mix(in srgb, var(--very-light-green) 70%, transparent);
+  background-image: linear-gradient(var(--very-light-green), color-mix(in srgb, var(--very-light-green) 70%, transparent));
   backdrop-filter: blur(0.125rem);
-  transition: background-color 0.4s;
 }
 .title-tray, .button-tray {
   display: flex;
