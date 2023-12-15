@@ -439,11 +439,13 @@ footer p {
   max-width: 8rem;
   border: 0.25rem solid var(--img3);
   border-radius: 50%;
-  overflow: hidden;
   transition: translate 0.4s
 }
 .chara-button:is(:hover, :focus-visible) {
   translate: 0 -1rem;
+}
+.chara-button img {
+  border-radius: 50%;
 }
 @media (min-width: 36rem) {
   .chara-details {
