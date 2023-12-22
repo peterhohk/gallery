@@ -72,7 +72,7 @@ function init() {
     return `${idToYear(id)}-${id.slice(2,4)}-${id.slice(4,6)}`;
   }
 
-  $.getJSON("./assets/artworks.json", (artworks) => {
+  $.getJSON("./artworks.json", (artworks) => {
     artworks.reverse();
     const featuredArtworks = artworks.filter((artwork) => artwork.featured);
     numArtworks = artworks.length;
