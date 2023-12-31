@@ -66,10 +66,10 @@ function init() {
   let slideshowString = "";
   let pipString       = "";
   function idToYear(id) {
-    return 2000 + parseInt(id.slice(0,2));
+    return parseInt(id.slice(0,4));
   }
   function idToDateString(id) {
-    return `${idToYear(id)}-${id.slice(2,4)}-${id.slice(4,6)}`;
+    return `${id.slice(0,4)}-${id.slice(4,6)}-${id.slice(6,8)}`;
   }
 
   $.getJSON("./artworks.json", (artworks) => {
