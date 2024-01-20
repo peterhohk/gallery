@@ -1,6 +1,6 @@
 "use strict";
 
-function init() {
+$(document).ready(function () {
 
   // general constants
 
@@ -156,7 +156,7 @@ function init() {
   // subpage controls
 
   for (let subpage of subpages) {
-    $(`#button-${subpage}`).on("click", function() {
+    $(`#button-${subpage}`).on("click", function () {
       $(`section:not(#${subpage})`).hide();
       $(`#${subpage}`).fadeIn();
     });
@@ -184,14 +184,14 @@ function init() {
 
   $(".slideshow-prev").on("click", slidePrev);
   $(".slideshow-next").on("click", slideNext);
-  $(".slideshow-pip-tray").on("click", ".slideshow-pip", function() {
+  $(".slideshow-pip-tray").on("click", ".slideshow-pip", function () {
     slideShow(parseInt($(this).attr("data-index")));
   });
 
   // character introduction controls
 
   for (let chara of charas) {
-    $(`.chara-button.${chara}`).on("click", function() {
+    $(`.chara-button.${chara}`).on("click", function () {
       $(".chara-details.default").hide();
       $(`.chara-details:not(.${chara})`).hide();
       $(`.chara-details.${chara}`).fadeIn();
@@ -202,7 +202,7 @@ function init() {
 
   function filterArtworks() {
     const showFeatured = $("#featured-filter").is(":checked");
-    const showCharas = Object.fromEntries(charas.map((chara) => [chara, $("#chara-filter-"+chara).is(":checked")]));
+    const showCharas = Object.fromEntries(charas.map((chara) => [chara, $(`#chara-filter-${chara}`).is(":checked")]));
     const showCategory = $("#category-filter").val();
     const showYearIndicator = $("#year-indicator-filter").is(":checked");
 
@@ -227,7 +227,7 @@ function init() {
     if (!showYearIndicator) {
       $(".year-indicator").hide();
     }
-    $(".year-indicator").each(function() {
+    $(".year-indicator").each(function () {
       if (!$(this).nextUntil(".year-indicator, .no-artwork-msg").is(":visible")) {
         $(this).hide();
       }
@@ -252,7 +252,7 @@ function init() {
   }
   function lightboxOpen() {
     $(".lightbox-overlay").fadeIn();
-    $(".artwork-button").each(function() {
+    $(".artwork-button").each(function () {
       $(this).attr({"tabindex": -1})
     });
   }
@@ -270,12 +270,12 @@ function init() {
   }
   function lightboxClose() {
     $(".lightbox-overlay").fadeOut();
-    $(".artwork-button").each(function() {
+    $(".artwork-button").each(function () {
       $(this).attr({"tabindex": null})
     });
   }
 
-  $(".artwork-button-container").on("click", ".artwork-button", function() {
+  $(".artwork-button-container").on("click", ".artwork-button", function () {
     lightboxOpen();
     lightboxShow(parseInt($(this).attr("data-index")));
   });
@@ -330,6 +330,4 @@ function init() {
     }
   });
 
-}
-
-$(document).ready(init);
+});
