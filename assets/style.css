@@ -76,15 +76,6 @@ body {
 :lang(ja) {
   font-family: "Klee One", "Yu Mincho", sans-serif;
 }
-.bi {
-  font-size: 0.75em;
-}
-a {
-  color: var(--blue);
-}
-p, ul, ol {
-  margin-block: 0.25em;
-}
 h1 { /* page header */
   font-size: 2rem;
   white-space: nowrap;
@@ -95,9 +86,24 @@ h2 { /* subpage header */
   font-size: 1.25rem;
   font-weight: normal;
 }
+p, ul, ol {
+  margin-block: 0.25em;
+}
+a {
+  color: var(--blue);
+}
+ruby {
+  ruby-align: center;
+}
+ruby > rt {
+  text-align: center;
+}
 hr {
   border: none;
   border-top: 0.0625rem dotted;
+}
+.bi {
+  font-size: 0.75em;
 }
 .round-button {
   border-radius: 50%;
@@ -339,9 +345,6 @@ footer p {
   padding: 0 0.25em;
   background-image: linear-gradient(transparent 60%, var(--img2) 60% 85%, transparent 85%);
   font-size: 2.5rem;
-}
-.chara-names ruby > rt {
-  text-align: center;
 }
 .chara-bio {
   grid-area: bio;
