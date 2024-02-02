@@ -64,7 +64,7 @@ label, button, select, summary, [type="radio"], [type="checkbox"], [type="submit
   --img-davina4: #7c00b2;
 }
 body {
-  max-width: max(48rem, 75vw);
+  width: min(calc(100% - 1rem), 50% + 24rem, 72rem);
   margin: 0 auto;
   overflow-y: scroll;
   background-color: var(--off-white);
