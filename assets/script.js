@@ -51,9 +51,13 @@ $(document).ready(function () {
       monthDiff += 12;
       yearDiff--;
     }
-    if (yearDiff > 0) { return `${yearDiff} year${yearDiff === 1 ? "" : "s"} ago`; }
-    else if (monthDiff > 0) { return `${monthDiff} month${monthDiff === 1 ? "" : "s"} ago`; }
-    else if (dayDiff > 0) { return `${dayDiff} day${dayDiff === 1 ? "" : "s"} ago`; }
+
+    const yearDiffString = `${yearDiff} year${yearDiff === 1 ? "" : "s"}`;
+    const monthDiffString = `${monthDiff} month${monthDiff === 1 ? "" : "s"}`;
+    const dayDiffString = `${dayDiff} day${dayDiff === 1 ? "" : "s"}`;
+    if (yearDiff > 0) { return `${yearDiffString}${monthDiff > 0 ? ", "+monthDiffString : ""} ago`; }
+    else if (monthDiff > 0) { return `${monthDiffString} ago`; }
+    else if (dayDiff > 0) { return `${dayDiffString} ago`; }
     else { return `today`; }
   }
 
@@ -123,7 +127,8 @@ $(document).ready(function () {
           <figcaption class="lightbox-info-expand">
             <span class="lightbox-info-artwork-title">${artwork.title}</span>
             <p><i class="bi bi-hash"></i> ${numArtworks - index}/${numArtworks}</p>
-            <p><i class="bi bi-calendar4-event"></i> ${idToDateString(artwork.id)} (${howLongAgo(new Date(idToDateString(artwork.id)))})</p>
+            <p><i class="bi bi-calendar4-event"></i> ${idToDateString(artwork.id)}</p>
+            <p><i class="bi bi-clock-history"></i> ${howLongAgo(new Date(idToDateString(artwork.id)))}</p>
             <hr>
             <p>${artwork.caption}</p>
           </figcaption>
