@@ -258,7 +258,7 @@ $(document).ready(function () {
   function lightboxOpen() {
     $(".lightbox-overlay").fadeIn();
     $(".artwork-button").each(function () {
-      $(this).attr({"tabindex": -1})
+      $(this).attr({ "tabindex": -1 });
     });
   }
   function lightboxPrev() {
@@ -276,7 +276,7 @@ $(document).ready(function () {
   function lightboxClose() {
     $(".lightbox-overlay").fadeOut();
     $(".artwork-button").each(function () {
-      $(this).attr({"tabindex": null})
+      $(this).attr({ "tabindex": null });
     });
   }
 
@@ -284,7 +284,7 @@ $(document).ready(function () {
     lightboxOpen();
     lightboxShow(parseInt($(this).attr("data-index")));
   });
-  $(".artwork-button-container").on("mousedown", ".artwork-button", function(event) {
+  $(".artwork-button-container").on("mousedown", ".artwork-button", function (event) {
     if (event.which === mouseMid) {
       event.preventDefault();
       window.open($(`.lightbox-entry[data-index="${$(this).attr("data-index")}"] .lightbox-img`).attr("src"));
@@ -295,7 +295,7 @@ $(document).ready(function () {
   $(".lightbox-info").on("click", lightboxInfo);
   $(".lightbox-expand").on("click", lightboxOrig);
   $(".lightbox-close").on("click", lightboxClose);
-  $(".lightbox-overlay").on("click", function(event) {
+  $(".lightbox-overlay").on("click", function (event) {
     if (event.target === this || event.target === $(".lightbox").get(0)) {
       lightboxClose();
     }
@@ -303,7 +303,7 @@ $(document).ready(function () {
 
   // keyboard controls
 
-  $(window).on("keydown", function(event) {
+  $(window).on("keydown", function (event) {
     if ($("#feat").is(":visible")) {
       switch (event.which) {
         case keyLeft:
