@@ -636,7 +636,8 @@ footer p {
   color: var(--gold);
   text-transform: uppercase;
   text-shadow: var(--tshadow);
-  transition: left 0.4s;
+  visibility: hidden;
+  transition: visibility 0.4s, left 0.4s;
 }
 .artwork-feature-badge-glow {
   position: absolute;
@@ -649,7 +650,7 @@ footer p {
   box-shadow: 0 0 1rem 1rem var(--gold);
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.4s;
+  transition: visibility 0.4s, opacity 0.4s;
 }
 .artwork-feature-badge {
   position: absolute;
@@ -670,6 +671,7 @@ footer p {
   opacity: 1;
 }
 .artwork-button:is(:hover, :focus-visible) .artwork-feature-text {
+  visibility: visible;
   left: 0;
 }
 .artwork-button:is(:hover, :focus-visible) .artwork-feature-badge-glow {
