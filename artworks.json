@@ -67,7 +67,7 @@
   {"id": "20201031", "title": "Ginkgo", "caption": "Autumn is also my favourite season.", "chara": ["A", "C"], "category": "outfit-scw", "featured": false},
   {"id": "20201111", "title": "Sharing Pocky (...?)", "caption": "Health comes before love, everyone.", "chara": ["C", "D"], "category": "pocky", "featured": false},
   {"id": "20201217", "title": "Glasses are Really Versatile", "caption": "A classic student look together with the ponytail.", "chara": ["B"], "category": "random", "featured": false},
-  {"id": "20201225", "title": "Sparkling Holiday", "caption": "This year may be a rough one, but hey, you've made it through!", "chara": ["A"], "category": "outfit-v", "featured": true},
+  {"id": "20201225", "title": "Sparkling Holiday", "caption": "This year may be a rough one, but hey, you've made it through!", "chara": ["A"], "category": "outfit-v", "featured": false},
   {"id": "20210128", "title": "Sign", "caption": "Kusa.", "chara": ["D"], "category": "random", "featured": false},
   {"id": "20210228", "title": "February Update", "caption": "I've always been on semi-hiatus.", "chara": ["B"], "category": "random", "featured": false},
   {"id": "20210316", "title": "Noctis Borealis", "caption": "A new aurora-themed costume for Stella Stream, because the last one was kinda meh.", "chara": ["C"], "category": "outfit-v", "featured": false},
@@ -84,7 +84,7 @@
   {"id": "20211205", "title": "Season of Beige", "caption": "Winter doesn't start until winter solstice so I'm not late!", "chara": ["A", "B"], "category": "outfit-scw", "featured": false},
   {"id": "20211207", "title": "Season of Maroon", "caption": "Mushroom?", "chara": ["C", "D"], "category": "outfit-scw", "featured": false},
   {"id": "20220121", "title": "Lively Charisma", "caption": "You don't need fancy clothes to look cute.", "chara": ["A", "C"], "category": "outfit-scw", "featured": false},
-  {"id": "20220122", "title": "Serene Charm", "caption": "Actually, considering these are casual wears, they aren't going to be very fancy anyway, right?", "chara": ["B", "D"], "category": "outfit-scw", "featured": true},
+  {"id": "20220122", "title": "Serene Charm", "caption": "Actually, considering these are casual wears, they aren't going to be very fancy anyway, right?", "chara": ["B", "D"], "category": "outfit-scw", "featured": false},
   {"id": "20220201", "title": "Frigid Phantasm", "caption": "Did you know that aurora comes in multiple colours, not just the classic green?", "chara": ["D"], "category": "outfit-v", "featured": false},
   {"id": "20220226", "title": "Summiteers", "caption": "Used one of my hiking photos as background.", "chara": ["A", "C"], "category": "outfit-tcw", "featured": false},
   {"id": "20220311", "title": "Wayfinders", "caption": "Used another one of my hiking photos as background.", "chara": ["B", "D"], "category": "outfit-tcw", "featured": false},
@@ -113,5 +113,6 @@
   {"id": "20231111", "title": "Sharing Pocky (Intimately?)", "caption": "With each passing year, this day feels more and more like just an excuse to draw girls engaged in increasingly egregious acts of gayness.", "chara": ["A", "C"], "category": "pocky", "featured": true},
   {"id": "20231222", "title": "Autumn Nostalgia", "caption": "Seasons come and go, friendship never changes.", "chara": ["A", "B", "C", "D"], "category": "outfit-scw", "featured": true},
   {"id": "20240128", "title": "Heartful", "caption": "Testing out a larger canvas size. Look at those crisp lines!", "chara": ["B"], "category": "random", "featured": false},
-  {"id": "20240228", "title": "Frills and Ribbons", "caption": "Girly and cute are top priorities. All else is irrelevant.", "chara": ["B", "D"], "category": "outfit-u", "featured": false}
+  {"id": "20240228", "title": "Frills and Ribbons", "caption": "Girly and cute are top priorities. All else is irrelevant.", "chara": ["B", "D"], "category": "outfit-u", "featured": false},
+  {"id": "20240331", "title": "Springtime Hairstyle Change", "caption": "Loving the vibe they're giving off.", "chara": ["A", "B", "C", "D"], "category": "random", "featured": true}
 ]
