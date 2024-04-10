@@ -207,7 +207,7 @@ $(document).ready(function () {
 
   function filterArtworks() {
     const showFeatured = $("#featured-filter").is(":checked");
-    const showCharas = Object.fromEntries(charas.map((chara) => [chara, $(`#chara-filter-${chara}`).is(":checked")]));
+    const showCharas = new Map(charas.map((chara) => [chara, $(`#chara-filter-${chara}`).is(":checked")]));
     const showCategory = $("#category-filter").val();
     const showYearIndicator = $("#year-indicator-filter").is(":checked");
 
@@ -215,8 +215,8 @@ $(document).ready(function () {
     if (showFeatured) {
       $(`.artwork-button:not([data-featured="true"])`).hide();
     }
-    for (let chara in showCharas) {
-      if (!showCharas[chara]) {
+    for (let chara of charas) {
+      if (!showCharas.get(chara)) {
         $(`.artwork-button[data-charas*="${chara[0].toUpperCase()}"]`).hide();
       }
     }
@@ -262,10 +262,14 @@ $(document).ready(function () {
     });
   }
   function lightboxPrev() {
-    lightboxShow((lightboxCurrent-1+numArtworks) % numArtworks);
+    const visibleIndices = [...$(".artwork-button").filter(":visible")].map((button) => parseInt($(button).attr("data-index")));
+    const prevIndex = visibleIndices.indexOf(lightboxCurrent) === 0 ? visibleIndices[visibleIndices.length - 1] : visibleIndices[visibleIndices.indexOf(lightboxCurrent) - 1];
+    lightboxShow(prevIndex);
   }
   function lightboxNext() {
-    lightboxShow((lightboxCurrent+1+numArtworks) % numArtworks);
+    const visibleIndices = [...$(".artwork-button").filter(":visible")].map((button) => parseInt($(button).attr("data-index")));
+    const nextIndex = visibleIndices.indexOf(lightboxCurrent) === visibleIndices.length - 1 ? visibleIndices[0] : visibleIndices[visibleIndices.indexOf(lightboxCurrent) + 1];
+    lightboxShow(nextIndex);
   }
   function lightboxInfo() {
     $(".lightbox-info-expand").toggleClass("expanded");
