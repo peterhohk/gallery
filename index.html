@@ -276,39 +276,45 @@
     <h2>Artwork Catalogue</h2>
     <form class="artwork-filter">
       <h3><i class="bi bi-funnel"></i> Filters</h3>
-      <strong>Featured:</strong>
-      <div>
-        <input type="checkbox" id="featured-filter"> <label for="featured-filter">Show featured artworks only</label>
-      </div>
-      <strong>Characters:</strong>
-      <ul>
-        <li><input type="checkbox" id="chara-filter-ada" checked> <label for="chara-filter-ada">Ada</label></li>
-        <li><input type="checkbox" id="chara-filter-bella" checked> <label for="chara-filter-bella">Bella</label></li>
-        <li><input type="checkbox" id="chara-filter-celia" checked> <label for="chara-filter-celia">Celia</label></li>
-        <li><input type="checkbox" id="chara-filter-davina" checked> <label for="chara-filter-davina">Davina</label></li>
-      </ul>
-      <strong>Category:</strong>
-      <select id="category-filter">
-        <option value="all">All</option>
-        <optgroup label="Outfit Designs">
-          <option value="outfit-all">Outfit Design - All</option>
-          <option value="outfit-vu">Outfit Design - Uniform</option>
-          <option value="outfit-scw">Outfit Design - Seasonal Casual Wear</option>
-          <option value="outfit-tcw">Outfit Design - Themed Casual Wear</option>
-          <option value="outfit-s">Outfit Design - Swimsuit</option>
-          <option value="outfit-u">Outfit Design - Underwear</option>
-          <option value="outfit-v">Outfit Design - Variety</option>
-        </optgroup>
-        <optgroup label="Other">
-          <option value="chibi">Chibi Batch</option>
-          <option value="pocky">Pocky Day</option>
-          <option value="random">Random</option>
-        </optgroup>
-      </select>
-      <strong>View:</strong>
-      <div>
-        <input type="checkbox" id="year-indicator-filter"> <label for="year-indicator-filter">Show year indicators</label>
-      </div>
+      <dl>
+        <dt>Featured:</dt>
+        <dd>
+          <input type="checkbox" id="featured-filter"> <label for="featured-filter">Show featured artworks only</label>
+        </dd>
+        <dt>Characters:</dt>
+        <dd>
+          <ul>
+            <li><input type="checkbox" id="chara-filter-ada" checked> <label for="chara-filter-ada">Ada</label></li>
+            <li><input type="checkbox" id="chara-filter-bella" checked> <label for="chara-filter-bella">Bella</label></li>
+            <li><input type="checkbox" id="chara-filter-celia" checked> <label for="chara-filter-celia">Celia</label></li>
+            <li><input type="checkbox" id="chara-filter-davina" checked> <label for="chara-filter-davina">Davina</label></li>
+          </ul>
+        </dd>
+        <dt>Category:</dt>
+        <dd>
+          <select id="category-filter">
+            <option value="all">All</option>
+            <optgroup label="Outfit Designs">
+              <option value="outfit-all">Outfit Design - All</option>
+              <option value="outfit-vu">Outfit Design - Uniform</option>
+              <option value="outfit-scw">Outfit Design - Seasonal Casual Wear</option>
+              <option value="outfit-tcw">Outfit Design - Themed Casual Wear</option>
+              <option value="outfit-s">Outfit Design - Swimsuit</option>
+              <option value="outfit-u">Outfit Design - Underwear</option>
+              <option value="outfit-v">Outfit Design - Variety</option>
+            </optgroup>
+            <optgroup label="Other">
+              <option value="chibi">Chibi Batch</option>
+              <option value="pocky">Pocky Day</option>
+              <option value="random">Random</option>
+            </optgroup>
+          </select>
+        </dd>
+        <dt>View:</dt>
+        <dd>
+          <input type="checkbox" id="year-indicator-filter"> <label for="year-indicator-filter">Show year indicators</label>
+        </dd>
+      </dl>
     </form>
     <div class="artwork-button-container">
       <!-- buttonString goes here -->

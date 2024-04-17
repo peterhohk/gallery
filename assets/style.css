@@ -501,8 +501,6 @@ footer p {
 
 .artwork-filter {
   position: relative;
-  display: grid;
-  gap: 0.125rem 1rem;
   width: fit-content;
   margin-top: 1rem;
   margin-inline: auto;
@@ -520,6 +518,16 @@ footer p {
   background-color: var(--dark-green);
   color: var(--very-light-green);
   font-size: 1rem;
+}
+.artwork-filter dl {
+  display: grid;
+  gap: 0.125rem 1rem;
+}
+.artwork-filter dt {
+  font-weight: bold;
+}
+.artwork-filter dd {
+  height: 1.25rem;
 }
 .artwork-filter ul {
   display: flex;
@@ -815,7 +823,7 @@ footer p {
   line-height: 1;
 }
 @media (min-width: 36rem) {
-  .artwork-filter {
+  .artwork-filter dl {
     grid-template-columns: repeat(2, auto);
   }
 }
