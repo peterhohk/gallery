@@ -114,5 +114,6 @@
   {"id": "20231222", "title": "Autumn Nostalgia", "caption": "Seasons come and go, friendship never changes.", "chara": ["A", "B", "C", "D"], "category": "outfit-scw", "featured": true},
   {"id": "20240128", "title": "Heartful", "caption": "Testing out a larger canvas size. Look at those crisp lines!", "chara": ["B"], "category": "random", "featured": false},
   {"id": "20240228", "title": "Frills and Ribbons", "caption": "Girly and cute are top priorities. All else is irrelevant.", "chara": ["B", "D"], "category": "outfit-u", "featured": false},
-  {"id": "20240331", "title": "Springtime Hairstyle Change", "caption": "Loving the vibe they're giving off.", "chara": ["A", "B", "C", "D"], "category": "random", "featured": true}
+  {"id": "20240331", "title": "Springtime Hairstyle Change", "caption": "Loving the vibe they're giving off.", "chara": ["A", "B", "C", "D"], "category": "random", "featured": true},
+  {"id": "20240430", "title": "Light as a Feather", "caption": "Does a sunny day make you feel lighter and happier?", "chara": ["A"], "category": "random", "featured": false}
 ]
