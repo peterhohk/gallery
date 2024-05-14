@@ -17,34 +17,22 @@ $(document).ready(function () {
   // utility functions
 
   function howLongAgo(date) {
-    function isLeap(year) {
-      if (year % 400 === 0) { return true; }
-      if (year % 100 === 0) { return false; }
-      if (year % 4 === 0) { return true; }
-      return false;
-    }
     function daysInMonth(year, month) {
-      switch (month) {
-        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
-          return 31;
-        case 4: case 6: case 9: case 11:
-          return 30;
-        case 2:
-          return (isLeap(year) ? 29 : 28);
-      }
+      return new Date(year, month, 0).getDate();
     }
 
     const tday = new Date();
-    tday.setHours(0,0,0,0);
-    date.setHours(0,0,0,0);
+    tday.setHours(0, 0, 0, 0);
+    date.setHours(0, 0, 0, 0);
     if (date > tday) { return "future?"; }
 
     let yearDiff = tday.getFullYear() - date.getFullYear();
     let monthDiff = (tday.getMonth()+1) - (date.getMonth()+1);
     let dayDiff = tday.getDate() - date.getDate();
     if (dayDiff < 0) {
-      const carryMonth = (tday.getMonth()+1 === 1) ? 12 : (tday.getMonth()+1)-1;
-      dayDiff += daysInMonth(tday.getFullYear(), carryMonth);
+      const carryYear = tday.getMonth()+1 === 1 ? tday.getFullYear() - 1 : tday.getFullYear();
+      const carryMonth = tday.getMonth()+1 === 1 ? 12 : (tday.getMonth()+1)-1;
+      dayDiff += daysInMonth(carryYear, carryMonth);
       monthDiff--;
     }
     if (monthDiff < 0) {
@@ -56,9 +44,9 @@ $(document).ready(function () {
     const monthDiffString = `${monthDiff} month${monthDiff === 1 ? "" : "s"}`;
     const dayDiffString = `${dayDiff} day${dayDiff === 1 ? "" : "s"}`;
     if (yearDiff > 0) { return `${yearDiffString}${monthDiff > 0 ? ", "+monthDiffString : ""} ago`; }
-    else if (monthDiff > 0) { return `${monthDiffString} ago`; }
-    else if (dayDiff > 0) { return `${dayDiffString} ago`; }
-    else { return `today`; }
+    if (monthDiff > 0) { return `${monthDiffString} ago`; }
+    if (dayDiff > 0) { return `${dayDiffString} ago`; }
+    return `today`;
   }
 
   // fetch artworks data
