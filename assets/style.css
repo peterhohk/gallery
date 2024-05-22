@@ -582,6 +582,7 @@ footer p {
   width: 100%;
   object-fit: cover;
   border-radius: 0.4375rem;
+  pointer-events: none;
   transition: filter 0.4s;
 }
 .artwork-button-overlay {
