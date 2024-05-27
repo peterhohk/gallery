@@ -403,7 +403,7 @@ footer p {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 80%;
+  bottom: calc(100% - 1rem);
   display: block;
   padding: 0.5em;
   border-radius: 1em;
@@ -414,7 +414,8 @@ footer p {
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0.4s, opacity 0.4s, bottom 0.4s;
+  translate: 0 1rem;
+  transition: visibility 0.4s, opacity 0.4s, translate 0.4s;
 }
 .chara-expr-quote::after {
   content: "";
@@ -433,7 +434,7 @@ footer p {
 .chara-expr-thumb:is(:hover, :focus-visible) + .chara-expr-quote {
   visibility: visible;
   opacity: 1;
-  bottom: 90%;
+  translate: none;
 }
 .chara-button-tray {
   display: flex;
@@ -638,15 +639,16 @@ footer p {
   overflow: hidden;
 }
 .artwork-feature-text {
-  position: relative;
-  left: 100%;
+  display: inline-block;
+  width: 100%;
   font-size: 1.25rem;
   font-weight: bold;
   color: var(--gold);
   text-transform: uppercase;
   text-shadow: var(--tshadow);
   visibility: hidden;
-  transition: visibility 0.4s, left 0.4s;
+  translate: -100%;
+  transition: visibility 0.4s, translate 0.4s;
 }
 .artwork-feature-badge-glow {
   position: absolute;
@@ -681,7 +683,7 @@ footer p {
 }
 .artwork-button:is(:hover, :focus-visible) .artwork-feature-text {
   visibility: visible;
-  left: 0;
+  translate: none;
 }
 .artwork-button:is(:hover, :focus-visible) .artwork-feature-badge-glow {
   visibility: visible;
