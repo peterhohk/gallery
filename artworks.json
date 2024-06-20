@@ -116,5 +116,6 @@
   {"id": "20240228", "title": "Frills and Ribbons", "caption": "Girly and cute are top priorities. All else is irrelevant.", "chara": ["B", "D"], "category": "outfit-u", "featured": false},
   {"id": "20240331", "title": "Springtime Hairstyle Change", "caption": "Loving the vibe they're giving off.", "chara": ["A", "B", "C", "D"], "category": "random", "featured": true},
   {"id": "20240430", "title": "Light as a Feather", "caption": "Does a sunny day make you feel lighter and happier?", "chara": ["A"], "category": "random", "featured": false},
-  {"id": "20240522", "title": "Sentiment", "caption": "Sometimes, you'd feel like even your closest friend is a complete stranger.", "chara": ["B", "D"], "category": "outfit-scw", "featured": false}
+  {"id": "20240522", "title": "Sentiment", "caption": "Sometimes, you'd feel like even your closest friend is a complete stranger.", "chara": ["B", "D"], "category": "outfit-scw", "featured": false},
+  {"id": "20240620", "title": "Endearment", "caption": "Sometimes, the mere presence of a friend is enough to brighten up your day.", "chara": ["A", "C"], "category": "outfit-scw", "featured": false}
 ]
