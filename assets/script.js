@@ -49,6 +49,17 @@ $(document).ready(function () {
     return `today`;
   }
 
+  function escapeHTML(str) {
+    const replaceMap = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      "'": "&#39;",
+      "\"": "&quot;",
+    };
+    return str.replace(/[&<>'"]/g, (tag) => replaceMap[tag]);
+  }
+
   // fetch artworks data
 
   let numArtworks     = 0;
@@ -89,9 +100,9 @@ $(document).ready(function () {
       const buttonAttrString = Object.keys(buttonAttr).map((key) => `data-${key}="${buttonAttr[key]}"`).join(" ");
       buttonString += `
         <button type="button" class="artwork-button" ${buttonAttrString}>
-          <img src="./assets/img/artworks/${artwork.id}_thumb.png" alt="Open artwork ${artwork.title}" loading="lazy" class="artwork-thumb">
+          <img src="./assets/img/artworks/${artwork.id}_thumb.png" alt="Open artwork ${escapeHTML(artwork.title)}" loading="lazy" class="artwork-thumb">
           <div class="artwork-button-overlay">
-            <span class="artwork-title">${artwork.title}</span>
+            <span class="artwork-title">${escapeHTML(artwork.title)}</span>
             <span class="artwork-meta">#${numArtworks - index}<i class="bi bi-dot"></i>${idToDateString(artwork.id)}</span>
             <div class="artwork-chara-container">
               ${artwork.chara.includes("A") ? `<i class="artwork-chara-ada bi bi-circle-fill"></i>` : ``}
@@ -111,14 +122,14 @@ $(document).ready(function () {
       `;
       lightboxString += `
         <figure class="lightbox-entry" data-index="${index}" style="display: none;">
-          <img src="./assets/img/artworks/${artwork.id}_50.png" alt="${artwork.title}" loading="lazy" class="lightbox-img">
+          <img src="./assets/img/artworks/${artwork.id}_50.png" alt="${escapeHTML(artwork.title)}" loading="lazy" class="lightbox-img">
           <figcaption class="lightbox-info-expand">
-            <span class="lightbox-info-artwork-title">${artwork.title}</span>
+            <span class="lightbox-info-artwork-title">${escapeHTML(artwork.title)}</span>
             <p><i class="bi bi-hash"></i> ${numArtworks - index}/${numArtworks}</p>
             <p><i class="bi bi-calendar4-event"></i> ${idToDateString(artwork.id)}</p>
             <p><i class="bi bi-clock-history"></i> ${howLongAgo(new Date(idToDateString(artwork.id)))}</p>
             <hr>
-            <p>${artwork.caption}</p>
+            <p>${escapeHTML(artwork.caption)}</p>
           </figcaption>
         </figure>
       `;
@@ -127,8 +138,8 @@ $(document).ready(function () {
     featuredArtworks.forEach((artwork, index) => {
       slideshowString += `
         <figure class="slideshow-entry" data-index="${index}" style="display: none;">
-          <img src="./assets/img/artworks/${artwork.id}_50.png" alt="${artwork.title}" class="slideshow-artwork">
-          <figcaption class="slideshow-artwork-title">${artwork.title}</figcaption>
+          <img src="./assets/img/artworks/${artwork.id}_50.png" alt="${escapeHTML(artwork.title)}" class="slideshow-artwork">
+          <figcaption class="slideshow-artwork-title">${escapeHTML(artwork.title)}</figcaption>
         </figure>
       `;
       pipString += `
