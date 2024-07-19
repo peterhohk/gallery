@@ -527,9 +527,6 @@ footer p {
 .artwork-filter dt {
   font-weight: bold;
 }
-.artwork-filter dd {
-  height: 1.25rem;
-}
 .artwork-filter ul {
   display: flex;
   gap: 0.5em;
@@ -538,6 +535,7 @@ footer p {
   list-style-type: none;
 }
 .artwork-filter select {
+  display: block;
   max-width: 12rem;
   height: 1.25rem;
 }
