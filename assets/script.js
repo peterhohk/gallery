@@ -206,7 +206,8 @@ $(document).ready(function () {
 
   function filterArtworks() {
     const showFeatured = $("#featured-filter").is(":checked");
-    const showCharas = new Map(charas.map((chara) => [chara, $(`#chara-filter-${chara}`).is(":checked")]));
+    const includeCharas = new Map(charas.map((chara) => [chara, $(`#chara-filter-include-${chara}`).is(":checked")]));
+    const excludeCharas = new Map(charas.map((chara) => [chara, $(`#chara-filter-exclude-${chara}`).is(":checked")]));
     const showCategory = $("#category-filter").val();
     const showYearIndicator = $("#year-indicator-filter").is(":checked");
 
@@ -215,7 +216,10 @@ $(document).ready(function () {
       $(`.artwork-button:not([data-featured="true"])`).hide();
     }
     for (let chara of charas) {
-      if (!showCharas.get(chara)) {
+      if (includeCharas.get(chara)) {
+        $(`.artwork-button:not([data-charas*="${chara[0].toUpperCase()}"])`).hide();
+      }
+      if (excludeCharas.get(chara)) {
         $(`.artwork-button[data-charas*="${chara[0].toUpperCase()}"]`).hide();
       }
     }

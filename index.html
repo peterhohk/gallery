@@ -279,15 +279,24 @@
       <dl>
         <dt>Featured:</dt>
         <dd>
-          <input type="checkbox" id="featured-filter"> <label for="featured-filter">Show featured artworks only</label>
+          <label><input type="checkbox" id="featured-filter"> Show featured artworks only</label>
         </dd>
-        <dt>Characters:</dt>
+        <dt>Must include:</dt>
         <dd>
           <ul>
-            <li><input type="checkbox" id="chara-filter-ada" checked> <label for="chara-filter-ada">Ada</label></li>
-            <li><input type="checkbox" id="chara-filter-bella" checked> <label for="chara-filter-bella">Bella</label></li>
-            <li><input type="checkbox" id="chara-filter-celia" checked> <label for="chara-filter-celia">Celia</label></li>
-            <li><input type="checkbox" id="chara-filter-davina" checked> <label for="chara-filter-davina">Davina</label></li>
+            <li><label><input type="checkbox" id="chara-filter-include-ada"> Ada</label></li>
+            <li><label><input type="checkbox" id="chara-filter-include-bella"> Bella</label></li>
+            <li><label><input type="checkbox" id="chara-filter-include-celia"> Celia</label></li>
+            <li><label><input type="checkbox" id="chara-filter-include-davina"> Davina</label></li>
+          </ul>
+        </dd>
+        <dt>Must exclude:</dt>
+        <dd>
+          <ul>
+            <li><label><input type="checkbox" id="chara-filter-exclude-ada"> Ada</label></li>
+            <li><label><input type="checkbox" id="chara-filter-exclude-bella"> Bella</label></li>
+            <li><label><input type="checkbox" id="chara-filter-exclude-celia"> Celia</label></li>
+            <li><label><input type="checkbox" id="chara-filter-exclude-davina"> Davina</label></li>
           </ul>
         </dd>
         <dt>Category:</dt>
@@ -312,7 +321,7 @@
         </dd>
         <dt>View:</dt>
         <dd>
-          <input type="checkbox" id="year-indicator-filter"> <label for="year-indicator-filter">Show year indicators</label>
+          <label><input type="checkbox" id="year-indicator-filter"> Show year indicators</label>
         </dd>
       </dl>
     </form>
