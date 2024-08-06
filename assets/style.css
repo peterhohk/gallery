@@ -132,8 +132,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-image: linear-gradient(var(--very-light-green), color-mix(in srgb, var(--very-light-green) 70%, transparent));
-  backdrop-filter: blur(0.125rem);
+  background-color: var(--very-light-green);
 }
 .title-tray {
   display: flex;
@@ -582,7 +581,6 @@ footer p {
   object-fit: cover;
   border-radius: 0.4375rem;
   pointer-events: none;
-  transition: filter 0.4s;
 }
 .artwork-button-overlay {
   position: absolute;
@@ -672,9 +670,6 @@ footer p {
 .artwork-button:is(:hover, :focus-visible) {
   translate: 0 -1rem;
 }
-.artwork-button:is(:hover, :focus-visible) .artwork-thumb {
-  filter: blur(0.0625rem);
-}
 .artwork-button:is(:hover, :focus-visible) .artwork-button-overlay {
   visibility: visible;
   opacity: 1;
@@ -701,8 +696,7 @@ footer p {
   height: 100%;
   z-index: 1;
   padding: 4rem;
-  background-color: hsl(0 0% 0% / 0.7);
-  backdrop-filter: blur(0.125rem);
+  background-color: hsl(0 0% 0% / 0.8);
 }
 .lightbox {
   position: relative;
