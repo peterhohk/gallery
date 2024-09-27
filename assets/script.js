@@ -44,7 +44,7 @@ $(document).ready(function () {
     const monthDiffString = `${monthDiff} month${monthDiff === 1 ? "" : "s"}`;
     const dayDiffString = `${dayDiff} day${dayDiff === 1 ? "" : "s"}`;
     if (yearDiff > 0) { return `${yearDiffString}${monthDiff > 0 ? ", "+monthDiffString : ""} ago`; }
-    if (monthDiff > 0) { return `${monthDiffString} ago`; }
+    if (monthDiff > 0) { return `${monthDiffString}${dayDiff > 0 ? ", "+dayDiffString : ""} ago`; }
     if (dayDiff > 0) { return `${dayDiffString} ago`; }
     return `today`;
   }
