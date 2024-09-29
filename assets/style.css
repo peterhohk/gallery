@@ -330,9 +330,10 @@ footer p {
 }
 .chara-portrait {
   grid-area: portrait;
+  max-width: 150%;
   margin-top: -1rem;
-  margin-inline: auto;
-  filter: drop-shadow(0.25rem 0.25rem 0.25rem var(--img3));
+  margin-inline: -25%;
+  filter: drop-shadow(0.25rem 0.25rem var(--img3));
 }
 .chara-names {
   grid-area: names;
