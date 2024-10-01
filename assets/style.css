@@ -369,7 +369,7 @@ footer p {
 .chara-about {
   grid-area: about;
   padding: 0.5rem 0.75rem;
-  border: 0.25rem double var(--img3);
+  border: 0.1875rem double var(--img3);
   border-radius: 1rem;
 }
 .chara-likes {
