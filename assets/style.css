@@ -701,7 +701,7 @@ footer p {
   height: 100%;
 }
 .lightbox-button {
-  position: fixed;
+  position: absolute;
   inset: 0;
   margin: auto;
   font-size: 3rem;
@@ -733,7 +733,7 @@ footer p {
   margin-right: 0.5rem;
 }
 .lightbox-button + span {
-  position: fixed;
+  position: absolute;
   inset: 0;
   margin: auto;
   width: fit-content;
