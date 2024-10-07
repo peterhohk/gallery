@@ -693,82 +693,12 @@ footer p {
   position: fixed;
   inset: 0;
   z-index: 1;
-  padding: 4rem;
+  padding: 3rem;
   background-color: hsl(0 0% 0% / 0.8);
 }
 .lightbox {
+  position: relative;
   height: 100%;
-}
-.lightbox-button {
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  font-size: 3rem;
-  width: 1em;
-  height: 1em;
-  opacity: 0.3;
-  box-shadow: var(--bshadow);
-  transition: background-color 0.4s, color 0.4s, opacity 0.4s;
-}
-.lightbox-button:is(:hover, :focus-visible) {
-  opacity: 1;
-}
-.lightbox-prev {
-  margin-left: 0.5rem;
-}
-.lightbox-next {
-  margin-right: 0.5rem;
-}
-.lightbox-info {
-  margin-bottom: 0.5rem;
-  margin-left: 0.5rem;
-}
-.lightbox-expand {
-  margin-bottom: 0.5rem;
-  margin-right: 0.5rem;
-}
-.lightbox-close {
-  margin-top: 0.5rem;
-  margin-right: 0.5rem;
-}
-.lightbox-button + span {
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  width: fit-content;
-  height: fit-content;
-  padding: 0.5em 1em;
-  border-radius: 1.5em;
-  background-color: var(--dark-green);
-  font-size: 1.25rem;
-  color: var(--very-light-green);
-  box-shadow: var(--bshadow);
-  pointer-events: none;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0.4s, opacity 0.4s;
-}
-.lightbox-button:is(:hover, :focus-visible) + span {
-  visibility: visible;
-  opacity: 1;
-}
-.lightbox-prev + span {
-  margin-left: 3.75rem;
-}
-.lightbox-next + span {
-  margin-right: 3.75rem;
-}
-.lightbox-info + span {
-  margin-bottom: 0.5rem;
-  margin-left: 3.75rem;
-}
-.lightbox-expand + span {
-  margin-bottom: 0.5rem;
-  margin-right: 3.75rem;
-}
-.lightbox-close + span {
-  margin-top: 0.5rem;
-  margin-right: 3.75rem;
 }
 .lightbox-img {
   position: absolute;
@@ -777,9 +707,9 @@ footer p {
 }
 .lightbox-info-expand {
   position: absolute;
-  bottom: 3.75rem;
-  left: 3.75rem;
-  width: min(32rem, calc(100% + 0.5rem));
+  bottom: -0.125rem;
+  left: -0.125rem;
+  width: min(32rem, calc(100% + 0.25rem));
   padding: 1rem 1rem 2rem 1rem;
   border-radius: 2rem 2rem 2rem 0;
   background-color: color-mix(in srgb, var(--very-light-green) 90%, transparent);
@@ -813,6 +743,76 @@ footer p {
   color: var(--very-light-green);
   font-size: 1.25rem;
   line-height: 1;
+}
+.lightbox-button {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  font-size: 2.5rem;
+  width: 1em;
+  height: 1em;
+  opacity: 0.3;
+  box-shadow: var(--bshadow);
+  transition: background-color 0.4s, color 0.4s, opacity 0.4s;
+}
+.lightbox-button:is(:hover, :focus-visible) {
+  opacity: 1;
+}
+.lightbox-prev {
+  margin-left: 0.25rem;
+}
+.lightbox-next {
+  margin-right: 0.25rem;
+}
+.lightbox-info {
+  margin-bottom: 0.25rem;
+  margin-left: 0.25rem;
+}
+.lightbox-expand {
+  margin-bottom: 0.25rem;
+  margin-right: 0.25rem;
+}
+.lightbox-close {
+  margin-top: 0.25rem;
+  margin-right: 0.25rem;
+}
+.lightbox-button + span {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.5em 1em;
+  border-radius: 1000em;
+  background-color: var(--dark-green);
+  color: var(--very-light-green);
+  box-shadow: var(--bshadow);
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.4s, opacity 0.4s;
+}
+.lightbox-button:is(:hover, :focus-visible) + span {
+  visibility: visible;
+  opacity: 1;
+}
+.lightbox-prev + span {
+  margin-left: 2.875rem;
+}
+.lightbox-next + span {
+  margin-right: 2.875rem;
+}
+.lightbox-info + span {
+  margin-bottom: 0.25rem;
+  margin-left: 2.875rem;
+}
+.lightbox-expand + span {
+  margin-bottom: 0.25rem;
+  margin-right: 2.875rem;
+}
+.lightbox-close + span {
+  margin-top: 0.25rem;
+  margin-right: 2.875rem;
 }
 @media (min-width: 36rem) {
   .artwork-filter dl {
