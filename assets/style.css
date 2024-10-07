@@ -697,7 +697,6 @@ footer p {
   background-color: hsl(0 0% 0% / 0.8);
 }
 .lightbox {
-  position: relative;
   height: 100%;
 }
 .lightbox-button {
@@ -778,8 +777,8 @@ footer p {
 }
 .lightbox-info-expand {
   position: absolute;
-  bottom: -0.25rem;
-  left: -0.25rem;
+  bottom: 3.75rem;
+  left: 3.75rem;
   width: min(32rem, calc(100% + 0.5rem));
   padding: 1rem 1rem 2rem 1rem;
   border-radius: 2rem 2rem 2rem 0;
