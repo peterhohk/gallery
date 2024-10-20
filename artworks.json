@@ -120,5 +120,6 @@
   {"id": "20240620", "title": "Endearment", "caption": "Sometimes, the mere presence of a friend is enough to brighten up your day.", "chara": ["A", "C"], "category": "outfit-scw", "featured": false},
   {"id": "20240729", "title": "Beachgoers Get Ready!", "caption": "It's summer, baby!", "chara": ["A", "B", "C", "D"], "category": "outfit-s", "featured": true},
   {"id": "20240831", "title": "Running", "caption": "But where are they going?", "chara": ["B", "C"], "category": "random", "featured": false},
-  {"id": "20240930", "title": "Favourites", "caption": "Picking my favoutire designs is surprisingly difficult, but I did manage to narrow them down to one per character.", "chara": ["A", "B", "C", "D"], "category": "random", "featured": true}
+  {"id": "20240930", "title": "Favourites", "caption": "Picking my favoutire designs is surprisingly difficult, but I did manage to narrow them down to one per character.", "chara": ["A", "B", "C", "D"], "category": "random", "featured": true},
+  {"id": "20241020", "title": "Oh?", "caption": "Knock before you enter!", "chara": ["A"], "category": "outfit-u", "featured": false}
 ]
