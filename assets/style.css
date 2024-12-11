@@ -39,7 +39,7 @@ label, button, select, summary, [type="radio"], [type="checkbox"], [type="submit
   --light-blue: hsl(210 90% 82%);
   --blue: hsl(225 90% 32%);
   --dark-blue: hsl(240 90% 18%);
-  --very-light-green: hsl(105 60% 92%);
+  --xlight-green: hsl(105 60% 92%);
   --light-green: hsl(105 60% 68%);
   --green: hsl(120 60% 32%);
   --dark-green: hsl(120 80% 18%);
@@ -113,7 +113,7 @@ hr {
 }
 .round-button:is(:hover, :focus-visible) {
   background-color: var(--dark-green);
-  color: var(--very-light-green);
+  color: var(--xlight-green);
 }
 .round-button > .bi:only-child {
   display: block;
@@ -132,7 +132,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--very-light-green);
+  background-color: var(--xlight-green);
 }
 .title-tray {
   display: flex;
@@ -247,7 +247,7 @@ footer p {
 /* SUBPAGE: CHARACTERS STYLE STARTS */
 
 .chara-details.default {
-  --img1: var(--very-light-green);
+  --img1: var(--xlight-green);
   --img2: var(--light-green);
   --img3: var(--green);
   --img4: var(--dark-green);
@@ -508,7 +508,7 @@ footer p {
   padding: 1rem 0.75rem 0.5rem;
   border: 0.0625rem dashed;
   border-radius: 1rem;
-  background-color: var(--very-light-green);
+  background-color: var(--xlight-green);
 }
 .artwork-filter h3 {
   position: absolute;
@@ -517,7 +517,7 @@ footer p {
   padding: 0.125em 0.5em;
   border-radius: 1em;
   background-color: var(--dark-green);
-  color: var(--very-light-green);
+  color: var(--xlight-green);
   font-size: 1rem;
 }
 .artwork-filter dl {
@@ -592,7 +592,7 @@ footer p {
   padding: 0 0.5rem;
   border-radius: 0.4375rem;
   background-color: color-mix(in srgb, var(--dark-green) 70%, transparent);
-  color: var(--very-light-green);
+  color: var(--xlight-green);
   font-weight: bold;
   text-shadow: var(--tshadow);
   visibility: hidden;
@@ -609,10 +609,10 @@ footer p {
   position: absolute;
   inset: auto 0 0.25rem 0;
   text-shadow:
-    0 0.0625rem  var(--very-light-green),
-    0 -0.0625rem var(--very-light-green),
-    0.0625rem 0  var(--very-light-green),
-    -0.0625rem 0 var(--very-light-green);
+    0 0.0625rem  var(--xlight-green),
+    0 -0.0625rem var(--xlight-green),
+    0.0625rem 0  var(--xlight-green),
+    -0.0625rem 0 var(--xlight-green);
 }
 .artwork-chara-ada {
   color: var(--img-ada3);
@@ -712,7 +712,7 @@ footer p {
   width: min(32rem, calc(100% + 0.25rem));
   padding: 1rem 1rem 2rem 1rem;
   border-radius: 2rem 2rem 2rem 0;
-  background-color: color-mix(in srgb, var(--very-light-green) 90%, transparent);
+  background-color: color-mix(in srgb, var(--xlight-green) 90%, transparent);
   box-shadow: var(--bshadow);
   visibility: hidden;
   scale: 0;
@@ -727,7 +727,7 @@ footer p {
   display: block;
   width: 1rem;
   height: 1rem;
-  background-color: color-mix(in srgb, var(--very-light-green) 90%, transparent);
+  background-color: color-mix(in srgb, var(--xlight-green) 90%, transparent);
   clip-path: polygon(50% 0%, 50% 50%, 100% 50%, 12.5% 87.5%);
 }
 .lightbox-info-expand.expanded {
@@ -740,7 +740,7 @@ footer p {
   margin-bottom: 0.125em;
   border-radius: 1em;
   background-color: var(--dark-green);
-  color: var(--very-light-green);
+  color: var(--xlight-green);
   font-size: 1.25rem;
   line-height: 1;
 }
@@ -785,7 +785,7 @@ footer p {
   padding: 0.5em 1em;
   border-radius: 1000em;
   background-color: var(--dark-green);
-  color: var(--very-light-green);
+  color: var(--xlight-green);
   box-shadow: var(--bshadow);
   pointer-events: none;
   visibility: hidden;
