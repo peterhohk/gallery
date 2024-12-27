@@ -226,6 +226,8 @@ $(document).ready(function () {
     if (showCategory !== "all") {
       if (showCategory === "outfit-all") {
         $(`.artwork-button:not([data-category^="outfit"])`).hide();
+      } else if (showCategory === "outfit-scw-all") {
+        $(`.artwork-button:not([data-category^="outfit-scw"])`).hide();
       } else {
         $(`.artwork-button:not([data-category="${showCategory}"])`).hide();
       }
