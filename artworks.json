@@ -123,5 +123,5 @@
   {"id": "20240930", "title": "Favourites", "caption": "Picking my favourite designs is surprisingly difficult, but I did manage to narrow them down to one per character.", "chara": ["A", "B", "C", "D"], "category": "random", "featured": true},
   {"id": "20241020", "title": "Oh?", "caption": "Knock before you enter!", "chara": ["A"], "category": "outfit-u", "featured": false},
   {"id": "20241111", "title": "Sharing Pocky (Dejectedly?)", "caption": "It seems that the Pocky Day Gayness Meter™ has encountered an overflow and is set to a negative value. Which might actually be a good thing, considering if it had kept up with the trend from past years, I'd likely be getting in trouble.", "chara": ["B", "C"], "category": "pocky", "featured": false},
-  {"id": "20241227", "title": "Season of Khaki", "caption": "It would appear that drawing autumn outfits when it's way past autumn is becoming a new yearly tradition.", "chara": ["B", "D"], "category": "outfit-scw", "featured": true}
+  {"id": "20241227", "title": "Season of Khaki", "caption": "It would appear that drawing autumn outfits when it's way past autumn is becoming a new yearly tradition.", "chara": ["B", "D"], "category": "outfit-scw", "featured": false}
 ]
