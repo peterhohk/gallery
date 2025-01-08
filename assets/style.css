@@ -316,11 +316,9 @@ footer p {
   white-space: nowrap;
 }
 .chara-details h4 {
-  display: inline-block;
-  margin-bottom: 0.25em;
   padding: 0.25em 0.5em;
+  margin-bottom: 0.25em;
   width: fit-content;
-  height: fit-content;
   border-radius: 1em;
   background-color: var(--img2);
   color: var(--img3);
@@ -341,10 +339,12 @@ footer p {
   font-weight: bold;
 }
 .chara-names h3 {
-  display: inline;
   padding: 0 0.25em;
-  background-image: linear-gradient(transparent 60%, var(--img2) 60% 85%, transparent 85%);
+  line-height: 1;
   font-size: 2.5rem;
+}
+.chara-names p {
+  margin-block: 0;
 }
 .chara-bio {
   grid-area: bio;
