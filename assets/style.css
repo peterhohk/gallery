@@ -471,11 +471,11 @@ footer p {
 @media (min-width: 48rem) {
   .chara-details {
     grid-template-areas:
-      "portrait .     .     .        .   "
-      "portrait names bio   bio      expr"
-      "portrait about about about    expr"
-      "portrait likes likes dislikes expr";
-    grid-template-columns: 12rem 2fr 1fr 3fr 12rem;
+      "portrait .     .        .   "
+      "portrait names bio      expr"
+      "portrait about about    expr"
+      "portrait likes dislikes expr";
+    grid-template-columns: 12rem 1fr 1fr 12rem;
     grid-template-rows: 6rem auto auto 1fr;
   }
   .chara-details::after {
@@ -484,15 +484,17 @@ footer p {
   .default-text {
     top: 6rem;
   }
-  .chara-bio ul {
-    grid-template-columns: repeat(2, max-content);
-  }
   .chara-about {
     font-size: 1.25rem;
   }
   .chara-expr-container {
     grid-template-columns: auto;
     align-content: start;
+  }
+}
+@media (min-width: 72rem) {
+  .chara-bio ul {
+    grid-template-columns: repeat(2, max-content);
   }
 }
 
