@@ -119,6 +119,23 @@ hr {
   display: block;
   font-size: 0.625em;
 }
+.outdated-msg {
+  position: fixed;
+  inset: auto 0 0 0;
+  padding: 1.5rem;
+  margin: 0;
+  background-color: #ff0000bf;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 2;
+}
+.outdated-msg a {
+  color: #ffffff;
+}
+.outdated-msg a:is(:hover, :focus-visible) {
+  opacity: 0.75;
+}
 
 /* GENERAL STYLE ENDS */
 
